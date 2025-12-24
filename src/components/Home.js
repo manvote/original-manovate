@@ -6,7 +6,7 @@ import "./solutions.css";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 // Hero images
-import hero1 from "../assets/hero1.jpeg";
+
 import hero2 from "../assets/hero2.jpeg";
 import hero3 from "../assets/hero3.jpeg";
 import aiImg from "../assets/ai.jpg";
@@ -30,7 +30,7 @@ import webImg from "../assets/web.jpg"
 
 
 
-const images = [hero1, hero2, hero3];
+const images = [ hero2, hero3];
 
 const Home = () => {
   /* ---------------------- HERO SLIDER LOGIC ---------------------- */
