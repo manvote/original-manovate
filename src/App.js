@@ -32,6 +32,7 @@ import Legal from "./components/Legal";
 import Services from "./components/Services";
 import ServiceCategory from "./components/ServiceCategory";
 import ServiceDetail from "./components/ServiceDetail";
+import ScrollToTop from "./components/scrolltop";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <BrowserRouter>
       <SplashScreen>
         <CookieBanner />
+        <ScrollToTop />
       <div className="page-wrapper"></div>
         <Routes>
           <Route path="/" element={<Home />} />
