@@ -1,0 +1,108 @@
+/* ================= LEGAL BACKGROUND ================= */
+.legal-bg {
+  min-height: 100vh;
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Subtle square grid pattern */
+.legal-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(2, 47, 106, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 47, 106, 0.18) 1px, transparent 1px);
+  background-size: 36px 36px; /* tighter grid = more visible */
+  animation: gridMove 50s linear infinite;
+  pointer-events: none;
+}
+
+
+/* Very soft gradient wash */
+.legal-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(0, 94, 255, 0.12), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(0, 200, 255, 0.12), transparent 45%);
+  pointer-events: none;
+}
+
+
+/* Background animation */
+@keyframes gridMove {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(48px, 48px);
+  }
+}
+
+/* Ensure content stays above pattern */
+.legal-page {
+  position: relative;
+  z-index: 1;
+}
+
+.legal-page {
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 0 24px;
+  font-family: Inter, sans-serif;
+}
+
+.legal-page h1 {
+  font-size: 40px;
+  color: #022f6a;
+  margin-bottom: 12px;
+}
+
+.legal-updated {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 50px;
+}
+
+.legal-page section {
+  margin-bottom: 80px;
+}
+
+.legal-page h2 {
+  font-size: 30px;
+  color: #022f6a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.legal-page h3 {
+  font-size: 18px;
+  margin-top: 28px;
+  color: #111827;
+}
+
+.legal-page p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #374151;
+  margin-top: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .legal-page {
+    margin: 90px auto;
+  }
+
+  .legal-page h1 {
+    font-size: 32px;
+  }
+
+  .legal-page h2 {
+    font-size: 24px;
+  }
+}
