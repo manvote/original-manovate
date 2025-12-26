@@ -132,3 +132,81 @@
     font-size: 30px;
   }
 }
+
+/* ===============================
+   PREMIUM EMPTY STATE (ANIMATED)
+   =============================== */
+
+.careers-empty-animated {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Smaller heading */
+.careers-empty-animated h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #0a2540;
+}
+
+/* Subtle paragraph */
+.careers-empty-animated p {
+  font-size: 16px;
+  color: #5f6f82;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+/* ---- Animated wave ---- */
+.empty-wave {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.empty-wave span {
+  width: 8px;
+  height: 40px;
+  background: linear-gradient(
+    180deg,
+    #cfd9ff,
+    #5b7cfa
+  );
+  border-radius: 6px;
+  animation: wave 1.2s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+.empty-wave span:nth-child(1) { animation-delay: 0s; }
+.empty-wave span:nth-child(2) { animation-delay: 0.1s; }
+.empty-wave span:nth-child(3) { animation-delay: 0.2s; }
+.empty-wave span:nth-child(4) { animation-delay: 0.3s; }
+
+/* Animations */
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.6);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

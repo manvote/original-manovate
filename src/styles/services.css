@@ -83,7 +83,6 @@ section {
   right: -40px;
   width: 200px;
   height: 200px;
-  background-image: url("/src/assets/ai.jpg"); /* change later */
   background-size: cover;
   opacity: 0.06;
   filter: blur(1px);
@@ -136,14 +135,22 @@ section {
 
 /* ================= CATEGORY CARD ================= */
 .service-category-card {
-  background: var(--card-bg);
-  padding: 32px;
-  border-radius: 20px;
-  text-decoration: none;
+  position: relative;
+  background: #ffffff;
+  padding: 34px;
+  border-radius: 22px;
   border: 1px solid var(--border);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.05);
+  text-decoration: none;
+
+  /* 🔥 FIX */
+  display: flex;
+  flex-direction: column;
+  min-height: 320px; /* ensures equal card height */
+
   transition: all 0.35s ease;
 }
+
 
 .service-category-card h3 {
   font-size: 22px;
@@ -158,12 +165,10 @@ section {
   line-height: 1.6;
 }
 
-.service-category-card span {
-  display: inline-block;
+.service-category-card > span {
   margin-top: 20px;
-  font-weight: 600;
-  color: var(--primary);
 }
+
 
 .service-category-card:hover {
   transform: translateY(-8px);
@@ -454,35 +459,43 @@ section {
 }
 .services-page {
   position: relative;
-  padding: 100px 6%;
-  background:
-    radial-gradient(
-      1200px 600px at 10% -10%,
-      rgba(0, 94, 255, 0.08),
-      transparent 40%
-    ),
-    radial-gradient(
-      1000px 500px at 90% 10%,
-      rgba(0, 200, 255, 0.08),
-      transparent 45%
-    ),
-    linear-gradient(
-      180deg,
-      #f8fbff 0%,
-      #ffffff 100%
-    );
+  padding: 110px 6%;
+  background: linear-gradient(180deg, #f6faff 0%, #ffffff 100%);
   overflow: hidden;
 }
+
+/* TECH PATTERN – VISIBLE BUT PREMIUM */
 .services-page::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 94, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 94, 255, 0.04) 1px, transparent 1px);
-  background-size: 80px 80px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 94, 255, 0.12) 0,
+      rgba(0, 94, 255, 0.12) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 200, 255, 0.10) 0,
+      rgba(0, 200, 255, 0.10) 1px,
+      transparent 1px,
+      transparent 60px
+    );
+
+  opacity: 0.45;   /* 🔥 KEY CHANGE */
   pointer-events: none;
+  z-index: 0;
 }
+
+.services-page > * {
+  position: relative;
+  z-index: 1;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -500,30 +513,7 @@ section {
 }
 
 /* Wave layer */
-.services-page::after {
-  content: "";
-  position: absolute;
-  inset: -20%;
-  background:
-    radial-gradient(
-      800px 400px at 20% 10%,
-      rgba(0, 94, 255, 0.12),
-      transparent 60%
-    ),
-    radial-gradient(
-      700px 350px at 80% 30%,
-      rgba(0, 200, 255, 0.10),
-      transparent 65%
-    ),
-    radial-gradient(
-      900px 500px at 50% 80%,
-      rgba(120, 150, 255, 0.10),
-      transparent 70%
-    );
-  animation: waveMove 28s linear infinite alternate;
-  pointer-events: none;
-  z-index: 0;
-}
+
 
 @keyframes waveMove {
   0% {
@@ -533,10 +523,7 @@ section {
     transform: translateY(-120px) translateX(100px);
   }
 }
-.services-page > * {
-  position: relative;
-  z-index: 1;
-}
+
 /* ================= MOBILE & TABLET RESPONSIVE ================= */
 
 /* ---------- Tablets (<= 1024px) ---------- */
@@ -633,4 +620,176 @@ section {
   .service-category-card span {
     font-size: 14px;
   }
+}
+
+
+/* =========================
+   SERVICES HERO
+   ========================= */
+
+.services-hero {
+  height: 420px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Blur layer */
+.services-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+/* Dark overlay */
+.services-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 24, 54, 0.65);
+  z-index: 2;
+}
+
+/* Text container */
+.services-hero-overlay {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 760px;
+  padding: 0 20px;
+}
+
+.services-hero-overlay h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.services-hero-overlay p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.services-page {
+  padding: 100px 80px;
+}
+
+.services-header {
+  max-width: 720px;
+  margin-bottom: 70px;
+}
+
+.services-header h2 {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.services-header p {
+  font-size: 18px;
+  color: #5f6f82;
+}
+
+@media (max-width: 768px) {
+  .services-hero {
+    height: 300px;
+  }
+
+  .services-hero-overlay h1 {
+    font-size: 36px;
+  }
+
+  .services-hero-overlay p {
+    font-size: 16px;
+  }
+
+  .services-page {
+    padding: 70px 20px;
+  }
+}
+
+
+/* ================= CARD FOOTER ================= */
+.service-card-footer {
+  margin-top: auto;
+  padding-top: 26px;
+  display: flex;
+  justify-content: flex-start; /* change to center if you want */
+}
+
+
+
+/* ================= VIEW MORE BUTTON ================= */
+.view-more-btn {
+  width: 180px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+
+  background: rgba(0, 94, 255, 0.08);
+  color: var(--primary);
+}
+
+.view-more-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.view-more-icon {
+  margin-top: 0 !important;   /* 🔥 OVERRIDE */
+  position: relative;
+  top: 0;
+}
+
+
+/* Hover (triggered by card hover) */
+.service-category-card:hover .view-more-btn {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-dark)
+  );
+  color: #ffffff;
+  box-shadow: 0 14px 40px rgba(0, 94, 255, 0.35);
+}
+
+.service-category-card:hover .view-more-icon {
+  transform: translateX(6px);
+}
+
+.service-category-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(
+      rgba(0, 94, 255, 0.06) 1px,
+      transparent 1px
+    );
+  background-size: 22px 22px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.service-category-card:hover::after {
+  opacity: 1;
 }

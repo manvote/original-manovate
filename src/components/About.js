@@ -3,10 +3,11 @@ import "./About.css";
 import ceo from "../assets/team/ceo.png";
 import manager1 from "../assets/team/manager.jpg";
 import manager2 from "../assets/team/manager1.jpeg";
+import robotImg from "../assets/download.png"
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import ClientGrowthWithFilter from "./charts/ClientGrowthWithFilter";
-
+import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -15,40 +16,41 @@ const About = () => {
     <div className="about-wrapper">
 
       {/* HERO */}
-   <section className="about-hero">
-  <div className="about-hero-inner">
-    <h1>Engineering Digital Excellence</h1>
+   {/* HERO */}
+<section className="about-hero">
+  <div className="about-hero-layout">
 
-    <p>
-      Manovate Technologies is a technology consulting and engineering
-      organization helping businesses design, build, and scale
-      secure, high-performance, and future-ready digital systems.
-    </p>
+    {/* LEFT CONTENT */}
+    <div className="about-hero-inner">
+      <h1>Engineering Digital Excellence</h1>
 
-    <p>
-      We partner with startups, growing enterprises, and established
-      organizations to transform complex business challenges into
-      intelligent technology solutions. Our approach combines
-      deep engineering expertise, modern architectures, and
-      business-driven strategy to deliver systems that are reliable,
-      adaptable, and built for long-term growth.
-    </p>
+      <p>
+        Manovate Technologies is a technology consulting and engineering
+        organization helping businesses design, build, and scale
+        secure, high-performance, and future-ready digital systems.
+      </p>
 
-    <p>
-      From enterprise platforms and cloud-native applications to
-      AI-powered automation and data-driven systems, we focus on
-      building technology that performs under scale, protects
-      critical data, and evolves with changing business needs.
-    </p>
+      <p>
+        We partner with startups, growing enterprises, and established
+        organizations to transform complex business challenges into
+        intelligent technology solutions.
+      </p>
 
-    <p>
-      At Manovate, engineering excellence is not just about writing
-      code — it is about creating digital foundations that enable
-      organizations to move faster, operate smarter, and compete
-      confidently in a rapidly evolving digital landscape.
-    </p>
+      <p>
+        From enterprise platforms and cloud-native applications to
+        AI-powered automation and data-driven systems, we focus on
+        building technology that performs under scale.
+      </p>
+    </div>
+
+    {/* RIGHT – ROBOT */}
+    <div className="about-hero-robot">
+      <img src={robotImg} alt="AI Robot" />
+    </div>
+
   </div>
 </section>
+
 
 
       {/* WHO WE ARE */}
@@ -85,8 +87,7 @@ const About = () => {
     <div className="analytics-section">
 
   <div className="analytics-heading">
-    <h2>Growth Analytics</h2>
-    <span>Client acquisition performance overview</span>
+    
   </div>
 
   <ClientGrowthWithFilter />
@@ -99,73 +100,131 @@ const About = () => {
 
 
       {/* LEADERSHIP */}
-     {/* LEADERSHIP */}
+  
+{/* LEADERSHIP */}
 <section className="about-team">
   <h2>Leadership Team</h2>
 
   <div className="team-grid">
 
-    {/* CEO & FOUNDER */}
+    {/* FOUNDER */}
     <div className="team-card">
       <div className="team-photo">
-        <img src={ceo} alt="CEO & Founder - Manovate Technologies" />
+        <img src={ceo} alt="Syed Kareem Mynudeen - Founder & Director" />
       </div>
 
       <h4>Syed Kareem Mynudeen</h4>
-      <span>CEO & Founder</span>
+      <span>Founder & Director</span>
 
       <p>
-        <p>
-<p>
-  Drives company vision, enterprise strategy, and digital transformation
-  initiatives across global clients.
+  Responsible for shaping the company’s long-term vision, strategic direction,
+  and enterprise growth initiatives. The role focuses on aligning technology
+  strategy with business objectives, enabling organizations to build secure,
+  scalable, and future-ready digital platforms. With deep experience in digital
+  engineering and technology consulting, leadership emphasizes engineering
+  excellence, innovation, and sustainable delivery models while partnering with
+  global clients to drive measurable business outcomes.
 </p>
 
-</p>
 
-      </p>
+      <div className="team-socials">
+        <a
+          href="https://www.linkedin.com/in/syed-kareem-mynudeen"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedinIn />
+        </a>
+
+        <a
+          href="mailto:syedkareemmynudeen@manovate.co.in"
+          aria-label="Email"
+        >
+          <FaEnvelope />
+        </a>
+      </div>
     </div>
 
-    {/* HEAD OF ENGINEERING */}
+    {/* MANAGER */}
     <div className="team-card">
       <div className="team-photo">
-        <img
-          src={manager1}
-          alt="Head of Engineering - Manovate Technologies"
-        />
+        <img src={manager1} alt="Harish N - Business Operations & Client Strategy" />
       </div>
 
       <h4>Harish N</h4>
       <span>Manager – Business Operations & Client Strategy</span>
 
-     <p>
-  Oversees operations, client strategy, and execution
-  quality across engagements.
+      <p>
+  Responsible for leading business operations and client strategy across
+  enterprise engagements. The role focuses on aligning delivery execution with
+  client objectives while maintaining operational efficiency, governance, and
+  quality standards. Through strong coordination with cross-functional teams,
+  this position ensures disciplined execution, transparent delivery processes,
+  and consistent outcomes that support long-term partnerships and client success.
 </p>
 
+
+      <div className="team-socials">
+        <a
+          href="https://www.linkedin.com/in/harishnandhakumar"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedinIn />
+        </a>
+
+        <a
+          href="mailto:harishnandakuamr@manovate.co.in"
+          aria-label="Email"
+        >
+          <FaEnvelope />
+        </a>
+      </div>
     </div>
 
-    {/* BUSINESS OPERATIONS */}
+    {/* MANAGER */}
     <div className="team-card">
       <div className="team-photo">
-        <img
-          src={manager2}
-          alt="Business Operations & Client Strategy - Manovate Technologies"
-        />
+        <img src={manager2} alt="Santhosh G - Business Operations & Client Strategy" />
       </div>
 
       <h4>Santhosh G</h4>
       <span>Manager – Business Operations & Client Strategy</span>
 
-      <p>
-  Oversees operations, client strategy, and execution
-  quality across engagements.
+     <p>
+  Responsible for leading business operations and client strategy across
+  enterprise engagements. The role focuses on aligning delivery execution with
+  client objectives while maintaining operational efficiency, governance, and
+  quality standards. Through strong coordination with cross-functional teams,
+  this position ensures disciplined execution, transparent delivery processes,
+  and consistent outcomes that support long-term partnerships and client success.
 </p>
 
+
+      <div className="team-socials">
+        <a
+          href="https://www.linkedin.com/in/santhosh155/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedinIn />
+        </a>
+
+        <a
+          href="mailto:santhoshsandy@manovate.co.in"
+          aria-label="Email"
+        >
+          <FaEnvelope />
+        </a>
+      </div>
     </div>
 
   </div>
 </section>
+
 
     </div>
     <Footer />

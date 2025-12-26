@@ -66,8 +66,9 @@ const Navbar = () => {
     </Link>
   </li>
 )}
+             <li><Link to="/about">About Us</Link></li>
 
-          <li><Link to="/services">Services</Link></li>
+          
 
           <li className="dropdown">
             <span>Products ▾</span>
@@ -79,12 +80,19 @@ const Navbar = () => {
             </ul>
           </li>
 
-          <li><Link to="/about">About Us</Link></li>
+          <li className="dropdown">
+            <span>Services ▾</span>
+            <ul className="dropdown-menu">
+              <li><Link to="/itservices">IT Services</Link></li>
+              <li><Link to="/nonitservices">Non-IT Services</Link></li>
+            </ul>
+          </li>
           <li><Link to="/careers">Careers</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
 
           <li>
             <Link className="contact-btn" to="/free-consultation">
-              Free Consultation →
+              Free Consultation → 
             </Link>
           </li>
         </ul>
@@ -95,4 +103,3 @@ const Navbar = () => {
 
 
 export default Navbar;
-

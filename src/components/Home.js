@@ -9,129 +9,25 @@ import { Link } from "react-router-dom";
 
 import hero2 from "../assets/hero2.jpeg";
 import hero3 from "../assets/hero3.jpeg";
-import aiImg from "../assets/ai.jpg";
-import cloudImg from "../assets/cloud.webp";
-import cyberImg from "../assets/cyber.jpg";
-import appImg from "../assets/app.avif";
-import productImg from "../assets/product.jpg";
-import brandingImg from "../assets/branding.png";
-import businessImg from "../assets/business.jpg";
-import digitalImg from "../assets/digital.avif"
-import aisolutions from "../assets/ai-solutions.jpg";
-import modernization from "../assets/modernization.jpg";
-import cloudMigration from "../assets/cloud-com.avif";
-import cybersecurity from "../assets/cyber-security.jpg";  
-import dataAnalytics from "../assets/data-analytics.avif";
-import productEngineering from "../assets/product-engineering.avif";
+import aiImg from "../assets/ai.png";
+import cloudImg from "../assets/cloudover.png";
+import cyberImg from "../assets/cyber.png";
+import appImg from "../assets/mobile.png";
+import productImg from "../assets/businessover.png";
+import brandingImg from "../assets/bdover.jpg";
+import businessImg from "../assets/business.png";
+import digitalImg from "../assets/digital.png"
 import ProductsSection from "./ProductsSection";
-import webImg from "../assets/web.jpg"
+import webImg from "../assets/webover.png"
+import Solutions from "./Solutions";
 // later in JSX
-
-
-
-
 const images = [ hero2, hero3];
 
 const Home = () => {
   /* ---------------------- HERO SLIDER LOGIC ---------------------- */
-  const [index, setIndex] = useState(0);
+  const [index] = useState(0);
 
 
-const solutions = [
-  {
-    title: "AI Solutions",
-    slug: "ai-solutions",
-    img: aisolutions,
-    desc: "AI-driven capabilities engineered to give your business a competitive edge."
-  },
-  {
-    title: "Legacy Modernization",
-    slug: "legacy-modernization",
-    img: modernization,
-    desc: "Transforming outdated systems into modern, scalable digital platforms."
-  },
-  {
-    title: "Cybersecurity",
-    slug: "cybersecurity",
-    img: cybersecurity,
-    desc: "End-to-end security frameworks protecting your digital ecosystem."
-  },
-  {
-    title: "Data & Analytics",
-    slug: "data-analytics",
-    img: dataAnalytics,
-    desc: "Advanced insights powering strategic decision-making and automation."
-  },
-  {
-    title: "Product Engineering",
-    slug: "product-engineering",
-    img: productEngineering,
-    desc: "Enterprise-grade product development with innovation at its core."
-  },
-  {
-    title: "Cloud Transformation",
-    slug: "cloud-transformation",
-    img: cloudMigration,
-    desc: "Cloud-native solutions enabling agility, resilience and optimized performance."
-  },
-];
-
-
-const [activeIndex, setActiveIndex] = useState(null);
-
-// Move carousel so active card is centered
-const centerActiveCard = (index) => {
-  const cardWidth = 260;          // normal card width
-  const expandedWidth = 480;   // active card width
-  const gap = 40;                 // spacing between cards
-
-  const baseX = index * (cardWidth + gap);
-
-  const carousel = document.querySelector(".carousel-window");
-  const windowCenter = carousel.offsetWidth / 2;
-
-  const cardCenter = baseX + expandedWidth / 2;
-
-  setTranslateX(windowCenter - cardCenter);
-};
-
-
-const [translateX, setTranslateX] = useState(0);
-
-const nextCard = () => {
-  setActiveIndex((prev) => {
-    const newIndex = (prev + 1) % solutions.length;
-    centerActiveCard(newIndex);
-    return newIndex;
-  });
-};
-
-const prevCard = () => {
-  setActiveIndex((prev) => {
-    const newIndex = prev === 0 ? solutions.length - 1 : prev - 1;
-    centerActiveCard(newIndex);
-    return newIndex;
-  });
-};
-
-// Re-center on first load
-// eslint-disable-next-line react-hooks/exhaustive-deps
-useEffect(() => {
-  if (activeIndex !== null) {
-    setTimeout(() => centerActiveCard(activeIndex), 100);
-  }
-}, [activeIndex]);
-
-
-
-
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
 
   useEffect(() => {
   setTimeout(() => {
@@ -141,26 +37,10 @@ useEffect(() => {
         card.classList.add("in-view");
       }, i * 120);
     });
-  }, 300);
+  }, 500);
 }, []);
 
-const [activeService, setActiveService] = useState(null);
 
-
-// CLICK TO TOGGLE OVERLAY
-useEffect(() => {
-  const cards = document.querySelectorAll(".service-card");
-
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      // Close all others
-      cards.forEach(c => c.classList.remove("active"));
-
-      // Open clicked one
-      card.classList.add("active");
-    });
-  });
-}, []);
 
 
 useEffect(() => {
@@ -285,7 +165,7 @@ useEffect(() => {
       <div className="hero-slider">
         {images.map((img, i) => (
           <div
-            key={i}
+            key={img}
             className={`slide ${i === index ? "active" : ""}`}
             style={{ backgroundImage: `url(${img})` }}
           ></div>
@@ -389,112 +269,12 @@ useEffect(() => {
 
 
 
-{/* ---------------------- SOLUTIONS SECTION ---------------------- */}
-
-<section className="solutions-flex">
-  <div className="solutions-accent"></div>
-
-  <p className="solution-tag">• Solutions</p>
-
-  <h1 className="solution-title">
-    Powering Businesses Through Smart<br /> Engineering
-  </h1>
-
-  {/* WRAPPER FOR ARROWS + CAROUSEL */}
-  <div className="carousel-wrapper">
-
-    {/* LEFT ARROW */}
-    <button
-      className="carousel-arrow left"
-      onClick={prevCard}
-      aria-label="Previous"
-    >
-      ‹
-    </button>
-
-    {/* CAROUSEL WINDOW */}
-    <div className="carousel-window">
-      <div
-        className="carousel-track"
-        style={{ transform: `translateX(${translateX}px)` }}
-      >
-        {solutions.map((item, i) => {
-          const isActive = activeIndex === i;
-
-          return (
-            <div
-              key={i}
-              className={`flex-card ${isActive ? "active" : "inactive"}`}
-              onClick={() => {
-                if (activeIndex === i) {
-                  setActiveIndex(null);
-                } else {
-                  setActiveIndex(i);
-                  centerActiveCard(i);
-                }
-              }}
-            >
-              {/* NORMAL CARD */}
-              {!isActive && (
-                <div className="normal-card">
-                  <div className="normal-img-wrapper">
-                    <img
-                      className="normal-img"
-                      src={item.img}
-                      alt={item.title}
-                    />
-                  </div>
-
-                  <div className="normal-title-wrapper">
-                    <h2 className="normal-title">{item.title}</h2>
-                  </div>
-                </div>
-              )}
-
-              {/* EXPANDED CARD */}
-              {isActive && (
-                <div className="expanded-content">
-                  <img
-                    className="big-img"
-                    src={item.img}
-                    alt={item.title}
-                  />
-
-                  <div className="text-side">
-                    <h2>{item.title}</h2>
-                    <p>{item.desc}</p>
-
-                    <Link
-  to={`/solutions/${item.slug}`}
-  className="solution-arrow-btn"
->
-  Explore →
-</Link>
-
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </div>
-
-    {/* RIGHT ARROW */}
-    <button
-      className="carousel-arrow right"
-      onClick={nextCard}
-      aria-label="Next"
-    >
-      ›
-    </button>
-
-  </div>
-</section>
+<Solutions />
 
 
 
-{/* ================= HOME SERVICES SECTION ================= */}
+
+ {/* ================= HOME SERVICES SECTION ================= */}
 <section className="home-services" id="home-services">
 
   <p className="home-services-tag">• Services</p>
@@ -506,41 +286,105 @@ useEffect(() => {
   <div className="home-services-grid">
 
     {[
-      { title: "Website & Web Application Services", img: webImg, desc: "High-performance websites and enterprise-grade web platforms engineered for speed, security, and scalability." },
-      { title: "Mobile Application Development", img: appImg, desc: "Modern, scalable mobile applications across Android, iOS, and cross-platform frameworks." },
-      { title: "AI & Automation Solutions", img: aiImg, desc: "Intelligent automation and AI systems that streamline operations and drive smarter decisions." },
-      { title: "Custom Enterprise Software", img: productImg, desc: "Tailored enterprise systems including CRM, ERP, HRMS, and custom platforms." },
-      { title: "Cloud & Infrastructure Services", img: cloudImg, desc: "Secure, resilient cloud environments built for performance and cost efficiency." },
-      { title: "Cybersecurity Solutions", img: cyberImg, desc: "End-to-end cybersecurity frameworks for continuous protection and compliance." },
-      { title: "Business & Strategy Consulting", img: businessImg, desc: "Strategic guidance to optimize operations and accelerate growth." },
-      { title: "Branding & Creative Services", img: brandingImg, desc: "Impactful brand identities and visually compelling digital assets." },
-      { title: "Digital Marketing Services", img: digitalImg, desc: "Data-driven SEO and performance marketing delivering measurable growth." }
-    ].map((item, idx) => (
-      <div
-        key={idx}
-        className={`home-service-card ${activeService === idx ? "active" : ""}`}
-        onClick={() => {
-          setActiveService(idx);
-          setTimeout(() => setActiveService(null), 4000);
-        }}
-      >
-        <img src={item.img} alt={item.title} className="home-service-img" />
+      {
+        title: "Website & Web Application Services",
+        img: webImg,
+        desc: "High-performance websites and enterprise-grade web platforms engineered for speed, security, and scalability.",
+        type: "it",
+        categoryId: "website-web-application-services"
+      },
+      {
+        title: "Mobile Application Development",
+        img: appImg,
+        desc: "Modern, scalable mobile applications across Android, iOS, and cross-platform frameworks.",
+        type: "it",
+        categoryId: "mobile-application-development"
+      },
+      {
+        title: "AI & Automation Solutions",
+        img: aiImg,
+        desc: "Intelligent automation and AI systems that streamline operations and drive smarter decisions.",
+        type: "it",
+        categoryId: "ai-automation-solutions"
+      },
+      {
+        title: "Custom Enterprise Software",
+        img: productImg,
+        desc: "Tailored enterprise systems including CRM, ERP, HRMS, and custom platforms.",
+        type: "it",
+        categoryId: "custom-enterprise-software"
+      },
+      {
+        title: "Cloud & Infrastructure Services",
+        img: cloudImg,
+        desc: "Secure, resilient cloud environments built for performance and cost efficiency.",
+        type: "it",
+        categoryId: "cloud-infrastructure-services"
+      },
+      {
+        title: "Cybersecurity Solutions",
+        img: cyberImg,
+        desc: "End-to-end cybersecurity frameworks for continuous protection and compliance.",
+        type: "it",
+        categoryId: "cybersecurity-solutions"
+      },
+      {
+        title: "Business & Strategy Consulting",
+        img: businessImg,
+        desc: "Strategic advisory services to optimize operations, efficiency, and long-term growth.",
+        type: "nonit",
+        categoryId: "business-strategy-consulting"
+      },
+      {
+        title: "Branding & Creative Services",
+        img: brandingImg,
+        desc: "Creative solutions that strengthen brand identity and market presence.",
+        type: "nonit",
+        categoryId: "branding-creative-services"
+      },
+      {
+        title: "Digital Marketing Services",
+        img: digitalImg,
+        desc: "Performance-driven digital marketing and growth strategies.",
+        type: "nonit",
+        categoryId: "digital-marketing-services"
+      }
+    ].map((item) => {
 
-        {/* Always visible title */}
-        <div className="home-service-title">
-          <h3>{item.title}</h3>
-        </div>
+      const link =
+        item.type === "it"
+          ? `/itservices/${item.categoryId}`
+          : `/nonitservices/${item.categoryId}`;
 
-        {/* Slide-up overlay */}
-        <div className="home-service-overlay">
-          <h3>{item.title}</h3>
-          <p>{item.desc}</p>
+      return (
+        <div className="home-service-card" key={`${item.type}-${item.categoryId}`}>
+
+          <img
+            src={item.img}
+            alt={item.title}
+            className="home-service-img"
+          />
+
+          <div className="home-service-title">
+            <h3>{item.title}</h3>
+          </div>
+
+          <div className="home-service-overlay">
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+
+            <Link to={link} className="home-service-link">
+              Explore Services →
+            </Link>
+          </div>
+
         </div>
-      </div>
-    ))}
+      );
+    })}
 
   </div>
 </section>
+
 
 
 <ProductsSection />

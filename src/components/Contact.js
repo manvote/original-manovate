@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 import "./Contact.css";
+import API from "../publicApi";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -27,21 +30,7 @@ export default function Contact() {
     setError("");
 
     try {
-      const response = await fetch(
-        "http://127.0.0.1:8000/contact/", // 👈 PUT YOUR API LINK HERE
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to submit form");
-      }
-
+      await API.post("contact/", formData);
       setSubmitted(true);
       setFormData({
         name: "",
@@ -50,7 +39,7 @@ export default function Contact() {
         subject: "",
         message: "",
       });
-    } catch (err) {
+    } catch {
       setError("Something went wrong. Please try again later.");
     } finally {
       setLoading(false);
@@ -61,8 +50,14 @@ export default function Contact() {
     <section className="contact-section">
       <div className="contact-container">
 
-        {/* LEFT CONTENT (UNCHANGED) */}
+        {/* LEFT CONTENT */}
         <div className="contact-left">
+
+          {/* 🔙 BACK TO HOME */}
+          <Link to="/" className="contact-back-home">
+            <FaArrowLeft /> Back to Home
+          </Link>
+
           <h2>
             Let’s Build <span>Impactful Technology</span>
           </h2>
@@ -72,6 +67,7 @@ export default function Contact() {
             build, and scale secure digital platforms that solve
             real business challenges.
           </p>
+
           <p className="contact-intro">
             From strategy and architecture to engineering and delivery,
             our teams work alongside you to create measurable outcomes
@@ -102,8 +98,7 @@ export default function Contact() {
                 and trusted collaboration.
               </span>
             </div>
-          
-        </div>
+          </div>
         </div>
 
         {/* RIGHT FORM */}
@@ -113,53 +108,12 @@ export default function Contact() {
               <h3 className="contact-form-title">Leave us a Message</h3>
 
               <form className="contact-form" onSubmit={handleSubmit}>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name *"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email *"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Your Phone *"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                />
-
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject *"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                />
-
-                <textarea
-                  name="message"
-                  placeholder="Type Your Message Here . . ."
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="5"
-                  required
-                />
-
+                <input type="text" name="name" placeholder="Your Name *" value={formData.name} onChange={handleChange} required />
+                <input type="email" name="email" placeholder="Your Email *" value={formData.email} onChange={handleChange} required />
+                <input type="tel" name="phone" placeholder="Your Phone *" value={formData.phone} onChange={handleChange} required />
+                <input type="text" name="subject" placeholder="Subject *" value={formData.subject} onChange={handleChange} required />
+                <textarea name="message" placeholder="Type Your Message Here..." value={formData.message} onChange={handleChange} rows="5" required />
                 {error && <p className="form-error">{error}</p>}
-
                 <button type="submit" className="contact-btn" disabled={loading}>
                   {loading ? "Sending..." : "Send"}
                 </button>
@@ -168,10 +122,7 @@ export default function Contact() {
           ) : (
             <div className="contact-success">
               <h3>Thank you!</h3>
-              <p>
-                Your message has been sent.
-                Our team will get back to you shortly.
-              </p>
+              <p>Your message has been sent. Our team will get back to you shortly.</p>
             </div>
           )}
         </div>

@@ -4,6 +4,22 @@
   background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
   overflow: hidden;
 }
+/* BACK TO HOME BUTTON */
+.contact-back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #004aad;
+  text-decoration: none;
+}
+
+.contact-back-home:hover {
+  opacity: 0.8;
+}
+
 
 /* Subtle tech grid */
 .contact-section::before {

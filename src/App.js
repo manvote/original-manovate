@@ -28,12 +28,15 @@ import AdminApplications from "./components/AdminApplications";
 import AdminHome from "./components/AdminHome";
 import AdminJobDetail from "./components/AdminJobDetail";
 import AdminJobs from "./components/AdminJobs";
-import Legal from "./components/Legal";
-import Services from "./components/Services";
-import ServiceCategory from "./components/ServiceCategory";
-import ServiceDetail from "./components/ServiceDetail";
+import ITServices from "./components/ITServices";
+import NonITServices from "./components/NonITServices";
+import ITServiceCategory from "./components/ITServiceCategory";
+import ITServiceDetail from "./components/ITServiceDetail";
+import NonITServiceCategory from "./components/NonITServiceCategory";
+import NonITServiceDetail from "./components/NonITServiceDetail";
 import ScrollToTop from "./components/scrolltop";
-
+import Legal from "./components/Legal";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
   return (
@@ -71,10 +74,14 @@ function App() {
               <Route path="applications" element={<AdminApplications />} />
              </Route>
 
-             <Route path="services" element={<Services />} />
-<Route path="services/:categoryId" element={<ServiceCategory />} />
-<Route path="services/:categoryId/:serviceId" element={<ServiceDetail />} />
-             <Route path="/legal" element={<Legal />} />
+             <Route path="/itservices" element={<ITServices />} />
+<Route path="/itservices/:categoryId" element={<ITServiceCategory />} />
+<Route path="/itservices/:categoryId/:serviceId" element={<ITServiceDetail />} />
+<Route path="/nonitservices" element={<NonITServices />} />
+<Route path="/nonitservices/:categoryId" element={<NonITServiceCategory />} />
+<Route path="/nonitservices/:categoryId/:serviceId" element={<NonITServiceDetail />} />
+<Route path="/legal" element={<Legal />} />
+<Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
         </Routes>
         

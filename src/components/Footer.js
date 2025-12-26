@@ -89,9 +89,9 @@ const Footer = () => {
         <p>© 2025 Manovate Technologies. All rights reserved.</p>
         
 <div className="footer-legal">
-  <Link to="/legal#terms">Terms & Conditions</Link>
+  <Link to="/legal">Terms & Conditions</Link>
   <span> | </span>
-  <Link to="/legal#privacy">Privacy Policy</Link>
+  <Link to="/privacy-policy">Privacy Policy</Link>
 </div>
 
 

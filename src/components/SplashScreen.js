@@ -5,7 +5,7 @@ import logo from "../assets/icon.png";
 export default function SplashScreen({ children }) {
   const [startReveal, setStartReveal] = useState(false);
   const [finishSplash, setFinishSplash] = useState(false);
-
+ 
   useEffect(() => {
     const timer = setTimeout(() => {
       setStartReveal(true);

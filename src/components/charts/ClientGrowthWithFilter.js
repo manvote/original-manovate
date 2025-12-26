@@ -61,22 +61,18 @@ const buildYAxis = (data, activeFilter) => {
   const min = Math.min(...values);
   const max = Math.max(...values);
 
-  /* ---- ALL → baseline chart ---- */
   if (activeFilter === "ALL") {
     const step = Math.ceil(max / 5 / 10) * 10;
     const top = step * 6;
-
     return {
       domain: [0, top],
       ticks: Array.from({ length: 6 }, (_, i) => step * (i + 1)),
     };
   }
 
-  /* ---- 3M / 6M / 1Y → zoomed ---- */
   const padding = Math.ceil((max - min) * 0.25);
   const lower = Math.max(0, min - padding);
   const upper = max + padding;
-
   const step = Math.ceil((upper - lower) / 4 / 10) * 10;
 
   return {
@@ -88,110 +84,144 @@ const buildYAxis = (data, activeFilter) => {
 export default function ClientGrowthChart() {
   const [active, setActive] = useState("ALL");
 
-  /* =========================
-     DATA PER FILTER
-  ========================= */
   const data = useMemo(() => {
     const cfg = FILTERS[active];
     if (cfg.type === "yearly") return YEARLY_DATA;
     return MONTHLY_DATA.slice(-cfg.count);
   }, [active]);
 
-  /* =========================
-     Y-AXIS PER FILTER
-  ========================= */
   const yAxis = useMemo(
     () => buildYAxis(data, active),
     [data, active]
   );
 
   return (
-    <div className="client-chart-card">
-      {/* HEADER */}
-      <div className="chart-header">
-        <div>
-          <h3>Client Growth</h3>
-          <p>
-            {active === "ALL"
-              ? "Year-wise completed client projects (till 2025)"
-              : "Actual client onboarding (monthly)"}
-          </p>
+    <section className="client-growth-section">
+
+      {/* LEFT CONTENT */}
+      <div className="client-growth-content">
+        <span className="growth-eyebrow">CLIENT ACQUISITION OVERVIEW</span>
+
+        <h2 className="growth-title">
+          Sustained Client Growth <br />
+          Through Reliable Delivery
+        </h2>
+
+        <p className="growth-description">
+          Manovate Technologies has demonstrated consistent client growth
+          year over year, reflecting strong delivery governance, long-term
+          partnerships, and scalable execution capabilities. The upward
+          trajectory since 2021 highlights increased enterprise adoption,
+          operational maturity, and a growing trust in our technology and
+          consulting services across global markets.
+        </p>
+
+        <div className="growth-stats">
+          <div>
+            <strong>620+</strong>
+            <span>Total Clients (2025)</span>
+          </div>
+          <div>
+            <strong>7×</strong>
+            <span>Growth Since 2016</span>
+          </div>
+          <div>
+            <strong>4 Years</strong>
+            <span>Continuous Acceleration</span>
+          </div>
         </div>
 
-        <div className="chart-filters">
-          {Object.keys(FILTERS).map((key) => (
-            <button
-              key={key}
-              className={active === key ? "active" : ""}
-              onClick={() => setActive(key)}
+        <ul className="growth-points">
+          <li>Enterprise-grade onboarding across industries</li>
+          <li>Post-2021 acceleration driven by scalable delivery models</li>
+          <li>High retention through consistent execution quality</li>
+        </ul>
+      </div>
+
+      {/* RIGHT GRAPH */}
+      <div className="client-growth-chart">
+        <div className="client-chart-card">
+
+          <div className="chart-header">
+            <div>
+              <h3>Client Growth</h3>
+              <p>
+                {active === "ALL"
+                  ? "Year-wise completed client projects (till 2025)"
+                  : "Actual client onboarding (monthly)"}
+              </p>
+            </div>
+
+            <div className="chart-filters">
+              {Object.keys(FILTERS).map((key) => (
+                <button
+                  key={key}
+                  className={active === key ? "active" : ""}
+                  onClick={() => setActive(key)}
+                >
+                  {key}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <ResponsiveContainer width="100%" height={420}>
+            <LineChart
+              data={data}
+              margin={{ top: 30, right: 40, left: 30, bottom: 30 }}
             >
-              {key}
-            </button>
-          ))}
+              <CartesianGrid
+                stroke="#eaf0f7"
+                strokeDasharray="4 6"
+                vertical={false}
+              />
+
+              <XAxis
+                dataKey="label"
+                tickLine={false}
+                axisLine={false}
+                tickMargin={14}
+              />
+
+              <YAxis
+                domain={yAxis.domain}
+                ticks={yAxis.ticks}
+                tickLine={false}
+                axisLine={false}
+                tickMargin={16}
+              />
+
+              <Tooltip
+                formatter={(v) => [`${v} Clients`, "Completed"]}
+                contentStyle={{
+                  borderRadius: 12,
+                  border: "1px solid #e5e7eb",
+                  fontSize: 13,
+                }}
+              />
+
+              <Line
+                type="monotone"
+                dataKey="clients"
+                stroke="#004aad"
+                strokeWidth={3}
+                dot={{
+                  r: 5,
+                  fill: "#ffffff",
+                  stroke: "#004aad",
+                  strokeWidth: 2,
+                }}
+                activeDot={{ r: 8, fill: "#004aad" }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+
+          <div className="chart-footer">
+            <strong>2025:</strong> Projects successfully completed till date
+          </div>
         </div>
       </div>
 
-      {/* CHART */}
-      <ResponsiveContainer width="100%" height={420}>
-        <LineChart
-          data={data}
-          margin={{ top: 30, right: 40, left: 30, bottom: 30 }}
-        >
-          <CartesianGrid
-            stroke="#eaf0f7"
-            strokeDasharray="4 6"
-            vertical={false}
-          />
-
-          <XAxis
-            dataKey="label"
-            tickLine={false}
-            axisLine={false}
-            tickMargin={14}
-          />
-
-          <YAxis
-            domain={yAxis.domain}
-            ticks={yAxis.ticks}
-            tickLine={false}
-            axisLine={false}
-            tickMargin={16}
-          />
-
-          <Tooltip
-            formatter={(v) => [`${v} Clients`, "Completed"]}
-            contentStyle={{
-              borderRadius: 12,
-              border: "1px solid #e5e7eb",
-              fontSize: 13,
-            }}
-          />
-
-          <Line
-            type="monotone"
-            dataKey="clients"
-            stroke="#004aad"
-            strokeWidth={3}
-            dot={{
-              r: 5,
-              fill: "#ffffff",
-              stroke: "#004aad",
-              strokeWidth: 2,
-            }}
-            activeDot={{
-              r: 8,
-              fill: "#004aad",
-            }}
-            isAnimationActive
-            animationDuration={600}
-          />
-        </LineChart>
-      </ResponsiveContainer>
-
-      {/* FOOTER */}
-      <div className="chart-footer">
-        <strong>2025:</strong> Projects successfully completed till date
-      </div>
-    </div>
+    </section>
   );
 }

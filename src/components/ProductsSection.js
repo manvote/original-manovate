@@ -5,7 +5,7 @@ import hrms from "../assets/hrms.webp";
 import crm from "../assets/crm.jpeg";
 import product1 from "../assets/product1.jpeg";
 import product2 from "../assets/product2.jpeg";
-
+ 
 const products = [
   {
     title: "Enterprise HRMS Platform",
@@ -68,6 +68,16 @@ export default function ProductsSection() {
     window.addEventListener("wheel", onWheel, { passive: true });
     return () => window.removeEventListener("wheel", onWheel);
   }, [active]);
+
+// Auto-rotate products
+useEffect(() => {
+  const interval = setInterval(() => {
+    setActive((prev) => (prev + 1) % products.length);
+  }, 4500); // 4.5 seconds (tweak if needed)
+
+  return () => clearInterval(interval);
+}, []);
+
 
   return (
     <section className="products-section">
