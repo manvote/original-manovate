@@ -35,8 +35,13 @@ export default function FreeConsultation() {
 
     const finalService = service === "Other" ? otherService : service;
 
+<<<<<<< HEAD
     try {
       const res = await fetch("http://127.0.0.1:8000/contact-service/", {
+=======
+    try { 
+      const res = await fetch("https://manovatebackend.onrender.com/contact-service/", {
+>>>>>>> a6bc8d8 (backend_check)
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -1,1 +1,131 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"><url><loc>https://manovate.co.in/</loc><changefreq>daily</changefreq><priority>1.0</priority></url><url><loc>https://manovate.co.in/about</loc><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>https://manovate.co.in/services</loc><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>https://manovate.co.in/contact</loc><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>https://manovate.co.in/careers</loc><changefreq>monthly</changefreq><priority>0.6</priority></url><url><loc>https://manovate.co.in/solution</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://manovate.co.in/products</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://manovate.co.in/free-consultation</loc><changefreq>weekly</changefreq><priority>0.7</priority></url></urlset>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://www.manovate.co.in/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ABOUT -->
+  <url>
+    <loc>https://www.manovate.co.in/about</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FREE CONSULTATION -->
+  <url>
+    <loc>https://www.manovate.co.in/free-consultation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- SOLUTIONS -->
+  <url>
+    <loc>https://www.manovate.co.in/solutions/ai-solutions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/solutions/legacy-modernization</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/solutions/cybersecurity</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/solutions/data-analytics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/solutions/product-engineering</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/solutions/cloud-transformation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- PRODUCTS -->
+  <url>
+    <loc>https://www.manovate.co.in/products/hrms</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/products/crm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/products/messaging</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/products/food-delivery</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- SERVICES -->
+  <url>
+    <loc>https://www.manovate.co.in/itservices</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/nonitservices</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- CAREERS -->
+  <url>
+    <loc>https://www.manovate.co.in/careers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LEGAL -->
+  <url>
+    <loc>https://www.manovate.co.in/legal</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://www.manovate.co.in/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- CONTACT -->
+  <url>
+    <loc>https://www.manovate.co.in/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
+>>>>>>> a6bc8d8 (backend_check)
