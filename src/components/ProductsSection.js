@@ -85,7 +85,7 @@ useEffect(() => {
         
         {/* LEFT CONTENT */}
         <div className="products-left">
-          <h1>{products[active].title}</h1>
+          <h2>{products[active].title}</h2>
           <p className="desc">
   {window.innerWidth < 768
     ? products[active].desc.slice(0, 180) + "..."

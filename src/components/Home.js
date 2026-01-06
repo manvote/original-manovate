@@ -20,6 +20,10 @@ import digitalImg from "../assets/digital.png"
 import ProductsSection from "./ProductsSection";
 import webImg from "../assets/webover.png"
 import Solutions from "./Solutions";
+import Chatbot from "./Chatbot";
+import ChatButton from "./ChatButton";
+
+
 // later in JSX
 const images = [ hero2, hero3];
 
@@ -153,13 +157,29 @@ useEffect(() => {
   return () => observer.disconnect();
 }, []);
 
+const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
 
   return (
     <>
+    
       <Navbar />
 
-      
+      {/* Chatbot */}
+      <Chatbot open={open} onClose={() => setOpen(false)} />
+
+      {/* Chat button ONLY when chat is closed */}
+      {!open && (
+        <ChatButton onClick={() => setOpen(true)} />
+      )}
 
 {/* ---------------------- HERO SLIDER ---------------------- */}
       <div className="hero-slider">
@@ -172,7 +192,7 @@ useEffect(() => {
         ))}
 
         <div className="hero-content">
-          <h1>Engineering Digital Success</h1>
+          <h2>Engineering Digital Success</h2>
           <p>Transforming businesses through technology and innovation</p><br></br>
          <Link to="/request-demo" className="hero-demo-btn">
   Book a Demo <span>→</span>
@@ -279,9 +299,9 @@ useEffect(() => {
 
   <p className="home-services-tag">• Services</p>
 
-  <h1 className="home-services-title">
+  <h2 className="home-services-title">
     Transforming Businesses<br />Through Engineering Excellence
-  </h1>
+  </h2>
 
   <div className="home-services-grid">
 

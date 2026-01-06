@@ -107,9 +107,9 @@ const prev = () => {
       <div className="solutions-accent" />
       <p className="solution-tag">• Solutions</p>
 
-      <h1 className="solution-title">
+      <h2 className="solution-title">
         Powering Businesses Through Smart <br /> Engineering
-      </h1>
+      </h2>
 
       <div className="carousel-wrapper">
         <button className="carousel-arrow left" onClick={prev}>‹</button>
