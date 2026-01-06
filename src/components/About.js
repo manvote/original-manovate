@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import ClientGrowthWithFilter from "./charts/ClientGrowthWithFilter";
 import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -143,6 +144,15 @@ const About = () => {
         >
           <FaEnvelope />
         </a>
+
+        <a
+    href="https://syedkareemmynudeen.page.gd/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Portfolio Website"
+  >
+    <FaGlobe />
+  </a>
       </div>
     </div>
 
@@ -181,6 +191,14 @@ const About = () => {
         >
           <FaEnvelope />
         </a>
+        <a
+    href="https://harishn.rf.gd/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Portfolio Website"
+  >
+    <FaGlobe />
+  </a>
       </div>
     </div>
 
@@ -219,6 +237,15 @@ const About = () => {
         >
           <FaEnvelope />
         </a>
+
+        <a
+    href="https://santhosh.page.gd/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Portfolio Website"
+  >
+    <FaGlobe />
+  </a>
       </div>
     </div>
 
