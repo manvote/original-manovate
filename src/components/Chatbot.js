@@ -21,7 +21,7 @@ const decisionKeywords = [
   "i want",
 ];
 
-const CHAT_API = "http://127.0.0.1:8000/api/chat/";
+const CHAT_API = "https://manovatebackend.onrender.com/api/chat/";
 
 export default function Chatbot({ open, onClose }) {
   const [messages, setMessages] = useState([
