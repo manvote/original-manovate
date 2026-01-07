@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./solutions.css";
 
-import aisolutions from "../assets/ai-solutions.jpg";
-import modernization from "../assets/modernization.jpg";
-import cloudMigration from "../assets/cloud-com.avif";
-import cybersecurity from "../assets/cyber-security.jpg";
-import dataAnalytics from "../assets/data.jpg";
-import productEngineering from "../assets/product-engineering.avif";
+import aisolutions from "../assets/ai-solutions.webp";
+import modernization from "../assets/legacy-modernization.webp";
+import cloudMigration from "../assets/cloud-transformation.webp";
+import cybersecurity from "../assets/cybersecurity.webp";
+import dataAnalytics from "../assets/data-analytics.webp";
+import productEngineering from "../assets/product-engineering.webp";
 
 const SolutionsCarousel = () => {
 

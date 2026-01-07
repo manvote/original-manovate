@@ -1,10 +1,10 @@
 // components/ProductsSection.jsx
 import React, { useEffect, useState, useRef } from "react";
 import "./products.css";
-import hrms from "../assets/hrms.webp";
-import crm from "../assets/crm.jpeg";
-import product1 from "../assets/product1.jpeg";
-import product2 from "../assets/product2.jpeg";
+import hrms from "../assets/enterprise-hrms-platform.webp";
+import crm from "../assets/customer-relationship-management.webp";
+import product1 from "../assets/enterprise-messaging-collaboration-app.webp";
+import product2 from "../assets/food-delivery-order-management-platform.webp";
  
 const products = [
   {

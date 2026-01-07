@@ -1,9 +1,9 @@
 import React from "react";
 import "./About.css";
-import ceo from "../assets/team/ceo.png";
-import manager1 from "../assets/team/manager.jpg";
-import manager2 from "../assets/team/manager1.jpeg";
-import robotImg from "../assets/download.png"
+import ceo from "../assets/team/ceo.webp";
+import manager1 from "../assets/team/manager.webp";
+import manager2 from "../assets/team/manager1.webp";
+import robotImg from "../assets/ai-waving-robot.webp"
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import ClientGrowthWithFilter from "./charts/ClientGrowthWithFilter";

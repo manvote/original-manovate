@@ -7,18 +7,18 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 // Hero images
 
-import hero2 from "../assets/hero2.jpeg";
-import hero3 from "../assets/hero3.jpeg";
-import aiImg from "../assets/ai.png";
-import cloudImg from "../assets/cloudover.png";
-import cyberImg from "../assets/cyber.png";
-import appImg from "../assets/mobile.png";
-import productImg from "../assets/businessover.png";
-import brandingImg from "../assets/bdover.jpg";
-import businessImg from "../assets/business.png";
-import digitalImg from "../assets/digital.png"
+import hero2 from "../assets/enterprise-software-development-meeting.webp";
+import hero3 from "../assets/ai-powered-digital-solutions.webp";
+import aiImg from "../assets/ai-automation-solutions.webp";
+import cloudImg from "../assets/cloud-infrastructure-services.webp";
+import cyberImg from "../assets/cybersecurity-solutions.webp";
+import appImg from "../assets/mobile-application-development.webp";
+import productImg from "../assets/custom-enterprise-software.webp";
+import brandingImg from "../assets/branding-creative-services.webp";
+import businessImg from "../assets/business-strategy-consulting.webp";
+import digitalImg from "../assets/digital-marketing-services.webp";
 import ProductsSection from "./ProductsSection";
-import webImg from "../assets/webover.png"
+import webImg from "../assets/website-web-application-services.webp"
 import Solutions from "./Solutions";
 import Chatbot from "./Chatbot";
 import ChatButton from "./ChatButton";
@@ -29,8 +29,15 @@ const images = [ hero2, hero3];
 
 const Home = () => {
   /* ---------------------- HERO SLIDER LOGIC ---------------------- */
-  const [index] = useState(0);
+  const [index, setIndex] = useState(0);
 
+useEffect(() => {
+  const interval = setInterval(() => {
+    setIndex((prev) => (prev + 1) % images.length);
+  }, 5000); // 5 seconds
+
+  return () => clearInterval(interval);
+}, []);
 
 
   useEffect(() => {
@@ -181,6 +188,7 @@ const [open, setOpen] = useState(false);
         <ChatButton onClick={() => setOpen(true)} />
       )}
 
+
 {/* ---------------------- HERO SLIDER ---------------------- */}
       <div className="hero-slider">
         {images.map((img, i) => (
@@ -192,13 +200,20 @@ const [open, setOpen] = useState(false);
         ))}
 
         <div className="hero-content">
-          <h2>Engineering Digital Success</h2>
-          <p>Transforming businesses through technology and innovation</p><br></br>
-         <Link to="/request-demo" className="hero-demo-btn">
-  Book a Demo <span>→</span>
-</Link>
-        </div>
-      </div>
+  <h1>Building Intelligent AI-Powered Software for Modern Enterprises</h1>
+
+  <p className="hero-desc">
+  Manovate Technologies is a technology and consulting partner delivering
+intelligent, AI-powered software, enterprise platforms, and scalable
+digital solutions.
+</p>
+
+<br />
+  <Link to="/request-demo" className="hero-demo-btn">
+    Book a Demo <span>→</span>
+  </Link>
+</div>
+ </div>
 
 
       {/* ------------------ ULTRA PREMIUM IMPACT SECTION 2.0 ------------------ */}
@@ -394,7 +409,7 @@ const [open, setOpen] = useState(false);
             <p>{item.desc}</p>
 
             <Link to={link} className="home-service-link">
-              Explore Services →
+              Explore AI & Software Services →
             </Link>
           </div>
 
