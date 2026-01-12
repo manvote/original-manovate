@@ -137,7 +137,7 @@ useEffect(() => {
   />
 </div>
 
-
+<br />
         <h2>Manovate AI Assistance</h2>
         <p className="subtitle">How can I help you today?</p>
       </div>

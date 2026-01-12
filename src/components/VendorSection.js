@@ -34,7 +34,7 @@ export default function VendorSection() {
       <p className="vendor-eyebrow">Trusted Vendors</p>
 
       <h2 className="vendor-heading">
-        Partners & platforms we collaborate with
+        Collaborations That Drive Innovation
       </h2>
 
       <div className="vendor-grid">

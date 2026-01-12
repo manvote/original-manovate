@@ -26,6 +26,15 @@ import neondb from "../assets/tools/neondb.png";
 import zohomail from "../assets/tools/zohomail.svg";
 import zohocliq from "../assets/tools/zohocliq.svg";
 import workplace from "../assets/tools/workplace.svg";
+import android from "../assets/tools/android.png";
+import applexcode from "../assets/tools/applexcode.jpg";
+import canva from "../assets/tools/canva.svg";
+import cypress from "../assets/tools/cypress.svg";
+import jira from "../assets/tools/jira.jpg";
+import notion from "../assets/tools/notion.png";
+import playwright from "../assets/tools/playwright.png";
+import slack from "../assets/tools/slack.png";
+import tally from "../assets/tools/tally.png";
 
 const tools = [
   { Icon: FaGithub, color: "#181717" },
@@ -51,6 +60,15 @@ const tools = [
   { Icon: () => <img src={zohomail} alt="Zoho Mail" style={{ width: '90px', height: '90px' }} />},
   { Icon: () => <img src={zohocliq} alt="Zoho Cliq" style={{ width: '90px', height: '90px' }} /> },
   { Icon: () => <img src={workplace} alt="Workplace" style={{ width: '150px', height: '150px' }} /> },
+  { Icon: () => <img src={android} alt="android" style={{ width: '80px', height: '80px' }} /> },
+  { Icon: () => <img src={applexcode} alt="applexcode" style={{ width: '100px', height: '100px' }} /> },
+  { Icon: () => <img src={canva} alt="canva" style={{ width: '150px', height: '150px' }} /> },
+  { Icon: () => <img src={cypress} alt="cypress" style={{ width: '150px', height: '150px' }} /> },
+  { Icon: () => <img src={jira} alt="jira" style={{ width: '150px', height: '80px' }} /> },
+  { Icon: () => <img src={notion} alt="notion" style={{ width: '150px', height: '150px' }} /> },
+  { Icon: () => <img src={slack} alt="slack" style={{ width: '150px', height: '100px' }} /> },
+  { Icon: () => <img src={tally} alt="tally" style={{ width: '150px', height: '150px' }} /> },
+  { Icon: () => <img src={playwright} alt="playwright" style={{ width: '150px', height: '150px' }} /> },
 ];
 
 export default function ToolsSection() {
@@ -68,7 +86,7 @@ export default function ToolsSection() {
 
 
 
-      <div className="carousel-wrapper">
+      <div className="tools-carousel-wrapper">
   <div className="carousel">
     <div className="track">
       {[...tools, ...tools].map(({ Icon, color }, index) => (
@@ -78,9 +96,6 @@ export default function ToolsSection() {
       ))}
     </div>
   </div>
-
-  <div className="fade left" />
-  <div className="fade right" />
 </div>
 
     </section>
