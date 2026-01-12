@@ -5,6 +5,7 @@ import "./impact.css";
 import "./solutions.css";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 // Hero images
 
 import hero2 from "../assets/enterprise-software-development-meeting.webp";
@@ -22,6 +23,8 @@ import webImg from "../assets/website-web-application-services.webp"
 import Solutions from "./Solutions";
 import Chatbot from "./Chatbot";
 import ChatButton from "./ChatButton";
+import ToolsCarousel from "./ToolsSection";
+import VendorSection from "./VendorSection";
 
 
 // later in JSX
@@ -179,6 +182,16 @@ const [open, setOpen] = useState(false);
     <>
     
       <Navbar />
+<Helmet>
+        <title>AI Software Development Company | Manovate Technologies</title>
+
+        <meta
+          name="description"
+          content="Manovate Technologies is an AI-driven software development and digital engineering company delivering scalable enterprise solutions."
+        />
+
+        <link rel="canonical" href="https://www.manovate.co.in/" />
+      </Helmet>
 
       {/* Chatbot */}
       <Chatbot open={open} onClose={() => setOpen(false)} />
@@ -306,7 +319,7 @@ digital solutions.
 
 <Solutions />
 
-
+<ToolsCarousel />
 
 
  {/* ================= HOME SERVICES SECTION ================= */}
@@ -423,6 +436,7 @@ digital solutions.
 
 
 <ProductsSection />
+<VendorSection />
 
 <section className="impact-story impact-story--compact">
 

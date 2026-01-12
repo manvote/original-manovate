@@ -1,0 +1,107 @@
+.tools-section {
+  position: relative;
+  padding: 150px 0;
+  background: #ffffff;
+  text-align: left;
+  overflow: hidden;
+}
+.tools-header {
+  max-width: 1200px;          /* enterprise width */
+  padding-left: 80px;         /* premium spacing */
+  padding-right: 40px;
+  margin-bottom: 90px;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.tools-eyebrow {
+  color: #1f4fd8;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.tools-heading {
+  color: #0b2c5d;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 90px;
+}
+
+/* Carousel */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  width: max-content;
+  padding: 60px 0;
+  animation: scroll 25s linear infinite;
+}
+
+/* Icon container */
+.tool-icon {
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  transition: transform 0.35s ease;
+}
+
+/* Hover effect */
+.tool-icon:hover {
+  transform: scale(1.3);
+}
+
+/* Infinite scroll */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Fade edges */
+.fade {
+  position: absolute;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.fade.left {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 35%, transparent);
+}
+
+.fade.right {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 35%, transparent);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tools-heading {
+    font-size: 28px;
+  }
+
+  .track {
+    gap: 70px;
+    animation-duration: 20s;
+  }
+
+  .tool-icon {
+    font-size: 44px;
+  }
+}
