@@ -1,5 +1,5 @@
 import "./ChatButton.css";
-import logo from "../assets/icon2.png";
+import chatbotIcon from "../assets/download.png"; // 👈 your chatbot image
 
 export default function ChatButton({ onClick }) {
   return (
@@ -9,8 +9,8 @@ export default function ChatButton({ onClick }) {
       aria-label="Open chat"
     >
       <img
-        src={logo}
-        alt="Manovate Chat"
+        src={chatbotIcon}
+        alt="Manovate Chatbot"
         className="chat-button-logo"
       />
     </button>
