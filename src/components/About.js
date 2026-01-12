@@ -9,11 +9,26 @@ import Navbar from "./Navbar";
 import ClientGrowthWithFilter from "./charts/ClientGrowthWithFilter";
 import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
+
 
 const About = () => {
   return (
     <>
     <Navbar />
+
+<Helmet>
+  <title>About Manovate Technologies | AI & Digital Engineering Company</title>
+
+  <meta
+    name="description"
+    content="Learn about Manovate Technologies, a technology consulting and AI-driven software engineering company building secure, scalable, and future-ready digital platforms."
+  />
+
+  <link rel="canonical" href="https://www.manovate.co.in/about" />
+</Helmet>
+
+
     <div className="about-wrapper">
 
       {/* HERO */}
@@ -23,7 +38,7 @@ const About = () => {
 
     {/* LEFT CONTENT */}
     <div className="about-hero-inner">
-      <h1>Engineering Digital Excellence</h1>
+      <h2>Engineering Digital Excellence at Manovate Technologies</h2>
 
       <p>
         Manovate Technologies is a technology consulting and engineering
@@ -46,7 +61,10 @@ const About = () => {
 
     {/* RIGHT – ROBOT */}
     <div className="about-hero-robot">
-      <img src={robotImg} alt="AI Robot" />
+      <img
+  src={robotImg}
+  alt="AI-powered digital engineering innovation at Manovate Technologies"
+/>
     </div>
 
   </div>
@@ -111,7 +129,8 @@ const About = () => {
     {/* FOUNDER */}
     <div className="team-card">
       <div className="team-photo">
-        <img src={ceo} alt="Syed Kareem Mynudeen - Founder & Director" />
+        <img src={ceo} alt="Syed Kareem Mynudeen, Founder and Director of Manovate Technologies"
+ />
       </div>
 
       <h4>Syed Kareem Mynudeen</h4>
