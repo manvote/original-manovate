@@ -1,5 +1,5 @@
 import "./ChatButton.css";
-import chatbotIcon from "../assets/download.png"; // 👈 your chatbot image
+import chatbotIcon from "../assets/bot.png"; // 👈 your chatbot image
 
 export default function ChatButton({ onClick }) {
   return (

@@ -15,7 +15,7 @@
 .tools-carousel-wrapper {
   position: relative;
   margin-top: 80px;
-  padding: 40px 0;
+  padding: 0px 0;
 
   background: #ffffff;
 
@@ -62,7 +62,7 @@
   gap: 120px;
   width: max-content;
   padding: 60px 0;
-  animation: scroll 25s linear infinite;
+  animation: scroll 45s linear infinite;
 }
 
 /* Icon container */

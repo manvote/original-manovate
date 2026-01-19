@@ -15,7 +15,8 @@ export const ITservicesData = [
           "Modern, responsive, and SEO-optimized websites built for growth.",
         heroImage: "/itservices/wdhero.jpg",
         overviewImage: "/itservices/wdover.jpg",
-        overview: `
+        pagePath: "/itservices/web-design-development",
+        overview: ` 
 We design and develop visually compelling, responsive, and performance-driven websites that act as a strong digital foundation for businesses. Our focus is on usability, scalability, and search engine visibility to ensure long-term success.
 
 Every website is built with clean architecture, modern UI/UX principles, and optimized performance to support branding, engagement, and conversions.
@@ -42,6 +43,7 @@ Every website is built with clean architecture, modern UI/UX principles, and opt
         title: "Web Application Development",
         shortValue:
           "Secure and scalable web applications for business operations.",
+        pagePath: "/itservices/web-application-development",
         heroImage: "/itservices/wahero.jpg",
         overviewImage: "/itservices/wadover.jpg",
         overview: `
@@ -70,6 +72,7 @@ From dashboards to enterprise platforms, we deliver solutions that integrate sea
         title: "E-Commerce Platform Development",
         shortValue:
           "Conversion-focused and secure e-commerce platforms.",
+        pagePath: "/nonitservices/hr-consulting",
         heroImage: "/itservices/ecomhero.jpg",
         overviewImage: "/itservices/ecomover.jpg",
         overview: `
@@ -98,6 +101,7 @@ From B2C to B2B marketplaces, we help businesses grow digital revenue streams.
         title: "SaaS Application Development",
         shortValue:
           "Cloud-native SaaS platforms engineered for scale.",
+        pagePath: "/itservices/saas-application",
         heroImage: "/itservices/saashero.jpg",
         overviewImage: "/itservices/saasover.jpg",
         overview: `
@@ -136,6 +140,7 @@ From MVPs to enterprise SaaS platforms, we ensure performance and security.
         id: "android-app-development",
         title: "Android App Development",
         shortValue: "Scalable Android applications with superior performance.",
+        pagePath: "/itservices/android-app-development",
         heroImage: "/itservices/andhero.jpg",
         overviewImage: "/itservices/andover.jpg",
         overview: `
@@ -162,6 +167,7 @@ From consumer apps to enterprise mobility solutions, we deliver high-quality And
         id: "ios-app-development",
         title: "iOS App Development",
         shortValue: "Premium iOS applications for Apple devices.",
+        pagePath: "/nonitservices/hr-consulting",
         heroImage: "/itservices/ioshero.jpg",
         overviewImage: "/itservices/iosover.jpg",
         overview: `
@@ -188,6 +194,7 @@ We help businesses reach high-value Apple users with reliable solutions.
         id: "cross-platform-app-development",
         title: "Cross-Platform App Development",
         shortValue: "Single codebase apps for iOS and Android.",
+        pagePath: "/itservices/cross-platform-app",
         heroImage: "/itservices/crosshero.jpg",
         overviewImage: "/itservices/crossover.jpg",
         overview: `
@@ -227,6 +234,7 @@ Ideal for startups and fast-growing businesses.
         shortValue: "Conversational AI for customer engagement.",
         heroImage: "/itservices/chathero.jpg",
         overviewImage: "/itservices/chatover.jpg",
+        pagePath: "/itservices/chatbot-development",
         overview: `
 We build AI-powered chatbots that automate customer support, sales interactions, and internal processes. Our chatbots integrate with existing platforms for seamless operations.
 
@@ -251,6 +259,7 @@ They improve response times and reduce operational costs.
         id: "workflow-automation-rpa",
         title: "Workflow Automation & RPA",
         shortValue: "Automated workflows for operational efficiency.",
+        pagePath: "/itservices/workflow-automation",
         heroImage: "/itservices/workhero.jpg",
         overviewImage: "/itservices/workover.jpg",
         overview: `
@@ -277,6 +286,7 @@ Our automation solutions help businesses scale operations with minimal friction.
         id: "recommendation-engine",
         title: "Recommendation Engine Development",
         shortValue: "Personalized recommendation systems.",
+        pagePath: "/itservices/recommendation-engine",
         heroImage: "/itservices/recomhero.jpg",
         overviewImage: "/itservices/recomover.jpg",
         overview: `
@@ -303,6 +313,7 @@ Ideal for e-commerce, media, and content platforms.
         id: "machine-learning-solutions",
         title: "Machine Learning Solutions",
         shortValue: "Predictive and intelligent ML systems.",
+        pagePath: "/itservices/ai-ml-solutions",
         heroImage: "/itservices/mlhero.jpg",
         overviewImage: "/itservices/mlover.jpg",
         overview: `
@@ -329,6 +340,7 @@ These solutions empower smarter business decisions.
         id: "computer-vision-solutions",
         title: "Computer Vision Solutions",
         shortValue: "Visual intelligence for automation.",
+        pagePath: "/itservices/computer-vision",
         heroImage: "/itservices/cvhero.jpg",
         overviewImage: "/itservices/cvover.jpg",
         overview: `
@@ -355,6 +367,7 @@ Used across industrial and smart systems.
         id: "aiot-solutions",
         title: "AIoT Solutions",
         shortValue: "AI-powered IoT intelligence.",
+        pagePath: "/itservices/aiot-solutions",
         heroImage: "/itservices/iothero.jpg",
         overviewImage: "/itservices/iotover.jpg",
         overview: `
@@ -394,6 +407,7 @@ Ideal for smart infrastructure and industrial automation.
         shortValue: "Tailored enterprise software solutions.",
         heroImage: "/itservices/cshero.jpg",
         overviewImage: "/itservices/csover.jpg",
+        pagePath: "/itservices/custom-software",
         overview: `
 We design and develop custom software solutions tailored to unique business processes. Our solutions are secure, scalable, and future-ready.
 
@@ -418,6 +432,7 @@ They integrate seamlessly with existing enterprise systems.
         id: "crm-systems",
         title: "CRM Systems",
         shortValue: "Customer relationship management platforms.",
+        pagePath: "/itservices/crm-services",
         heroImage: "/itservices/crmhero.jpg",
         overviewImage: "/itservices/crmover.jpg",
         overview: `
@@ -439,11 +454,57 @@ Our CRM platforms enhance customer engagement and business intelligence.
         ],
         industries: ["Sales", "Services"]
       },
+      {
+  id: "it-staff-augmentation",
+  title: "IT Staff Augmentation",
+  shortValue: "Flexible access to skilled IT professionals.",
+  heroImage: "/itservices/itstaffhero.jpg",
+  overviewImage: "/itservices/itstaffover.jpg",
+  pagePath: "/itservices/it-staff-augmentation",
+  overview: `
+We provide experienced IT professionals who seamlessly integrate with your in-house teams to accelerate project delivery.
+
+Our staff augmentation model offers flexibility, scalability, and cost efficiency while maintaining full control over your development processes.
+  `,
+  capabilities: [
+    "Dedicated Development Teams",
+    "Frontend & Backend Developers",
+    "Full-Stack Engineers",
+    "Mobile App Developers",
+    "Cloud & DevOps Engineers",
+    "QA & Test Engineers",
+    "UI/UX Designers",
+    "Project & Delivery Management"
+  ],
+  tools: [
+    "react",
+    "node",
+    "python",
+    "java",
+    "aws",
+    "docker"
+  ],
+  outcomes: [
+    "Faster project delivery",
+    "Reduced hiring costs",
+    "On-demand scalability",
+    "Improved team productivity"
+  ],
+  industries: [
+    "Technology",
+    "Finance",
+    "Healthcare",
+    "Retail",
+    "Manufacturing"
+  ]
+}
+,
 
       {
         id: "erp-systems",
         title: "ERP Systems",
         shortValue: "Integrated enterprise resource planning systems.",
+        pagePath: "/itservices/erp-services",
         heroImage: "/itservices/erphero.jpg",
         overviewImage: "/itservices/erpover.jpg",
         overview: `
@@ -470,6 +531,7 @@ Designed for scalability and compliance.
         id: "hrms-platforms",
         title: "HRMS Platforms",
         shortValue: "Human resource management systems.",
+        pagePath: "/itservices/hrms-services",
         heroImage: "/itservices/hrmshero.jpg",
         overviewImage: "/itservices/hrmsover.jpg",
         overview: `
@@ -496,6 +558,7 @@ Our systems support compliance and workforce productivity.
         id: "inventory-asset-management",
         title: "Inventory & Asset Management Systems",
         shortValue: "Track and manage enterprise assets.",
+        pagePath: "/itservices/inventory-asset-management",
         heroImage: "/itservices/invenhero.jpg",
         overviewImage: "/itservices/invenover.jpg",
         overview: `
@@ -535,6 +598,7 @@ These systems reduce losses and improve operational efficiency.
         shortValue: "Seamless migration to the cloud.",
         heroImage: "/itservices/cloudhero.jpg",
         overviewImage: "/itservices/cloudover.jpg",
+        pagePath: "/itservices/cloud-migration",
         overview: `
 We migrate applications and infrastructure to the cloud with minimal downtime. Our approach ensures security, performance, and cost efficiency.
 
@@ -559,6 +623,7 @@ We support hybrid and multi-cloud environments.
         id: "cloud-architecture-setup",
         title: "Cloud Architecture Setup",
         shortValue: "Robust cloud architecture design.",
+        pagePath: "/nonitservices/hr-consulting",
         heroImage: "/itservices/clarhero.jpg",
         overviewImage: "/itservices/clarover.jpg",
         overview: `
@@ -585,6 +650,7 @@ Built for reliability and future growth.
         id: "application-integrations",
         title: "Application Integrations",
         shortValue: "Seamless system integrations.",
+        pagePath: "/itservices/application-integration",
         heroImage: "/itservices/aihero.jpg",
         overviewImage: "/itservices/aiover.jpg",
         overview: `
@@ -611,6 +677,7 @@ Supports cloud and on-premise systems.
         id: "infrastructure-optimization",
         title: "Infrastructure Optimization",
         shortValue: "Optimize infrastructure performance and cost.",
+        pagePath: "/itservices/it-infrastructure-management",
         heroImage: "/itservices/infrahero.jpg",
         overviewImage: "/itservices/infraover.jpg",
         overview: `
@@ -637,6 +704,7 @@ Focused on long-term sustainability.
         id: "ucaas",
         title: "Unified Communications (UCaaS)",
         shortValue: "Cloud-based communication platforms.",
+        pagePath: "/itservices/unified-communications",
         heroImage: "/itservices/ucaashero.jpg",
         overviewImage: "/itservices/ucaasover.jpg",
         overview: `
@@ -676,6 +744,7 @@ Designed for modern distributed teams.
         shortValue: "Comprehensive security assessments.",
         heroImage: "/itservices/sahero.jpg",
         overviewImage: "/itservices/saover.jpg",
+        pagePath: "/itservices/cyber-security-audit",
         overview: `
 We conduct in-depth security audits to identify vulnerabilities and compliance gaps. Our audits help organizations strengthen security posture.
 
@@ -700,6 +769,7 @@ Ensures regulatory compliance and risk reduction.
         id: "vulnerability-assessment",
         title: "Vulnerability Assessment",
         shortValue: "Identify and mitigate vulnerabilities.",
+        pagePath: "/nonitservices/hr-consulting",
         heroImage: "/itservices/vulhero.jpg",
         overviewImage: "/itservices/vulover.jpg",
         overview: `
@@ -728,6 +798,7 @@ Designed for proactive risk management.
         shortValue: "24/7 threat detection and response.",
         heroImage: "/itservices/tmhero.jpg",
         overviewImage: "/itservices/tmover.jpg",
+        pagePath: "/itservices/threat-monitoring",
         overview: `
 We provide continuous threat monitoring to detect and respond to security incidents in real time. Our solutions ensure business continuity.
 
@@ -754,6 +825,7 @@ Proactive defense against cyber threats.
         shortValue: "Protect sensitive data and ensure compliance.",
         heroImage: "/itservices/dphero.jpg",
         overviewImage: "/itservices/dpover.jpg",
+        pagePath: "/itservices/data-protection",
         overview: `
 We implement data protection strategies that ensure confidentiality, integrity, and compliance with regulations. Our solutions safeguard critical business data.
 

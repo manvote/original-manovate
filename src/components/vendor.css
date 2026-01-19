@@ -28,19 +28,11 @@
 /* CARD */
 .vendor-card {
   height: 120px;
-  border-radius: 16px;
-  background: #f8fafc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.35s ease;
+  background: transparent;
 }
 
-.vendor-card img {
-  max-width: 120px;
-  max-height: 60px;
-  transition: transform 0.3s ease;
-}
+
+
 
 
 /* HOVER EFFECT */
@@ -65,4 +57,24 @@
   .vendor-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.vendor-logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vendor-logo img {
+  max-width: 140px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* Only for white logos */
+.logo-dark {
+  background: #0b2c5d; /* or #1f4fd8 */
+  padding: 16px 20px;
+  border-radius: 12px;
 }

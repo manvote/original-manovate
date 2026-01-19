@@ -149,23 +149,23 @@ useEffect(() => {
 
 useEffect(() => {
   const graph = document.querySelector(".growth-graph-card");
-
   if (!graph) return;
 
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
         graph.classList.add("in-view");
-        observer.disconnect();
+        observer.unobserve(graph); // ✅ unobserve ONLY this element
       }
     },
-    { threshold: 0.4 }
+    { threshold: 0.3 }
   );
 
   observer.observe(graph);
 
   return () => observer.disconnect();
 }, []);
+
 
 const [open, setOpen] = useState(false);
 
@@ -212,7 +212,7 @@ const [open, setOpen] = useState(false);
           ></div>
         ))}
 
-        <div className="hero-content">
+        <div className="home-hero-content">
   <h1>Building Intelligent AI-Powered Software for Modern Enterprises</h1>
 
   <p className="hero-desc">

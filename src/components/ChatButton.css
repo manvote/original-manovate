@@ -7,7 +7,7 @@
   height: 56px;
   border-radius: 50%;
 
-  background: transparent; /* ❌ no bg */
+  background: white; /* ❌ no bg */
   border: none;
   padding: 0;
   cursor: pointer;
@@ -34,8 +34,8 @@
 
 /* 🔥 IMAGE ZOOMED & CROPPED */
 .chat-button-logo {
-  width: 120%;     /* 👈 zoom in */
-  height: 120%;
+  width: 90%;     /* 👈 zoom in */
+  height: 90%;
   object-fit: cover; /* 🔥 fills circle */
 }
 

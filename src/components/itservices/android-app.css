@@ -1,0 +1,432 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #f5f9ff;
+  color: #0f172a;
+}
+
+/* ================= GLOBAL ================= */
+section {
+  padding: 100px 0;
+}
+
+.service-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+h1 {
+  font-size: clamp(42px, 5vw, 64px);
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 42px;
+  color: #062a5e;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #062a5e;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* ================= HERO + SLIDESHOW ================= */
+.hero-modern {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0 !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slides wrapper */
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Individual slide */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  transform: scale(1.08);
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 31, 68, 0.85),
+    rgba(4, 31, 68, 0.95)
+  );
+  z-index: 2;
+}
+
+/* Hero content */
+.service-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.service-hero-content p {
+  color: #dbe7ff;
+  margin: 20px auto 32px;
+}
+
+/* ================= BUTTON ================= */
+.btn-primary {
+  background: linear-gradient(135deg, #0b4edb, #1e6fff);
+  color: #fff;
+  padding: 16px 46px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* ================= GRIDS & CARDS ================= */
+.grid,
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 45px;
+  margin-top: 60px;
+}
+
+.card,
+.why-box {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 22px;
+  border: 1px solid #dbe7ff;
+  transition: all 0.35s ease;
+}
+
+.card:hover,
+.why-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(11, 78, 219, 0.15);
+}
+
+/* ================= PROCESS ================= */
+.process-wrapper {
+  max-width: 900px;
+  margin: auto;
+}
+
+.process-step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.process-number {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b4edb, #1e6fff);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* ================= BRAND FLOW ================= */
+.brand-flow-step {
+  max-width: 800px;
+  margin: auto;
+}
+
+.brand-step-count {
+  color: #0058f0;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.brand-flow-arrow {
+  font-size: 30px;
+  color: #005eff;
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* ================= ADVANCED TIMELINE ================= */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 80px auto 0;
+  padding-left: 70px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 3px;
+  height: 0;
+  background: linear-gradient(180deg, #0b4edb, #1e6fff);
+  border-radius: 10px;
+  transition: height 0.1s linear;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 90px;
+  padding-left: 40px;
+  opacity: 0.35;
+  transition: all 0.4s ease;
+}
+
+.timeline-item.active {
+  opacity: 1;
+}
+#services {
+  background: #ffffff;
+  padding: 120px 0;
+  position: relative;
+  z-index: 2;
+}
+#services {
+  scroll-margin-top: 100px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+  background: #ffffff;
+  padding: 120px 0;
+  border-top: 1px solid #e5ecff;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.contact-left h2 {
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+.service-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.service-contact-form input,
+.service-contact-form textarea {
+  border: none;
+  border-bottom: 2px solid #cddcff;
+  padding: 14px 6px;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+}
+
+.service-contact-form input:focus,
+.service-contact-form textarea:focus {
+  border-color: #1e6fff;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #0b4edb, #1e6fff);
+  color: #fff;
+  padding: 16px 42px;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-right {
+  text-align: left;
+}
+
+.interest-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.interest-tags span {
+  padding: 10px 20px;
+  border: 1px solid #dbe7ff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.interest-tags span.active,
+.interest-tags span:hover {
+  background: #1e6fff;
+  color: #fff;
+  border-color: #1e6fff;
+}
+
+.project-btn {
+  background: #020617;
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 1px;
+  width: 14px;
+  height: 14px;
+  background: #c7d7ff;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.timeline-item.active::before {
+  background: #1e6fff;
+  box-shadow: 0 0 0 6px rgba(30, 111, 255, 0.25);
+}
+
+.timeline-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e6fff;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* ================= CONTACT ================= */
+.contact-section {
+  background: #ffffff;
+  border-top: 1px solid #e5ecff;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #cddcff;
+  padding: 14px;
+  font-size: 16px;
+  background: transparent;
+  margin-bottom: 24px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #0b4edb, #1e6fff);
+  color: #ffffff;
+  padding: 16px 42px;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* ================= ANIMATIONS ================= */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate.visible {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 45px;
+  }
+
+  .timeline-line {
+    left: 5px;
+  }
+
+  .timeline-item {
+    padding-left: 30px;
+  }
+}

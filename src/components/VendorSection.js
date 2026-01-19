@@ -2,31 +2,42 @@ import "./vendor.css";
 
 // import your logos here
 import auditify from "../assets/vendors/auditify.png";
-import axiselevate from "../assets/vendors/axiselevate.png";
-import cma_cgm from "../assets/vendors/cma_cgm.jpg";
+import axiselevate from "../assets/vendors/axiselevate.jpg";
+import cma_cgm from "../assets/vendors/cmacgm.svg";
 import crossml from "../assets/vendors/crossml.svg";
 import logiqtrove from "../assets/vendors/logiqtrove.png";
 import nithminds from "../assets/vendors/nithminds.jpg";
 import quantiqueminds from "../assets/vendors/quantiqueminds.svg";
-import testriq from "../assets/vendors/testriq.png";
-import trootech from "../assets/vendors/trootech.png";
-import vibevision from "../assets/vendors/vibevision.webp";
-import zenithblox from "../assets/vendors/zenithblox.jpg";
+import testriq from "../assets/vendors/testriq.webp";
+import trootech from "../assets/vendors/trootech.svg";
+import vibevision from "../assets/vendors/vibevision.png";
+import zenithblox from "../assets/vendors/zenithblox.svg";
+import mindwebsolutions from "../assets/vendors/mindwebsolutions.webp";
+import wildpitch from "../assets/vendors/wildpitch.jpg";
+import letmestudy from "../assets/vendors/letmestudy.png";
+import kevinandary from "../assets/vendors/kevinandary.png";
+import softservehub from "../assets/vendors/softservehub.png";
 // add more as needed
 
 const vendors = [
-  auditify,
-  axiselevate,
-  cma_cgm,
-  crossml,
-  logiqtrove,
-  nithminds,
-  quantiqueminds,
-  testriq,
-  trootech,
-  vibevision,
-  zenithblox,
+  { src: auditify, bg: "dark" },
+  { src: axiselevate },
+  { src: cma_cgm },
+  { src: crossml },
+  { src: logiqtrove },
+  { src: nithminds },
+  { src: quantiqueminds },
+  { src: testriq },
+  { src: trootech },
+  { src: vibevision },
+  { src: zenithblox, bg: "dark" },
+  { src: mindwebsolutions, bg: "dark" },
+  { src:wildpitch },
+  { src:kevinandary },
+  { src:letmestudy },
+  { src:softservehub },
 ];
+
 
 export default function VendorSection() {
   return (
@@ -38,12 +49,16 @@ export default function VendorSection() {
       </h2>
 
       <div className="vendor-grid">
-        {vendors.map((logo, index) => (
-          <div className="vendor-card" key={index}>
-            <img src={logo} alt="Vendor logo" />
-          </div>
-        ))}
-      </div>
+  {vendors.map((vendor, index) => (
+    <div
+      key={index}
+      className={`vendor-logo ${vendor.bg === "dark" ? "logo-dark" : ""}`}
+    >
+      <img src={vendor.src} alt="Vendor logo" />
+    </div>
+  ))}
+</div>
+
     </section>
   );
 }

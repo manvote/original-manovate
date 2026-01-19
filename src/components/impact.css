@@ -416,12 +416,14 @@
 .home-service-overlay h3 {
   font-size: 22px;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .home-service-overlay p {
   font-size: 15px;
   line-height: 1.6;
   opacity: 0.9;
+  color: #ffffff;
 }
 
 /* Responsive */
@@ -687,8 +689,13 @@
 .growth-graph path {
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  transition: stroke-dashoffset 1.6s ease;
 }
+
+/* ONCE VISIBLE — STAY VISIBLE */
+.growth-graph-card.in-view path {
+  stroke-dashoffset: 0;
+}
+
 
 @keyframes drawLine {
   to {
