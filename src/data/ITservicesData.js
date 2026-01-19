@@ -596,9 +596,9 @@ These systems reduce losses and improve operational efficiency.
         id: "cloud-migration",
         title: "Cloud Migration",
         shortValue: "Seamless migration to the cloud.",
+        pagePath: "/itservices/cloud-migration",
         heroImage: "/itservices/cloudhero.jpg",
         overviewImage: "/itservices/cloudover.jpg",
-        pagePath: "/itservices/cloud-migration",
         overview: `
 We migrate applications and infrastructure to the cloud with minimal downtime. Our approach ensures security, performance, and cost efficiency.
 
@@ -677,7 +677,7 @@ Supports cloud and on-premise systems.
         id: "infrastructure-optimization",
         title: "Infrastructure Optimization",
         shortValue: "Optimize infrastructure performance and cost.",
-        pagePath: "/itservices/it-infrastructure-management",
+        pagePath: "/itservices/infrastructure-management",
         heroImage: "/itservices/infrahero.jpg",
         overviewImage: "/itservices/infraover.jpg",
         overview: `

@@ -37,12 +37,13 @@ import NonITServiceDetail from "./components/NonITServiceDetail";
 import ScrollToTop from "./components/scrolltop";
 import Legal from "./components/Legal";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+/*IT Serices path*/
 import AndroidAppDevelopment from "./components/itservices/android-app-development";
 import MachineLearningSolutions from "./components/itservices/ai-ml-solutions";
 import WebApplicationServices from "./components/itservices/web-application-development";
 import CustomEnterpriseSoftware from "./components/itservices/custom-software";
 import DataProtectionCompliance from "./components/itservices/data-protection";
-import ITInfrastructureManagement from "./components/itservices/infrastructure-management";
+import InfrastructureManagement from "./components/itservices/infrastructure-management";
 import InventoryAssetManagement from "./components/itservices/inventory-asset-management";
 import CyberSecurityAudit from "./components/itservices/cyber-security-audit";
 import ThreatMonitoringServices from "./components/itservices/threat-monitoring";
@@ -60,7 +61,7 @@ import AIRecommendationSystems from "./components/itservices/recommendation-engi
 import SaaSDevelopment from "./components/itservices/saas-application";
 import WebDevelopment from "./components/itservices/web-design -development";
 import WorkflowAutomation from "./components/itservices/workflow-automation";
-
+import ApplicationIntegration from "./components/itservices/application-integration";
 
 function App() {
   return (
@@ -122,7 +123,7 @@ function App() {
 />
 <Route
   path="/itservices/infrastructure-management"
-  element={<ITInfrastructureManagement />}
+  element={<InfrastructureManagement />}
 />
 <Route
   path="/itservices/inventory-asset-management"
@@ -153,7 +154,7 @@ function App() {
   element={<AIChatbotServices />}
 />
 <Route
-  path="/itservices/cloud-migration-services"
+  path="/itservices/cloud-migration"
   element={<CloudMigrationServices />}
 />
 <Route
@@ -191,6 +192,10 @@ function App() {
 <Route
   path="/itservices/workflow-automation"
   element={<WorkflowAutomation />}
+/>
+<Route
+  path="/itservices/application-integration"
+  element={<ApplicationIntegration />}
 />
 
 <Route path="/itservices/:categoryId" element={<ITServiceCategory />} />
