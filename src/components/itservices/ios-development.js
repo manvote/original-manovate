@@ -5,7 +5,7 @@ import hero3 from "../../assets/hero3.jpg";
 import inventoryGif from "../../assets/inventory-management.gif";
 import "./android-app.css";
 
-export default function AndroidAppDevelopment() {
+export default function IOSAppDevelopment() {
   const heroImages = [hero1, hero2, hero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,10 +13,10 @@ export default function AndroidAppDevelopment() {
   /* ================= SEO META ================= */
   useEffect(() => {
     document.title =
-      "Android App Development Services | Custom Android Applications";
+      "iOS App Development Services | Custom iPhone & iPad Applications";
 
     const content =
-      "Professional Android app development services to build secure, scalable, and high-performance Android applications. We develop custom Android apps using Kotlin, Java, and modern Android frameworks.";
+      "Professional iOS app development services for iPhone and iPad. We build secure, scalable, and high-performance iOS applications using Swift and modern Apple frameworks.";
 
     const metaDescription = document.querySelector(
       "meta[name='description']"
@@ -32,7 +32,7 @@ export default function AndroidAppDevelopment() {
     }
   }, []);
 
-  /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
+  /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -80,7 +80,7 @@ export default function AndroidAppDevelopment() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* ================= FADE-UP ANIMATION ================= */
+  /* ================= FADE-UP ================= */
   useEffect(() => {
     const elements = document.querySelectorAll(".animate");
 
@@ -118,16 +118,15 @@ export default function AndroidAppDevelopment() {
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
-          <h1>Android App Development Services</h1>
+          <h1>iOS App Development Services</h1>
           <p>
-            Manovate Technologies builds secure, scalable, and high-performance
-            Android applications tailored to your business needs. We deliver
-            intuitive mobile experiences across smartphones, tablets, and
-            Android devices.
+            Manovate Technologies builds premium iOS applications for iPhone and
+            iPad using Swift and Apple-native frameworks. Our apps deliver
+            seamless user experience, strong security, and long-term scalability.
           </p>
 
           <a href="#services" className="btn-primary">
-            Build Android App
+            Build iOS App
           </a>
         </div>
       </section>
@@ -137,33 +136,32 @@ export default function AndroidAppDevelopment() {
         <div className="service-container">
           <h2>Overview</h2>
           <p className="section-intro">
-            Our Android app development services help businesses design,
-            develop, and deploy powerful mobile applications using modern
-            Android technologies with a strong focus on performance,
-            security, and scalability.
+            Our iOS app development services help businesses design, develop, and
+            launch high-quality mobile applications for the Apple ecosystem. We
+            focus on performance, security, usability, and App Store compliance.
           </p>
 
           <div className="grid">
             <div className="card animate">
-              <h3>Custom Android App Development</h3>
+              <h3>Custom iOS App Development</h3>
               <p>
-                Tailor-made Android applications built with Kotlin and Java
-                to match business goals and user needs.
+                Native iOS applications built using Swift and Apple frameworks
+                tailored to business goals.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Android UI/UX Design</h3>
+              <h3>iOS UI/UX Design</h3>
               <p>
-                Intuitive and engaging user interfaces following Material
-                Design principles.
+                Elegant, intuitive interfaces following Apple Human Interface
+                Guidelines.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>API & Backend Integration</h3>
+              <h3>API & Apple Ecosystem Integration</h3>
               <p>
-                Seamless integration with APIs, backend systems, and cloud
+                Secure integration with APIs, backend systems, iCloud, and Apple
                 services.
               </p>
             </div>
@@ -174,10 +172,10 @@ export default function AndroidAppDevelopment() {
       {/* ================= TIMELINE ================= */}
       <section className="section-light">
         <div className="service-container">
-          <h2>Android App Development Process</h2>
+          <h2>iOS App Development Process</h2>
           <p className="section-intro">
-            A structured approach ensuring performance, quality, and Google
-            Play Store compliance.
+            A structured process ensuring quality, performance, and smooth App
+            Store approval.
           </p>
 
           <div className="timeline" id="brand-timeline">
@@ -186,28 +184,26 @@ export default function AndroidAppDevelopment() {
 
             <div className="timeline-item">
               <span className="timeline-label">Planning</span>
-              <h3>Strategy & Architecture</h3>
+              <h3>Product Strategy & Architecture</h3>
               <p>
-                Define app requirements, user journeys, and technical
-                architecture.
+                Define app goals, user journeys, and technical architecture
+                optimized for iOS.
               </p>
             </div>
 
             <div className="timeline-item">
               <span className="timeline-label">Development</span>
-              <h3>Android Engineering</h3>
+              <h3>iOS Engineering</h3>
               <p>
-                Secure and scalable Android app development using best
-                practices.
+                Secure, scalable iOS development using Swift and best practices.
               </p>
             </div>
 
             <div className="timeline-item">
               <span className="timeline-label">Launch</span>
-              <h3>Testing & Deployment</h3>
+              <h3>Testing & App Store Release</h3>
               <p>
-                Quality testing and successful publishing to the Google Play
-                Store.
+                QA testing, App Store submission, and post-launch optimization.
               </p>
             </div>
 
@@ -219,28 +215,27 @@ export default function AndroidAppDevelopment() {
       {/* ================= WHY CHOOSE US ================= */}
       <section className="section-white" id="services">
         <div className="service-container">
-          <h2>Why Choose Our Android App Development Services</h2>
+          <h2>Why Choose Our iOS App Development Services</h2>
 
           <div className="why-grid">
             <div className="why-box animate">
-              <h3>Android Expertise</h3>
+              <h3>Apple Ecosystem Expertise</h3>
               <p>
-                Skilled Android developers using modern tools and frameworks.
+                Strong expertise in iOS, Swift, and Apple-native technologies.
               </p>
             </div>
 
             <div className="why-box animate">
-              <h3>Scalable & Secure Apps</h3>
+              <h3>Secure & Scalable Apps</h3>
               <p>
-                Apps built for performance, security, and future growth.
+                Built with performance, security, and future growth in mind.
               </p>
             </div>
 
             <div className="why-box animate">
               <h3>End-to-End Delivery</h3>
               <p>
-                Complete Android app lifecycle from planning to Play Store
-                launch.
+                Complete iOS app lifecycle from concept to App Store launch.
               </p>
             </div>
           </div>
@@ -251,29 +246,29 @@ export default function AndroidAppDevelopment() {
       <section className="contact-section" id="contact">
         <div className="service-container contact-grid">
           <div className="contact-left">
-            <h2>Start Your Android App Project</h2>
+            <h2>Start Your iOS App Project</h2>
             <p>
-              Ready to build an Android application? Talk to our Android
-              experts and bring your idea to life.
+              Have an iOS app idea? Talk to our experts and turn it into a
+              high-quality Apple application.
             </p>
 
             <form
               className="service-contact-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Our Android team will contact you shortly.");
+                alert("Thank you! Our iOS team will contact you shortly.");
               }}
             >
               <input type="text" placeholder="Your name*" required />
               <input type="email" placeholder="Your email*" required />
               <textarea
                 rows="4"
-                placeholder="Tell us about your Android app requirements..."
+                placeholder="Tell us about your iOS app requirements..."
                 required
               ></textarea>
 
               <button type="submit" className="submit-btn">
-                Request Android Consultation
+                Request iOS Consultation
               </button>
             </form>
           </div>
@@ -281,7 +276,7 @@ export default function AndroidAppDevelopment() {
           <div className="contact-right gif-container">
             <img
               src={inventoryGif}
-              alt="Android App Development Services"
+              alt="iOS App Development Services"
               className="contact-gif"
             />
           </div>

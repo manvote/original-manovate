@@ -167,7 +167,7 @@ From consumer apps to enterprise mobility solutions, we deliver high-quality And
         id: "ios-app-development",
         title: "iOS App Development",
         shortValue: "Premium iOS applications for Apple devices.",
-        pagePath: "/nonitservices/hr-consulting",
+        pagePath: "/itservices/ios-development",
         heroImage: "/itservices/ioshero.jpg",
         overviewImage: "/itservices/iosover.jpg",
         overview: `
@@ -623,7 +623,7 @@ We support hybrid and multi-cloud environments.
         id: "cloud-architecture-setup",
         title: "Cloud Architecture Setup",
         shortValue: "Robust cloud architecture design.",
-        pagePath: "/nonitservices/hr-consulting",
+        pagePath: "/itservices/cloud-architecture-setup",
         heroImage: "/itservices/clarhero.jpg",
         overviewImage: "/itservices/clarover.jpg",
         overview: `

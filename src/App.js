@@ -62,6 +62,8 @@ import SaaSDevelopment from "./components/itservices/saas-application";
 import WebDevelopment from "./components/itservices/web-design -development";
 import WorkflowAutomation from "./components/itservices/workflow-automation";
 import ApplicationIntegration from "./components/itservices/application-integration";
+import CloudArchitectureSetup from "./components/itservices/cloud-architecture-setup";
+import IOSAppDevelopment from "./components/itservices/ios-development";
 
 function App() {
   return (
@@ -196,6 +198,14 @@ function App() {
 <Route
   path="/itservices/application-integration"
   element={<ApplicationIntegration />}
+/>
+<Route
+  path="/itservices/cloud-architecture-setup"
+  element={<CloudArchitectureSetup />}
+/>
+<Route
+  path="/itservices/ios-development"
+  element={<IOSAppDevelopment />}
 />
 
 <Route path="/itservices/:categoryId" element={<ITServiceCategory />} />
