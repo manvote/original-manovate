@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
+import inventoryGif from "../../assets/inventory-management.gif";
 import shero1 from "../../assets/hero1.jpg";
 import shero2 from "../../assets/hero2.jpg";
 import shero3 from "../../assets/hero3.jpg";
-import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import "./android-app.css";
+import "./App.css";
 
-export default function ERPServices() {
+export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,10 +15,10 @@ export default function ERPServices() {
   /* ================= SEO META ================= */
   useEffect(() => {
     document.title =
-      "ERP Software Services | Enterprise Resource Planning Solutions";
+      "Bookkeeping & Ledger Handling Services | Financial Accounting & General Ledger Management";
 
     const content =
-      "ERP software services to integrate finance, HR, inventory, sales, and operations into a unified enterprise resource planning system. We deliver scalable ERP solutions for growing businesses.";
+      "Professional bookkeeping and ledger handling services including financial accounting, journal entries, general ledger management, double entry bookkeeping, accurate recording of daily transactions, and financial reporting.";
 
     const metaDescription = document.querySelector(
       "meta[name='description']"
@@ -34,7 +34,7 @@ export default function ERPServices() {
     }
   }, []);
 
-  /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
+  /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -78,7 +78,6 @@ export default function ERPServices() {
 
     window.addEventListener("scroll", onScroll);
     onScroll();
-
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -121,14 +120,16 @@ export default function ERPServices() {
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
-          <h1>ERP Solutions for Integrated Business Operations</h1>
+          <h1>Bookkeeping & Ledger Handling</h1>
           <p>
-            Manovate Technologies delivers ERP solutions that integrate finance,
-            HR, inventory, sales, procurement, and operations into a unified
-            enterprise platform for better visibility and decision-making.
+            Manovate Technologies provides reliable bookkeeping and ledger
+            handling services focused on accurate recording of daily
+            transactions, maintenance of general ledgers, and compliance with
+            accounting standards to ensure clean, audit-ready books.
           </p>
+
           <a href="#services" className="btn-primary">
-            Get Started
+            Explore Bookkeeping Services
           </a>
         </div>
       </section>
@@ -137,34 +138,36 @@ export default function ERPServices() {
       <section className="section-white">
         <div className="service-container">
           <h2>Overview</h2>
+
           <p className="section-intro">
-            Our ERP software centralizes core business functions including
-            finance, supply chain, HR, and operations into a single scalable
-            system that streamlines workflows and improves control.
+            Our bookkeeping and ledger handling services cover financial
+            accounting, journal entries, double entry bookkeeping, and general
+            ledger management to ensure transparent and accurate financial
+            records.
           </p>
 
           <div className="grid">
             <div className="card animate">
-              <h3>Financial & Accounting ERP</h3>
+              <h3>Daily Transaction Recording</h3>
               <p>
-                Manage general ledger, accounts payable, receivable, budgeting,
-                and financial reporting within a unified ERP system.
+                Accurate recording of daily financial transactions using double
+                entry bookkeeping principles and structured journal entries.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Inventory & Supply Chain ERP</h3>
+              <h3>General Ledger Management</h3>
               <p>
-                Track inventory, procurement, vendors, warehouses, and order
-                fulfillment in real time.
+                Maintenance of general ledgers, chart of accounts, ledger
+                balances, and reconciliations for accuracy and consistency.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>HR & Operations ERP</h3>
+              <h3>Financial Accounting & Reporting</h3>
               <p>
-                Streamline HR, payroll, employee management, and operational
-                workflows through integrated ERP modules.
+                Support for month-end close, structured financial records, and
+                reliable accounting reports aligned with standards.
               </p>
             </div>
           </div>
@@ -174,10 +177,11 @@ export default function ERPServices() {
       {/* ================= TIMELINE ================= */}
       <section className="section-light">
         <div className="service-container">
-          <h2>How Our ERP Implementation Works</h2>
+          <h2>Our Bookkeeping Process</h2>
+
           <p className="section-intro">
-            A structured ERP implementation approach ensuring smooth adoption
-            and long-term scalability.
+            A structured and compliant process for accurate bookkeeping and
+            reliable ledger management.
           </p>
 
           <div className="timeline" id="brand-timeline">
@@ -185,29 +189,28 @@ export default function ERPServices() {
             <div className="timeline-line"></div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Assessment</span>
-              <h3>Business Process Analysis</h3>
+              <span className="timeline-label">Record</span>
+              <h3>Transaction Recording</h3>
               <p>
-                Analyze existing systems, workflows, and pain points to design
-                an ERP solution aligned with business goals.
+                Capture and record all business transactions using proper
+                journal entries.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Configuration</span>
-              <h3>ERP Customization & Integration</h3>
+              <span className="timeline-label">Post</span>
+              <h3>Ledger Posting</h3>
               <p>
-                Configure ERP modules, integrate third-party systems, and tailor
-                workflows to business requirements.
+                Post journal entries to general ledger accounts and track
+                balances accurately.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Deployment</span>
-              <h3>Go-Live & Optimization</h3>
+              <span className="timeline-label">Reconcile</span>
+              <h3>Ledger Reconciliation</h3>
               <p>
-                Deploy ERP, train users, and continuously optimize performance
-                for operational efficiency.
+                Reconcile accounts, verify balances, and resolve discrepancies.
               </p>
             </div>
 
@@ -216,33 +219,49 @@ export default function ERPServices() {
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US ================= */}
-      <section className="section-white" id="services">
+      {/* ================= FLOW ================= */}
+      <section className="dt-flow-section">
         <div className="service-container">
-          <h2>Why Choose Our ERP Services</h2>
+          <h2 className="dt-title">From Transactions to Financial Clarity</h2>
+          <p className="dt-subtitle">
+            Turning daily financial activity into structured, reliable accounting
+            records.
+          </p>
 
-          <div className="why-grid">
-            <div className="why-box animate">
-              <h3>End-to-End ERP Expertise</h3>
-              <p>
-                ERP solutions covering finance, operations, HR, and supply chain
-                in one integrated platform.
-              </p>
+          <div className="dt-flow">
+            <div className="dt-stage before">
+              <h3>Before Proper Bookkeeping</h3>
+              <ul>
+                <li>Unrecorded transactions</li>
+                <li>Disorganized ledgers</li>
+                <li>Limited financial visibility</li>
+                <li>Audit and compliance risks</li>
+              </ul>
             </div>
 
-            <div className="why-box animate">
-              <h3>Scalable & Secure ERP</h3>
-              <p>
-                Enterprise-grade ERP designed to scale securely with business
-                growth.
-              </p>
+            <div className="dt-core">
+              <div className="dt-core-item">
+                <span>Entries</span>
+                <p>Accurate journal entries</p>
+              </div>
+              <div className="dt-core-item">
+                <span>Ledger</span>
+                <p>Clean general ledger management</p>
+              </div>
+              <div className="dt-core-item">
+                <span>Reports</span>
+                <p>Clear and reliable financial reports</p>
+              </div>
             </div>
 
-            <div className="why-box animate">
-              <h3>Business-Centric Approach</h3>
-              <p>
-                ERP implementations aligned with business goals to maximize ROI.
-              </p>
+            <div className="dt-stage after">
+              <h3>After Structured Bookkeeping</h3>
+              <ul>
+                <li>Accurate financial records</li>
+                <li>Well-maintained ledgers</li>
+                <li>Improved compliance</li>
+                <li>Better financial control</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -252,28 +271,29 @@ export default function ERPServices() {
       <section className="contact-section" id="contact">
         <div className="service-container contact-grid">
           <div className="contact-left">
-            <h2>Talk to Our ERP Experts</h2>
+            <h2>Start Your Bookkeeping Engagement</h2>
             <p>
-              Planning to implement or upgrade your ERP system? Our specialists
-              are ready to help.
+              Need reliable bookkeeping and ledger handling services? Speak with
+              our accounting specialists today.
             </p>
 
             <form
               className="service-contact-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Our ERP team will contact you shortly.");
+                alert("Thank you! Our accounting team will contact you shortly.");
               }}
             >
               <input type="text" placeholder="Your name*" required />
               <input type="email" placeholder="Your email*" required />
               <textarea
                 rows="4"
-                placeholder="Tell us about your ERP requirements..."
+                placeholder="Tell us about your bookkeeping needs..."
                 required
               ></textarea>
+
               <button type="submit" className="submit-btn">
-                Request ERP Consultation
+                Request Bookkeeping Consultation
               </button>
             </form>
           </div>
@@ -281,7 +301,7 @@ export default function ERPServices() {
           <div className="contact-right gif-container">
             <img
               src={inventoryGif}
-              alt="ERP Software Services Illustration"
+              alt="Bookkeeping and General Ledger Services"
               className="contact-gif"
             />
           </div>

@@ -1,33 +1,33 @@
 import { useEffect, useState } from "react";
 import inventoryGif from "../../assets/inventory-management.gif";
-import hero1 from "../../assets/hero1.jpg";
-import hero2 from "../../assets/hero2.jpg";
-import hero3 from "../../assets/hero3.jpg";
+import shero1 from "../../assets/hero1.jpg";
+import shero2 from "../../assets/hero2.jpg";
+import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import "./android-app.css";
+import "./App.css";
 
-export default function ITStaffAugmentationServices() {
-  const heroImages = [hero1, hero2, hero3];
-  const totalSlides = heroImages.length; // ✅ FIX
+export default function App() {
+  const heroImages = [shero1, shero2, shero3];
+  const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   /* ================= SEO META ================= */
   useEffect(() => {
     document.title =
-      "IT Staff Augmentation Services | Hire Software Developers & Engineers";
+      "Content Management Services | Content Strategy, Publishing & Optimization";
 
     const metaDescription = document.querySelector("meta[name='description']");
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "IT staff augmentation services to hire software developers, mobile app developers, full stack engineers, frontend and backend developers, DevOps engineers, React, Python, AI, and cross-platform development teams."
+        "Professional content management services including content strategy, creation, publishing, governance, optimization, and lifecycle management to ensure consistent, accurate, and scalable digital content."
       );
     } else {
       const meta = document.createElement("meta");
       meta.name = "description";
       meta.content =
-        "IT staff augmentation services to hire software developers, mobile app developers, full stack engineers, frontend and backend developers, DevOps engineers, React, Python, AI, and cross-platform development teams.";
+        "Professional content management services including content strategy, creation, publishing, governance, optimization, and lifecycle management to ensure consistent, accurate, and scalable digital content.";
       document.head.appendChild(meta);
     }
   }, []);
@@ -39,7 +39,7 @@ export default function ITStaffAugmentationServices() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [totalSlides]); // ✅ FIXED
+  }, [totalSlides]);
 
   /* ================= TIMELINE PROGRESS ================= */
   useEffect(() => {
@@ -76,18 +76,21 @@ export default function ITStaffAugmentationServices() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* ================= FADE-UP ================= */
+  /* ================= FADE-UP ANIMATION ================= */
   useEffect(() => {
     const elements = document.querySelectorAll(".animate");
+
     const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach(
-          (entry) =>
-            entry.isIntersecting &&
-            entry.target.classList.add("visible")
-        ),
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
       { threshold: 0.2 }
     );
+
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
@@ -110,15 +113,15 @@ export default function ITStaffAugmentationServices() {
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
-          <h1>IT Staff Augmentation Services</h1>
+          <h1>Content Management Services</h1>
           <p>
-            Flexible IT staff augmentation services to help businesses quickly
-            hire skilled software developers, mobile app developers, full stack
-            engineers, and DevOps professionals.
+            Manovate Technologies provides end-to-end content management services
+            to help businesses organize, manage, publish, and optimize digital
+            content across platforms with accuracy and consistency.
           </p>
 
           <a href="#services" className="btn-primary">
-            Get Started
+            Manage Content Effectively
           </a>
         </div>
       </section>
@@ -129,105 +132,81 @@ export default function ITStaffAugmentationServices() {
           <h2>Overview</h2>
 
           <p className="section-intro">
-            Our IT staff augmentation model enables companies to scale
-            development teams with vetted engineers across web, mobile,
-            cloud, and enterprise software projects.
+            Our content management services ensure your digital content remains
+            structured, relevant, up-to-date, and optimized across websites,
+            applications, and marketing channels.
           </p>
 
           <div className="grid">
             <div className="card animate">
-              <h3>Software & Application Developers</h3>
+              <h3>Content Strategy & Planning</h3>
               <p>
-                Experienced frontend, backend, and full stack developers
-                for enterprise-grade software solutions.
+                We define content frameworks, workflows, and governance models
+                aligned with business goals and audience needs.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Mobile App Development Teams</h3>
+              <h3>Content Publishing & Maintenance</h3>
               <p>
-                Android, iOS, React Native, and cross-platform mobile
-                app development experts.
+                Manage content updates, formatting, publishing schedules, and
+                version control across platforms.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Specialized Engineering Talent</h3>
+              <h3>Content Optimization & Governance</h3>
               <p>
-                DevOps, cloud engineers, AI specialists, QA automation,
-                and database experts.
+                Ensure content accuracy, compliance, SEO optimization, and
+                lifecycle management for long-term value.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ================= PROCESS ================= */}
+      {/* ================= TIMELINE ================= */}
       <section className="section-light">
         <div className="service-container">
-          <h2>How Our IT Staff Augmentation Works</h2>
+          <h2>Our Content Management Workflow</h2>
+
+          <p className="section-intro">
+            A structured process for managing content efficiently and
+            consistently.
+          </p>
 
           <div className="timeline" id="brand-timeline">
+            <div className="timeline-start"></div>
             <div className="timeline-line"></div>
 
             <div className="timeline-item">
               <span className="timeline-label">Planning</span>
-              <h3>Skill & Team Assessment</h3>
+              <h3>Content Structuring & Strategy</h3>
               <p>
-                We analyze project scope, tech stack, and skill requirements.
+                Define content architecture, workflows, and publishing
+                guidelines.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Onboarding</span>
-              <h3>Hire Dedicated Developers</h3>
+              <span className="timeline-label">Execution</span>
+              <h3>Publishing & Updates</h3>
               <p>
-                Rapid onboarding of vetted developers who integrate with
-                your in-house teams.
+                Publish, update, and manage content across digital platforms
+                efficiently.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Delivery</span>
-              <h3>Ongoing Collaboration & Scale</h3>
+              <span className="timeline-label">Optimization</span>
+              <h3>Content Review & Improvement</h3>
               <p>
-                Agile delivery, scalable teams, and long-term project
-                success.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= WHY US ================= */}
-      <section className="section-white" id="services">
-        <div className="service-container">
-          <h2>Why Choose Us</h2>
-
-          <div className="why-grid">
-            <div className="why-box animate">
-              <h3>Top Engineering Talent</h3>
-              <p>
-                Access experienced developers and IT specialists from
-                India’s leading talent pool.
+                Monitor content performance, ensure compliance, and continuously
+                improve quality.
               </p>
             </div>
 
-            <div className="why-box animate">
-              <h3>Flexible Engagement Models</h3>
-              <p>
-                Scale teams up or down with cost-effective staff
-                augmentation.
-              </p>
-            </div>
-
-            <div className="why-box animate">
-              <h3>Faster Delivery</h3>
-              <p>
-                Accelerate development while maintaining quality and
-                budget efficiency.
-              </p>
-            </div>
+            <div className="timeline-end"></div>
           </div>
         </div>
       </section>
@@ -236,43 +215,44 @@ export default function ITStaffAugmentationServices() {
       <section className="contact-section" id="contact">
         <div className="service-container contact-grid">
           <div className="contact-left">
-            <h2>Contact Manovate Technologies</h2>
+            <h2>Talk to Our Content Specialists</h2>
             <p>
-              Hire dedicated developers and scale your development
-              teams quickly with our IT staff augmentation services.
+              Looking for reliable content management support? Let our experts
+              handle your content lifecycle.
             </p>
 
             <form
               className="service-contact-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Our team will contact you shortly.");
+                alert("Thank you! Our content team will contact you shortly.");
               }}
             >
               <input type="text" placeholder="Your name*" required />
               <input type="email" placeholder="Your email*" required />
               <textarea
                 rows="4"
-                placeholder="Tell us about your staffing needs..."
+                placeholder="Tell us about your content management needs..."
                 required
               ></textarea>
 
               <button type="submit" className="submit-btn">
-                Submit Project
+                Request Content Support
               </button>
             </form>
           </div>
 
-          <div className="contact-right gif-container">
+          <div className="contact-right gif-service-
+container">
             <img
               src={inventoryGif}
-              alt="IT Staff Augmentation"
+              alt="Content Management Services"
               className="contact-gif"
             />
           </div>
         </div>
       </section>
-      <Footer />
+<Footer />
     </>
   );
 }

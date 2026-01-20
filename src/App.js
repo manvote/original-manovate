@@ -64,6 +64,23 @@ import WorkflowAutomation from "./components/itservices/workflow-automation";
 import ApplicationIntegration from "./components/itservices/application-integration";
 import CloudArchitectureSetup from "./components/itservices/cloud-architecture-setup";
 import IOSAppDevelopment from "./components/itservices/ios-development";
+import WebsiteContent from "./components/nonitservices/content-management";
+import CreativeAssets from "./components/nonitservices/creative-assets";
+import AccountingManagement from "./components/nonitservices/accounting-management";
+import SocialMediaManagement from "./components/nonitservices/social-media-management";
+import WebsiteContentServices from "./components/nonitservices/website-content-services";
+import BookkeepingServices from "./components/nonitservices/bookkeeping-services";
+import BusinessProcess from "./components/nonitservices/business-process";
+import DigitalTransformation from "./components/nonitservices/digital-transformation";
+import FinancialOperations from "./components/nonitservices/financial-operations";
+import FinancialReporting from "./components/nonitservices/financial-reporting";
+import PerformanceMarketing from "./components/nonitservices/performance-marketing";
+import SEOServices from "./components/nonitservices/seo-services";
+import NonITStaffAugmentation from "./components/nonitservices/nonit-staff-augmentation";
+import LeadGeneration from "./components/nonitservices/lead-generation";
+import OperationalEfficiency from "./components/nonitservices/operationalefficiency";
+import BrandIdentityDesign from "./components/nonitservices/brandidentity";
+import UIUXDesign from "./components/nonitservices/uiuxdesign";
 
 function App() {
   return (
@@ -210,7 +227,76 @@ function App() {
 
 <Route path="/itservices/:categoryId" element={<ITServiceCategory />} />
 <Route path="/itservices/:categoryId/:serviceId" element={<ITServiceDetail />} />
+
 <Route path="/nonitservices" element={<NonITServices />} />
+<Route
+  path="/nonitservices/content-management"
+  element={<WebsiteContent />}
+/>
+<Route
+  path="/nonitservices/creative-assets"
+  element={<CreativeAssets />}
+/>
+<Route
+  path="/nonitservices/accounting-management"
+  element={<AccountingManagement />}
+/>
+<Route
+  path="/nonitservices/social-media-management"
+  element={<SocialMediaManagement />}
+/>
+<Route
+  path="/nonitservices/website-content-services"
+  element={<WebsiteContentServices />}
+/>
+<Route
+  path="/nonitservices/financial-reporting"
+  element={<FinancialReporting />}
+/>
+<Route
+  path="/nonitservices/financial-operations"
+  element={<FinancialOperations />}
+/>
+<Route
+  path="/nonitservices/bookkeeping-services"
+  element={<BookkeepingServices />}
+/>
+<Route
+  path="/nonitservices/business-process"
+  element={<BusinessProcess />}
+/>
+<Route
+  path="/nonitservices/digital-transformation"
+  element={<DigitalTransformation />}
+/>
+<Route
+  path="/nonitservices/performance-marketing"
+  element={<PerformanceMarketing />}
+/>
+<Route
+  path="/nonitservices/seo-services"
+  element={<SEOServices />}
+/>
+<Route
+  path="/nonitservices/nonit-staff-augmentation"
+  element={<NonITStaffAugmentation />}
+/>
+<Route
+  path="/nonitservices/lead-generation"
+  element={<LeadGeneration />}
+/>
+<Route
+  path="/nonitservices/operationalefficiency"
+  element={<OperationalEfficiency />}
+/>
+<Route
+  path="/nonitservices/brandidentity"
+  element={<BrandIdentityDesign />}
+/>
+<Route
+  path="/nonitservices/uiuxdesign"
+  element={<UIUXDesign />}
+/>
 <Route path="/nonitservices/:categoryId" element={<NonITServiceCategory />} />
 <Route path="/nonitservices/:categoryId/:serviceId" element={<NonITServiceDetail />} />
 <Route path="/legal" element={<Legal />} />

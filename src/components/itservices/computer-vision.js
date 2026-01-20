@@ -3,6 +3,8 @@ import shero1 from "../../assets/hero1.jpg";
 import shero2 from "../../assets/hero2.jpg";
 import shero3 from "../../assets/hero3.jpg";
 import inventoryGif from "../../assets/inventory-management.gif";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 import "./android-app.css";
 
 export default function ComputerVisionServices() {
@@ -101,6 +103,7 @@ export default function ComputerVisionServices() {
 
   return (
     <>
+    <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
         <div className="hero-slideshow">
@@ -291,6 +294,7 @@ export default function ComputerVisionServices() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

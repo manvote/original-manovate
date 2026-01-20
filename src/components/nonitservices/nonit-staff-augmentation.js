@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
+import inventoryGif from "../../assets/inventory-management.gif";
 import shero1 from "../../assets/hero1.jpg";
 import shero2 from "../../assets/hero2.jpg";
 import shero3 from "../../assets/hero3.jpg";
-import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import "./android-app.css";
+import "./App.css";
 
-export default function ERPServices() {
+export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,10 +15,10 @@ export default function ERPServices() {
   /* ================= SEO META ================= */
   useEffect(() => {
     document.title =
-      "ERP Software Services | Enterprise Resource Planning Solutions";
+      "Non-IT Staff Augmentation & Workforce Solutions | Talent Acquisition & Staffing Services";
 
     const content =
-      "ERP software services to integrate finance, HR, inventory, sales, and operations into a unified enterprise resource planning system. We deliver scalable ERP solutions for growing businesses.";
+      "Non-IT staff augmentation services offering talent acquisition, workforce augmentation, manpower services, administrative staffing, customer support staffing, operational staff hiring, and end-to-end staffing solutions for businesses.";
 
     const metaDescription = document.querySelector(
       "meta[name='description']"
@@ -34,7 +34,7 @@ export default function ERPServices() {
     }
   }, []);
 
-  /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
+  /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -78,7 +78,6 @@ export default function ERPServices() {
 
     window.addEventListener("scroll", onScroll);
     onScroll();
-
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -121,14 +120,17 @@ export default function ERPServices() {
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
-          <h1>ERP Solutions for Integrated Business Operations</h1>
+          <h1>Non-IT Staff Augmentation & Workforce Solutions</h1>
           <p>
-            Manovate Technologies delivers ERP solutions that integrate finance,
-            HR, inventory, sales, procurement, and operations into a unified
-            enterprise platform for better visibility and decision-making.
+            Manovate Technologies provides non-IT staff augmentation services to
+            support talent acquisition, manpower services, operational staffing,
+            administrative staffing, and customer support hiring. We help
+            businesses scale teams quickly with qualified professionals across
+            multiple functions.
           </p>
+
           <a href="#services" className="btn-primary">
-            Get Started
+            Explore Staffing Solutions
           </a>
         </div>
       </section>
@@ -137,34 +139,37 @@ export default function ERPServices() {
       <section className="section-white">
         <div className="service-container">
           <h2>Overview</h2>
+
           <p className="section-intro">
-            Our ERP software centralizes core business functions including
-            finance, supply chain, HR, and operations into a single scalable
-            system that streamlines workflows and improves control.
+            Our non-IT staffing and workforce augmentation solutions help
+            organizations meet staffing requirements efficiently. We support
+            operations, administration, customer service, logistics, sales
+            support, and business management roles through flexible staffing
+            models.
           </p>
 
           <div className="grid">
             <div className="card animate">
-              <h3>Financial & Accounting ERP</h3>
+              <h3>Talent Acquisition & Recruitment</h3>
               <p>
-                Manage general ledger, accounts payable, receivable, budgeting,
-                and financial reporting within a unified ERP system.
+                End-to-end recruitment services including sourcing, screening,
+                interviewing, and onboarding for non-IT roles.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Inventory & Supply Chain ERP</h3>
+              <h3>Staff Augmentation & Deployment</h3>
               <p>
-                Track inventory, procurement, vendors, warehouses, and order
-                fulfillment in real time.
+                Flexible workforce deployment with temporary, contract, and
+                long-term staffing models.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>HR & Operations ERP</h3>
+              <h3>Operational & Support Staffing</h3>
               <p>
-                Streamline HR, payroll, employee management, and operational
-                workflows through integrated ERP modules.
+                Administrative staff, customer support teams, operational
+                personnel, and service industry staffing.
               </p>
             </div>
           </div>
@@ -174,10 +179,11 @@ export default function ERPServices() {
       {/* ================= TIMELINE ================= */}
       <section className="section-light">
         <div className="service-container">
-          <h2>How Our ERP Implementation Works</h2>
+          <h2>Staff Augmentation Process</h2>
+
           <p className="section-intro">
-            A structured ERP implementation approach ensuring smooth adoption
-            and long-term scalability.
+            A structured staffing workflow to deliver qualified personnel on
+            time.
           </p>
 
           <div className="timeline" id="brand-timeline">
@@ -185,29 +191,29 @@ export default function ERPServices() {
             <div className="timeline-line"></div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Assessment</span>
-              <h3>Business Process Analysis</h3>
+              <span className="timeline-label">Identify</span>
+              <h3>Staffing Requirements</h3>
               <p>
-                Analyze existing systems, workflows, and pain points to design
-                an ERP solution aligned with business goals.
+                Understand role requirements, skills, experience levels, and
+                workforce expectations.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Configuration</span>
-              <h3>ERP Customization & Integration</h3>
+              <span className="timeline-label">Source</span>
+              <h3>Talent Sourcing & Screening</h3>
               <p>
-                Configure ERP modules, integrate third-party systems, and tailor
-                workflows to business requirements.
+                Source qualified candidates through recruitment networks and
+                staffing channels.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Deployment</span>
-              <h3>Go-Live & Optimization</h3>
+              <span className="timeline-label">Deploy</span>
+              <h3>Staff Deployment & Management</h3>
               <p>
-                Deploy ERP, train users, and continuously optimize performance
-                for operational efficiency.
+                Deploy staff with payroll support, compliance handling, and
+                ongoing workforce management.
               </p>
             </div>
 
@@ -216,33 +222,48 @@ export default function ERPServices() {
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US ================= */}
-      <section className="section-white" id="services">
+      {/* ================= TRANSFORMATION FLOW ================= */}
+      <section className="dt-flow-section">
         <div className="service-container">
-          <h2>Why Choose Our ERP Services</h2>
+          <h2 className="dt-title">Flexible Workforce Augmentation</h2>
+          <p className="dt-subtitle">
+            Scaling teams efficiently through professional staffing solutions.
+          </p>
 
-          <div className="why-grid">
-            <div className="why-box animate">
-              <h3>End-to-End ERP Expertise</h3>
-              <p>
-                ERP solutions covering finance, operations, HR, and supply chain
-                in one integrated platform.
-              </p>
+          <div className="dt-flow">
+            <div className="dt-stage before">
+              <h3>Before Staffing Support</h3>
+              <ul>
+                <li>Talent shortages</li>
+                <li>Long hiring cycles</li>
+                <li>Operational workload pressure</li>
+                <li>Limited internal recruitment capacity</li>
+              </ul>
             </div>
 
-            <div className="why-box animate">
-              <h3>Scalable & Secure ERP</h3>
-              <p>
-                Enterprise-grade ERP designed to scale securely with business
-                growth.
-              </p>
+            <div className="dt-core">
+              <div className="dt-core-item">
+                <span>Talent</span>
+                <p>Qualified professionals and skilled personnel</p>
+              </div>
+              <div className="dt-core-item">
+                <span>Staffing</span>
+                <p>Workforce augmentation and rapid deployment</p>
+              </div>
+              <div className="dt-core-item">
+                <span>Support</span>
+                <p>Payroll, compliance, and workforce management</p>
+              </div>
             </div>
 
-            <div className="why-box animate">
-              <h3>Business-Centric Approach</h3>
-              <p>
-                ERP implementations aligned with business goals to maximize ROI.
-              </p>
+            <div className="dt-stage after">
+              <h3>After Augmentation</h3>
+              <ul>
+                <li>On-time staff availability</li>
+                <li>Improved operational efficiency</li>
+                <li>Reduced hiring costs</li>
+                <li>Scalable workforce</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -252,28 +273,29 @@ export default function ERPServices() {
       <section className="contact-section" id="contact">
         <div className="service-container contact-grid">
           <div className="contact-left">
-            <h2>Talk to Our ERP Experts</h2>
+            <h2>Build Your Workforce</h2>
             <p>
-              Planning to implement or upgrade your ERP system? Our specialists
-              are ready to help.
+              Looking for reliable non-IT staffing and workforce augmentation?
+              Connect with our staffing experts today.
             </p>
 
             <form
               className="service-contact-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Our ERP team will contact you shortly.");
+                alert("Thank you! Our team will contact you shortly.");
               }}
             >
               <input type="text" placeholder="Your name*" required />
               <input type="email" placeholder="Your email*" required />
               <textarea
                 rows="4"
-                placeholder="Tell us about your ERP requirements..."
+                placeholder="Tell us about your staffing requirements..."
                 required
               ></textarea>
+
               <button type="submit" className="submit-btn">
-                Request ERP Consultation
+                Request Staffing Support
               </button>
             </form>
           </div>
@@ -281,7 +303,7 @@ export default function ERPServices() {
           <div className="contact-right gif-container">
             <img
               src={inventoryGif}
-              alt="ERP Software Services Illustration"
+              alt="Non-IT Staff Augmentation and Workforce Solutions"
               className="contact-gif"
             />
           </div>

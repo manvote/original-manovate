@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
+import inventoryGif from "../../assets/inventory-management.gif";
 import shero1 from "../../assets/hero1.jpg";
 import shero2 from "../../assets/hero2.jpg";
 import shero3 from "../../assets/hero3.jpg";
-import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import "./android-app.css";
+import "./App.css";
 
-export default function ERPServices() {
+export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,10 +15,10 @@ export default function ERPServices() {
   /* ================= SEO META ================= */
   useEffect(() => {
     document.title =
-      "ERP Software Services | Enterprise Resource Planning Solutions";
+      "Operational Efficiency Consulting Services | Process Optimization";
 
     const content =
-      "ERP software services to integrate finance, HR, inventory, sales, and operations into a unified enterprise resource planning system. We deliver scalable ERP solutions for growing businesses.";
+      "Operational efficiency consulting services to streamline processes, reduce costs, and improve business performance through data-driven strategies.";
 
     const metaDescription = document.querySelector(
       "meta[name='description']"
@@ -34,7 +34,7 @@ export default function ERPServices() {
     }
   }, []);
 
-  /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
+  /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -78,7 +78,6 @@ export default function ERPServices() {
 
     window.addEventListener("scroll", onScroll);
     onScroll();
-
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -121,14 +120,15 @@ export default function ERPServices() {
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
-          <h1>ERP Solutions for Integrated Business Operations</h1>
+          <h1>Operational Efficiency Consulting</h1>
           <p>
-            Manovate Technologies delivers ERP solutions that integrate finance,
-            HR, inventory, sales, procurement, and operations into a unified
-            enterprise platform for better visibility and decision-making.
+            Manovate Technologies helps organizations optimize operations,
+            eliminate inefficiencies, and maximize productivity through
+            data-driven operational consulting.
           </p>
+
           <a href="#services" className="btn-primary">
-            Get Started
+            Explore Consulting Services
           </a>
         </div>
       </section>
@@ -137,34 +137,35 @@ export default function ERPServices() {
       <section className="section-white">
         <div className="service-container">
           <h2>Overview</h2>
+
           <p className="section-intro">
-            Our ERP software centralizes core business functions including
-            finance, supply chain, HR, and operations into a single scalable
-            system that streamlines workflows and improves control.
+            Our operational efficiency consulting services identify bottlenecks,
+            streamline workflows, and implement sustainable improvements that
+            drive measurable business results.
           </p>
 
           <div className="grid">
             <div className="card animate">
-              <h3>Financial & Accounting ERP</h3>
+              <h3>Process Optimization</h3>
               <p>
-                Manage general ledger, accounts payable, receivable, budgeting,
-                and financial reporting within a unified ERP system.
+                Analyze and redesign business processes to reduce waste, improve
+                execution speed, and increase operational clarity.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Inventory & Supply Chain ERP</h3>
+              <h3>Cost Reduction</h3>
               <p>
-                Track inventory, procurement, vendors, warehouses, and order
-                fulfillment in real time.
+                Identify cost-saving opportunities while maintaining quality,
+                compliance, and service performance.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>HR & Operations ERP</h3>
+              <h3>Performance Measurement</h3>
               <p>
-                Streamline HR, payroll, employee management, and operational
-                workflows through integrated ERP modules.
+                Define KPIs, dashboards, and metrics to monitor efficiency and
+                enable continuous improvement.
               </p>
             </div>
           </div>
@@ -174,10 +175,11 @@ export default function ERPServices() {
       {/* ================= TIMELINE ================= */}
       <section className="section-light">
         <div className="service-container">
-          <h2>How Our ERP Implementation Works</h2>
+          <h2>Our Consulting Approach</h2>
+
           <p className="section-intro">
-            A structured ERP implementation approach ensuring smooth adoption
-            and long-term scalability.
+            A structured methodology to improve operational performance across
+            teams and processes.
           </p>
 
           <div className="timeline" id="brand-timeline">
@@ -185,29 +187,29 @@ export default function ERPServices() {
             <div className="timeline-line"></div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Assessment</span>
-              <h3>Business Process Analysis</h3>
+              <span className="timeline-label">Assess</span>
+              <h3>Current State Analysis</h3>
               <p>
-                Analyze existing systems, workflows, and pain points to design
-                an ERP solution aligned with business goals.
+                Evaluate existing processes, systems, resource utilization, and
+                operational challenges.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Configuration</span>
-              <h3>ERP Customization & Integration</h3>
+              <span className="timeline-label">Optimize</span>
+              <h3>Process Improvement</h3>
               <p>
-                Configure ERP modules, integrate third-party systems, and tailor
-                workflows to business requirements.
+                Design optimized workflows, eliminate inefficiencies, and define
+                improvement initiatives.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Deployment</span>
-              <h3>Go-Live & Optimization</h3>
+              <span className="timeline-label">Implement</span>
+              <h3>Execution & Change Management</h3>
               <p>
-                Deploy ERP, train users, and continuously optimize performance
-                for operational efficiency.
+                Implement solutions, support teams through change, and embed
+                continuous improvement practices.
               </p>
             </div>
 
@@ -216,33 +218,48 @@ export default function ERPServices() {
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US ================= */}
-      <section className="section-white" id="services">
+      {/* ================= FLOW ================= */}
+      <section className="dt-flow-section">
         <div className="service-container">
-          <h2>Why Choose Our ERP Services</h2>
+          <h2 className="dt-title">Driving Operational Excellence</h2>
+          <p className="dt-subtitle">
+            Transforming inefficiencies into measurable competitive advantages.
+          </p>
 
-          <div className="why-grid">
-            <div className="why-box animate">
-              <h3>End-to-End ERP Expertise</h3>
-              <p>
-                ERP solutions covering finance, operations, HR, and supply chain
-                in one integrated platform.
-              </p>
+          <div className="dt-flow">
+            <div className="dt-stage before">
+              <h3>Before Efficiency Consulting</h3>
+              <ul>
+                <li>Inefficient processes</li>
+                <li>High operational costs</li>
+                <li>Low productivity</li>
+                <li>Limited performance visibility</li>
+              </ul>
             </div>
 
-            <div className="why-box animate">
-              <h3>Scalable & Secure ERP</h3>
-              <p>
-                Enterprise-grade ERP designed to scale securely with business
-                growth.
-              </p>
+            <div className="dt-core">
+              <div className="dt-core-item">
+                <span>Analyze</span>
+                <p>Process and performance analysis</p>
+              </div>
+              <div className="dt-core-item">
+                <span>Improve</span>
+                <p>Optimized workflows and systems</p>
+              </div>
+              <div className="dt-core-item">
+                <span>Measure</span>
+                <p>Continuous performance tracking</p>
+              </div>
             </div>
 
-            <div className="why-box animate">
-              <h3>Business-Centric Approach</h3>
-              <p>
-                ERP implementations aligned with business goals to maximize ROI.
-              </p>
+            <div className="dt-stage after">
+              <h3>After Efficiency Consulting</h3>
+              <ul>
+                <li>Streamlined operations</li>
+                <li>Reduced costs</li>
+                <li>Improved productivity</li>
+                <li>Data-driven decision making</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -252,28 +269,31 @@ export default function ERPServices() {
       <section className="contact-section" id="contact">
         <div className="service-container contact-grid">
           <div className="contact-left">
-            <h2>Talk to Our ERP Experts</h2>
+            <h2>Improve Your Operational Performance</h2>
             <p>
-              Planning to implement or upgrade your ERP system? Our specialists
-              are ready to help.
+              Ready to enhance efficiency and reduce costs? Our consultants are
+              here to help you achieve operational excellence.
             </p>
 
             <form
               className="service-contact-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Our ERP team will contact you shortly.");
+                alert(
+                  "Thank you! Our consulting team will contact you shortly."
+                );
               }}
             >
               <input type="text" placeholder="Your name*" required />
               <input type="email" placeholder="Your email*" required />
               <textarea
                 rows="4"
-                placeholder="Tell us about your ERP requirements..."
+                placeholder="Tell us about your operational challenges..."
                 required
               ></textarea>
+
               <button type="submit" className="submit-btn">
-                Request ERP Consultation
+                Request Consultation
               </button>
             </form>
           </div>
@@ -281,7 +301,7 @@ export default function ERPServices() {
           <div className="contact-right gif-container">
             <img
               src={inventoryGif}
-              alt="ERP Software Services Illustration"
+              alt="Operational Efficiency Consulting Services"
               className="contact-gif"
             />
           </div>

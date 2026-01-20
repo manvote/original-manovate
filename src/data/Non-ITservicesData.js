@@ -13,6 +13,7 @@ export const nonItServicesData = [
         title: "Business Process Optimization",
         shortValue:
           "Streamlining operations to improve efficiency and reduce costs.",
+        pagePath: "/nonitservices/business-process",
         heroImage: "/nonitservices/bpohero.jpg",
         overviewImage: "/nonitservices/bpoover.jpg",
         overview: `
@@ -37,10 +38,39 @@ By redesigning processes and introducing best practices, we help organizations o
       },
 
       {
+  id: "nonit-staff-augmentation",
+  title: "Non-IT Staff Augmentation",
+  shortValue:
+    "Flexible workforce solutions for non-technical roles.",
+  pagePath: "/nonitservices/nonit-staff-augmentation",
+  heroImage: "/nonitservices/nsahero.jpg",
+  overviewImage: "/nonitservices/nsaover.jpg",
+  overview: ` 
+We provide skilled non-IT professionals to support your business operations across various functions. Our staff augmentation services help you scale teams quickly while maintaining productivity and operational efficiency.
+
+We work as an extended workforce for your organization.
+        `,
+  capabilities: [
+    "Administrative Staffing",
+    "HR & Payroll Support",
+    "Finance & Accounting Resources",
+    "Customer Support & Operations",
+    "Sales & Back-Office Support"
+  ],
+  tools: ["zoho-people", "sap", "workday", "ms-excel"],
+  outcomes: [
+    "Quick access to skilled professionals",
+    "Operational scalability"
+  ],
+  industries: ["SMEs", "Enterprise"]
+}
+,
+      {
         id: "digital-transformation-consulting",
         title: "Digital Transformation Consulting",
         shortValue:
           "Guiding businesses through digital change initiatives.",
+        pagePath: "/nonitservices/digital-transformation",
         heroImage: "/nonitservices/dgchero.jpg",
         overviewImage: "/nonitservices/dgcover.jpg",
         overview: `
@@ -69,6 +99,7 @@ From planning to execution, we support organizations at every stage of their dig
         title: "Operational Efficiency Consulting",
         shortValue:
           "Improving productivity and resource utilization.",
+        pagePath: "/nonitservices/operationalefficiency",
         heroImage: "/nonitservices/ochero.jpg",
         overviewImage: "/nonitservices/ocover.jpg",
         overview: `
@@ -107,6 +138,7 @@ We help organizations achieve operational excellence through structured improvem
         title: "Brand Identity Design",
         shortValue:
           "Building strong, consistent, and memorable brand identities.",
+        pagePath: "/nonitservices/brandidentity",
         heroImage: "/nonitservices/bdhero.jpg",
         overviewImage: "/nonitservices/bdover.jpg",
         overview: `
@@ -134,6 +166,7 @@ From logos to brand guidelines, we craft identities that build trust and recogni
         title: "UI/UX Design",
         shortValue:
           "User-centered design for digital experiences.",
+        pagePath: "/nonitservices/uiuxdesign",
         heroImage: "/nonitservices/uiuxhero.jpg",
         overviewImage: "/nonitservices/uiuxover.jpg",
         overview: `
@@ -161,6 +194,7 @@ The result is digital products that users love to interact with.
         title: "Creative Assets & Marketing Design",
         shortValue:
           "Visually compelling assets for marketing campaigns.",
+        pagePath: "/nonitservices/creative-assets",
         heroImage: "/nonitservices/cahero.jpg",
         overviewImage: "/nonitservices/caover.jpg",
         overview: `
@@ -188,6 +222,7 @@ From ads to presentations, we ensure brand consistency and visual appeal.
         title: "Website & Corporate Content",
         shortValue:
           "Professional content for digital and corporate platforms.",
+        pagePath: "/nonitservices/website-content-services",
         heroImage: "/nonitservices/wchero.jpg",
         overviewImage: "/nonitservices/wcover.jpg",
         overview: `
@@ -208,7 +243,35 @@ Designed to improve clarity, credibility, and engagement.
           "Improved audience engagement"
         ],
         industries: ["Corporate", "Startups"]
-      }
+      },
+      {
+  id: "content-management-support",
+  title: "Content Management Support",
+  shortValue:
+    "Efficient content management and digital upkeep.",
+  pagePath: "/nonitservices/content-management",
+  heroImage: "/nonitservices/cmhero.jpg",
+  overviewImage: "/nonitservices/cmover.jpg",
+  overview: ` 
+We manage, update, and optimize digital content across websites and platforms to ensure consistency, accuracy, and engagement. Our support helps businesses maintain a strong and up-to-date digital presence.
+
+We work as an extended content operations team for your organization.
+        `,
+  capabilities: [
+    "Website Content Updates",
+    "Content Publishing & Scheduling",
+    "Content Quality & Consistency Checks",
+    "CMS Administration",
+    "Content Performance Monitoring"
+  ],
+  tools: ["wordpress", "drupal", "joomla", "contentful"],
+  outcomes: [
+    "Consistent and updated content",
+    "Improved user engagement"
+  ],
+  industries: ["SMEs", "Enterprise"]
+}
+
     ]
   },
 
@@ -226,9 +289,10 @@ Designed to improve clarity, credibility, and engagement.
         title: "Accounting Management",
         shortValue:
           "End-to-end accounting and financial control.",
+        pagePath: "/nonitservices/accounting-management",
         heroImage: "/nonitservices/amhero.jpg",
         overviewImage: "/nonitservices/amover.jpg",
-        overview: `
+        overview: ` 
 We manage accounting operations to ensure accuracy, compliance, and financial transparency. Our services support informed decision-making and financial stability.
 
 We work as an extended finance team for your organization.
@@ -253,6 +317,7 @@ We work as an extended finance team for your organization.
         title: "Bookkeeping & Ledger Handling",
         shortValue:
           "Accurate and organized financial records.",
+        pagePath: "/nonitservices/bookkeeping-services",
         heroImage: "/nonitservices/bkhero.jpg",
         overviewImage: "/nonitservices/bkover.jpg",
         overview: `
@@ -280,6 +345,7 @@ Ideal for businesses seeking reliable financial record management.
         title: "Financial Reporting",
         shortValue:
           "Clear and compliant financial reporting services.",
+        pagePath: "/nonitservices/financial-reporting",
         heroImage: "/nonitservices/finhero.jpg",
         overviewImage: "/nonitservices/finover.jpg",
         overview: `
@@ -307,6 +373,7 @@ Designed for clarity, accuracy, and decision-making.
         title: "Financial Operations Support",
         shortValue:
           "Operational finance support for growing businesses.",
+        pagePath: "/nonitservices/financial-operations",
         heroImage: "/nonitservices/finophero.jpg",
         overviewImage: "/nonitservices/finopover.jpg",
         overview: `
@@ -345,6 +412,7 @@ Designed to support scalability and business growth.
         title: "SEO Services",
         shortValue:
           "Search engine optimization for long-term visibility.",
+        pagePath: "/nonitservices/seo-services",
         heroImage: "/nonitservices/seohero.jpg",
         overviewImage: "/nonitservices/seoover.jpg",
         overview: `
@@ -372,6 +440,7 @@ Designed to drive consistent, high-quality traffic.
         title: "Performance Marketing (Google & Meta Ads)",
         shortValue:
           "ROI-focused paid advertising campaigns.",
+        pagePath: "/nonitservices/performance-marketing",
         heroImage: "/nonitservices/perhero.jpg",
         overviewImage: "/nonitservices/perover.jpg",
         overview: `
@@ -399,6 +468,7 @@ We continuously optimize campaigns to maximize returns.
         title: "Social Media Management",
         shortValue:
           "Consistent and engaging social media presence.",
+        pagePath: "/nonitservices/social-media-management",
         heroImage: "/nonitservices/smhero.jpg",
         overviewImage: "/nonitservices/smover.jpg",
         overview: `
@@ -426,6 +496,7 @@ Designed to strengthen digital presence.
         title: "Lead Generation Campaigns",
         shortValue:
           "Targeted campaigns to generate qualified leads.",
+        pagePath: "/nonitservices/lead-generation",
         heroImage: "/nonitservices/lghero.jpg",
         overviewImage: "/nonitservices/lgover.jpg",
         overview: `

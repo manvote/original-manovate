@@ -1,45 +1,47 @@
 import { useEffect, useState } from "react";
-import inventoryGif from "../../assets/inventory-management.gif";
 import hero1 from "../../assets/hero1.jpg";
 import hero2 from "../../assets/hero2.jpg";
 import hero3 from "../../assets/hero3.jpg";
+import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
 
-export default function ITStaffAugmentationServices() {
+export default function EcommerceDevelopment() {
   const heroImages = [hero1, hero2, hero3];
-  const totalSlides = heroImages.length; // ✅ FIX
+  const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   /* ================= SEO META ================= */
   useEffect(() => {
     document.title =
-      "IT Staff Augmentation Services | Hire Software Developers & Engineers";
+      "E-Commerce Development Services | Scalable Online Stores & Marketplaces";
 
-    const metaDescription = document.querySelector("meta[name='description']");
+    const content =
+      "Professional e-commerce development services for scalable, secure, and high-converting online stores. Build powerful shopping experiences with modern technologies.";
+
+    const metaDescription = document.querySelector(
+      "meta[name='description']"
+    );
+
     if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "IT staff augmentation services to hire software developers, mobile app developers, full stack engineers, frontend and backend developers, DevOps engineers, React, Python, AI, and cross-platform development teams."
-      );
+      metaDescription.setAttribute("content", content);
     } else {
       const meta = document.createElement("meta");
       meta.name = "description";
-      meta.content =
-        "IT staff augmentation services to hire software developers, mobile app developers, full stack engineers, frontend and backend developers, DevOps engineers, React, Python, AI, and cross-platform development teams.";
+      meta.content = content;
       document.head.appendChild(meta);
     }
   }, []);
 
-  /* ================= HERO SLIDESHOW ================= */
+  /* ================= HERO SLIDESHOW (FIXED) ================= */
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [totalSlides]); // ✅ FIXED
+  }, [totalSlides]);
 
   /* ================= TIMELINE PROGRESS ================= */
   useEffect(() => {
@@ -54,7 +56,10 @@ export default function ITStaffAugmentationServices() {
       const windowHeight = window.innerHeight;
 
       const progress = Math.min(
-        Math.max((windowHeight - rect.top) / (rect.height + windowHeight), 0),
+        Math.max(
+          (windowHeight - rect.top) / (rect.height + windowHeight),
+          0
+        ),
         1
       );
 
@@ -73,21 +78,25 @@ export default function ITStaffAugmentationServices() {
 
     window.addEventListener("scroll", onScroll);
     onScroll();
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   /* ================= FADE-UP ================= */
   useEffect(() => {
     const elements = document.querySelectorAll(".animate");
+
     const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach(
-          (entry) =>
-            entry.isIntersecting &&
-            entry.target.classList.add("visible")
-        ),
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
       { threshold: 0.2 }
     );
+
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
@@ -101,7 +110,9 @@ export default function ITStaffAugmentationServices() {
           {heroImages.map((img, index) => (
             <div
               key={index}
-              className={`hero-slide ${index === currentSlide ? "active" : ""}`}
+              className={`hero-slide ${
+                index === currentSlide ? "active" : ""
+              }`}
               style={{ backgroundImage: `url(${img})` }}
             />
           ))}
@@ -110,15 +121,16 @@ export default function ITStaffAugmentationServices() {
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
-          <h1>IT Staff Augmentation Services</h1>
+          <h1>E-Commerce Development Services</h1>
           <p>
-            Flexible IT staff augmentation services to help businesses quickly
-            hire skilled software developers, mobile app developers, full stack
-            engineers, and DevOps professionals.
+            Manovate Technologies builds secure, scalable, and high-performing
+            e-commerce platforms that drive sales and enhance customer
+            experiences. From startups to enterprises, we deliver solutions
+            designed for growth.
           </p>
 
           <a href="#services" className="btn-primary">
-            Get Started
+            Explore E-Commerce Solutions
           </a>
         </div>
       </section>
@@ -127,105 +139,112 @@ export default function ITStaffAugmentationServices() {
       <section className="section-white">
         <div className="service-container">
           <h2>Overview</h2>
-
           <p className="section-intro">
-            Our IT staff augmentation model enables companies to scale
-            development teams with vetted engineers across web, mobile,
-            cloud, and enterprise software projects.
+            Our e-commerce development services help businesses launch and scale
+            online stores with seamless shopping experiences, secure payments,
+            and powerful management tools.
           </p>
 
           <div className="grid">
             <div className="card animate">
-              <h3>Software & Application Developers</h3>
+              <h3>Custom Store Development</h3>
               <p>
-                Experienced frontend, backend, and full stack developers
-                for enterprise-grade software solutions.
+                Fully customized online stores built for performance, branding,
+                and high conversion rates.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Mobile App Development Teams</h3>
+              <h3>Multi-Channel Selling</h3>
               <p>
-                Android, iOS, React Native, and cross-platform mobile
-                app development experts.
+                Sell across web, mobile, marketplaces, and social platforms
+                using a unified commerce system.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Specialized Engineering Talent</h3>
+              <h3>Scalable Infrastructure</h3>
               <p>
-                DevOps, cloud engineers, AI specialists, QA automation,
-                and database experts.
+                Architected to handle traffic spikes, large product catalogs,
+                and long-term business growth.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ================= PROCESS ================= */}
+      {/* ================= TIMELINE ================= */}
       <section className="section-light">
         <div className="service-container">
-          <h2>How Our IT Staff Augmentation Works</h2>
+          <h2>E-Commerce Development Process</h2>
+          <p className="section-intro">
+            A proven approach to building, launching, and scaling successful
+            e-commerce platforms.
+          </p>
 
           <div className="timeline" id="brand-timeline">
+            <div className="timeline-start"></div>
             <div className="timeline-line"></div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Planning</span>
-              <h3>Skill & Team Assessment</h3>
+              <span className="timeline-label">Plan</span>
+              <h3>Strategy & Requirements</h3>
               <p>
-                We analyze project scope, tech stack, and skill requirements.
+                Understand business goals, customer journeys, and define the
+                right e-commerce architecture.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Onboarding</span>
-              <h3>Hire Dedicated Developers</h3>
+              <span className="timeline-label">Build</span>
+              <h3>Store Design & Development</h3>
               <p>
-                Rapid onboarding of vetted developers who integrate with
-                your in-house teams.
+                Develop responsive storefronts, secure payment flows, and
+                powerful admin dashboards.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Delivery</span>
-              <h3>Ongoing Collaboration & Scale</h3>
+              <span className="timeline-label">Launch</span>
+              <h3>Testing & Go-Live</h3>
               <p>
-                Agile delivery, scalable teams, and long-term project
-                success.
+                Test performance, security, and customer journeys before
+                launching your online store.
               </p>
             </div>
+
+            <div className="timeline-end"></div>
           </div>
         </div>
       </section>
 
-      {/* ================= WHY US ================= */}
+      {/* ================= WHY CHOOSE US ================= */}
       <section className="section-white" id="services">
         <div className="service-container">
-          <h2>Why Choose Us</h2>
+          <h2>Why Choose Our E-Commerce Services</h2>
 
           <div className="why-grid">
             <div className="why-box animate">
-              <h3>Top Engineering Talent</h3>
+              <h3>E-Commerce Expertise</h3>
               <p>
-                Access experienced developers and IT specialists from
-                India’s leading talent pool.
+                Experience building scalable e-commerce platforms across
+                industries and markets.
               </p>
             </div>
 
             <div className="why-box animate">
-              <h3>Flexible Engagement Models</h3>
+              <h3>Secure & Reliable</h3>
               <p>
-                Scale teams up or down with cost-effective staff
-                augmentation.
+                Secure payment gateways, data protection, and performance
+                optimization.
               </p>
             </div>
 
             <div className="why-box animate">
-              <h3>Faster Delivery</h3>
+              <h3>Growth-Focused Solutions</h3>
               <p>
-                Accelerate development while maintaining quality and
-                budget efficiency.
+                Platforms designed to support marketing, analytics, and
+                long-term revenue growth.
               </p>
             </div>
           </div>
@@ -236,29 +255,31 @@ export default function ITStaffAugmentationServices() {
       <section className="contact-section" id="contact">
         <div className="service-container contact-grid">
           <div className="contact-left">
-            <h2>Contact Manovate Technologies</h2>
+            <h2>Start Your E-Commerce Project</h2>
             <p>
-              Hire dedicated developers and scale your development
-              teams quickly with our IT staff augmentation services.
+              Ready to launch or scale your online store? Connect with our
+              e-commerce experts today.
             </p>
 
             <form
               className="service-contact-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Our team will contact you shortly.");
+                alert(
+                  "Thank you! Our e-commerce team will contact you shortly."
+                );
               }}
             >
               <input type="text" placeholder="Your name*" required />
               <input type="email" placeholder="Your email*" required />
               <textarea
                 rows="4"
-                placeholder="Tell us about your staffing needs..."
+                placeholder="Tell us about your e-commerce idea..."
                 required
               ></textarea>
 
               <button type="submit" className="submit-btn">
-                Submit Project
+                Request Consultation
               </button>
             </form>
           </div>
@@ -266,7 +287,7 @@ export default function ITStaffAugmentationServices() {
           <div className="contact-right gif-container">
             <img
               src={inventoryGif}
-              alt="IT Staff Augmentation"
+              alt="E-Commerce Development Services"
               className="contact-gif"
             />
           </div>

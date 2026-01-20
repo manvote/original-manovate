@@ -1,33 +1,35 @@
 import { useEffect, useState } from "react";
 import inventoryGif from "../../assets/inventory-management.gif";
-import hero1 from "../../assets/hero1.jpg";
-import hero2 from "../../assets/hero2.jpg";
-import hero3 from "../../assets/hero3.jpg";
+import shero1 from "../../assets/hero1.jpg";
+import shero2 from "../../assets/hero2.jpg";
+import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import "./android-app.css";
+import "./App.css";
 
-export default function ITStaffAugmentationServices() {
-  const heroImages = [hero1, hero2, hero3];
-  const totalSlides = heroImages.length; // ✅ FIX
+export default function App() {
+  const heroImages = [shero1, shero2, shero3];
+  const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   /* ================= SEO META ================= */
   useEffect(() => {
     document.title =
-      "IT Staff Augmentation Services | Hire Software Developers & Engineers";
+      "Lead Design & Product Design Strategy | Manovate Technologies";
 
-    const metaDescription = document.querySelector("meta[name='description']");
+    const content =
+      "We provide lead design and product design strategy services that align business goals, user needs, and scalable design systems. From UX research and design leadership to enterprise-grade design systems, we help organizations build impactful digital products.";
+
+    const metaDescription = document.querySelector(
+      "meta[name='description']"
+    );
+
     if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "IT staff augmentation services to hire software developers, mobile app developers, full stack engineers, frontend and backend developers, DevOps engineers, React, Python, AI, and cross-platform development teams."
-      );
+      metaDescription.setAttribute("content", content);
     } else {
       const meta = document.createElement("meta");
       meta.name = "description";
-      meta.content =
-        "IT staff augmentation services to hire software developers, mobile app developers, full stack engineers, frontend and backend developers, DevOps engineers, React, Python, AI, and cross-platform development teams.";
+      meta.content = content;
       document.head.appendChild(meta);
     }
   }, []);
@@ -39,7 +41,7 @@ export default function ITStaffAugmentationServices() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [totalSlides]); // ✅ FIXED
+  }, [totalSlides]);
 
   /* ================= TIMELINE PROGRESS ================= */
   useEffect(() => {
@@ -54,7 +56,10 @@ export default function ITStaffAugmentationServices() {
       const windowHeight = window.innerHeight;
 
       const progress = Math.min(
-        Math.max((windowHeight - rect.top) / (rect.height + windowHeight), 0),
+        Math.max(
+          (windowHeight - rect.top) / (rect.height + windowHeight),
+          0
+        ),
         1
       );
 
@@ -76,18 +81,21 @@ export default function ITStaffAugmentationServices() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* ================= FADE-UP ================= */
+  /* ================= FADE-UP ANIMATION ================= */
   useEffect(() => {
     const elements = document.querySelectorAll(".animate");
+
     const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach(
-          (entry) =>
-            entry.isIntersecting &&
-            entry.target.classList.add("visible")
-        ),
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
       { threshold: 0.2 }
     );
+
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
@@ -101,7 +109,9 @@ export default function ITStaffAugmentationServices() {
           {heroImages.map((img, index) => (
             <div
               key={index}
-              className={`hero-slide ${index === currentSlide ? "active" : ""}`}
+              className={`hero-slide ${
+                index === currentSlide ? "active" : ""
+              }`}
               style={{ backgroundImage: `url(${img})` }}
             />
           ))}
@@ -110,15 +120,16 @@ export default function ITStaffAugmentationServices() {
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
-          <h1>IT Staff Augmentation Services</h1>
+          <h1>Lead Design & Product Experience Strategy</h1>
           <p>
-            Flexible IT staff augmentation services to help businesses quickly
-            hire skilled software developers, mobile app developers, full stack
-            engineers, and DevOps professionals.
+            Manovate Technologies provides senior-level design leadership to help
+            organizations craft meaningful digital experiences. We bridge
+            business vision, user needs, and scalable design systems to deliver
+            products that perform, scale, and inspire.
           </p>
 
           <a href="#services" className="btn-primary">
-            Get Started
+            Explore Our Approach
           </a>
         </div>
       </section>
@@ -126,106 +137,125 @@ export default function ITStaffAugmentationServices() {
       {/* ================= OVERVIEW ================= */}
       <section className="section-white">
         <div className="service-container">
-          <h2>Overview</h2>
+          <h2>Design Leadership Overview</h2>
 
           <p className="section-intro">
-            Our IT staff augmentation model enables companies to scale
-            development teams with vetted engineers across web, mobile,
-            cloud, and enterprise software projects.
+            Our lead design services go beyond visuals. We guide product teams
+            through research, strategy, and execution to ensure every design
+            decision supports long-term business outcomes and exceptional user
+            experiences.
           </p>
 
           <div className="grid">
             <div className="card animate">
-              <h3>Software & Application Developers</h3>
+              <h3>UX Strategy & Research</h3>
               <p>
-                Experienced frontend, backend, and full stack developers
-                for enterprise-grade software solutions.
+                User research, journey mapping, usability testing, and insight
+                synthesis that inform strong, evidence-based design decisions.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Mobile App Development Teams</h3>
+              <h3>Product & Interaction Design</h3>
               <p>
-                Android, iOS, React Native, and cross-platform mobile
-                app development experts.
+                End-to-end product design including information architecture,
+                interaction design, and refined user interfaces.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Specialized Engineering Talent</h3>
+              <h3>Design Systems & Governance</h3>
               <p>
-                DevOps, cloud engineers, AI specialists, QA automation,
-                and database experts.
+                Scalable design systems that improve consistency, speed, and
+                cross-team collaboration.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ================= PROCESS ================= */}
+      {/* ================= TIMELINE ================= */}
       <section className="section-light">
         <div className="service-container">
-          <h2>How Our IT Staff Augmentation Works</h2>
+          <h2>How We Lead Design Initiatives</h2>
+
+          <p className="section-intro">
+            A structured approach to building impactful, scalable, and
+            high-performing digital products.
+          </p>
 
           <div className="timeline" id="brand-timeline">
+            <div className="timeline-start"></div>
             <div className="timeline-line"></div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Planning</span>
-              <h3>Skill & Team Assessment</h3>
+              <span className="timeline-label">Discovery</span>
+              <h3>Business & User Alignment</h3>
               <p>
-                We analyze project scope, tech stack, and skill requirements.
+                Stakeholder alignment, success metrics definition, and deep user
+                understanding to form a strong design foundation.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Onboarding</span>
-              <h3>Hire Dedicated Developers</h3>
+              <span className="timeline-label">Design</span>
+              <h3>Experience & System Design</h3>
               <p>
-                Rapid onboarding of vetted developers who integrate with
-                your in-house teams.
+                Prototyping, interaction design, and system creation that balance
+                creativity, usability, and feasibility.
               </p>
             </div>
 
             <div className="timeline-item">
               <span className="timeline-label">Delivery</span>
-              <h3>Ongoing Collaboration & Scale</h3>
+              <h3>Collaboration & Execution</h3>
               <p>
-                Agile delivery, scalable teams, and long-term project
-                success.
+                Close collaboration with engineering and product teams to ensure
+                design integrity through implementation.
               </p>
             </div>
+
+            <div className="timeline-item">
+              <span className="timeline-label">Scale</span>
+              <h3>Optimization & Growth</h3>
+              <p>
+                Continuous improvement, audits, and system evolution to support
+                long-term product growth.
+              </p>
+            </div>
+
+            <div className="timeline-end"></div>
           </div>
         </div>
       </section>
 
-      {/* ================= WHY US ================= */}
+      {/* ================= WHY CHOOSE US ================= */}
       <section className="section-white" id="services">
         <div className="service-container">
-          <h2>Why Choose Us</h2>
+          <h2>Why Choose Our Lead Design Services</h2>
 
           <div className="why-grid">
             <div className="why-box animate">
-              <h3>Top Engineering Talent</h3>
+              <h3>Senior Design Leadership</h3>
               <p>
-                Access experienced developers and IT specialists from
-                India’s leading talent pool.
+                Embedded design leadership that guides teams, mentors designers,
+                and drives strategic decisions.
               </p>
             </div>
 
             <div className="why-box animate">
-              <h3>Flexible Engagement Models</h3>
+              <h3>Business-Driven Design</h3>
               <p>
-                Scale teams up or down with cost-effective staff
-                augmentation.
+                Design decisions aligned with measurable business outcomes, not
+                just aesthetics.
               </p>
             </div>
 
             <div className="why-box animate">
-              <h3>Faster Delivery</h3>
+              <h3>Scalable Design Systems</h3>
               <p>
-                Accelerate development while maintaining quality and
-                budget efficiency.
+                Systems and processes built to scale with your product and
+                organization.
               </p>
             </div>
           </div>
@@ -236,29 +266,29 @@ export default function ITStaffAugmentationServices() {
       <section className="contact-section" id="contact">
         <div className="service-container contact-grid">
           <div className="contact-left">
-            <h2>Contact Manovate Technologies</h2>
+            <h2>Work With Our Lead Designers</h2>
             <p>
-              Hire dedicated developers and scale your development
-              teams quickly with our IT staff augmentation services.
+              Elevate your product experience with strategic design leadership.
+              Let’s discuss how we can support your design and product goals.
             </p>
 
             <form
               className="service-contact-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Our team will contact you shortly.");
+                alert("Thank you! Our design team will contact you shortly.");
               }}
             >
               <input type="text" placeholder="Your name*" required />
               <input type="email" placeholder="Your email*" required />
               <textarea
                 rows="4"
-                placeholder="Tell us about your staffing needs..."
+                placeholder="Tell us about your product or design challenge..."
                 required
               ></textarea>
 
               <button type="submit" className="submit-btn">
-                Submit Project
+                Start a Conversation
               </button>
             </form>
           </div>
@@ -266,7 +296,7 @@ export default function ITStaffAugmentationServices() {
           <div className="contact-right gif-container">
             <img
               src={inventoryGif}
-              alt="IT Staff Augmentation"
+              alt="Design leadership illustration"
               className="contact-gif"
             />
           </div>

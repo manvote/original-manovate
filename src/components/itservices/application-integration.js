@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import shero1 from "../../assets/hero1.jpg";
 import shero2 from "../../assets/hero2.jpg";
 import shero3 from "../../assets/hero3.jpg";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 import "./android-app.css";
 
 export default function App() {
@@ -71,6 +73,7 @@ const totalSlides = heroImages.length;
 
   return (
     <>
+    <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
         <div className="hero-slideshow">
@@ -257,6 +260,7 @@ const totalSlides = heroImages.length;
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

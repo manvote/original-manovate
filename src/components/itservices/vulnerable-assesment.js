@@ -1,33 +1,35 @@
 import { useEffect, useState } from "react";
-import inventoryGif from "../../assets/inventory-management.gif";
 import hero1 from "../../assets/hero1.jpg";
 import hero2 from "../../assets/hero2.jpg";
 import hero3 from "../../assets/hero3.jpg";
+import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
 
-export default function ITStaffAugmentationServices() {
+export default function VulnerabilityAssessment() {
   const heroImages = [hero1, hero2, hero3];
-  const totalSlides = heroImages.length; // ✅ FIX
+  const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   /* ================= SEO META ================= */
   useEffect(() => {
     document.title =
-      "IT Staff Augmentation Services | Hire Software Developers & Engineers";
+      "Vulnerability Assessment Services | Application & Network Security";
 
-    const metaDescription = document.querySelector("meta[name='description']");
+    const content =
+      "Professional vulnerability assessment services to identify, analyze, and mitigate security risks across applications, networks, and systems.";
+
+    const metaDescription = document.querySelector(
+      "meta[name='description']"
+    );
+
     if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "IT staff augmentation services to hire software developers, mobile app developers, full stack engineers, frontend and backend developers, DevOps engineers, React, Python, AI, and cross-platform development teams."
-      );
+      metaDescription.setAttribute("content", content);
     } else {
       const meta = document.createElement("meta");
       meta.name = "description";
-      meta.content =
-        "IT staff augmentation services to hire software developers, mobile app developers, full stack engineers, frontend and backend developers, DevOps engineers, React, Python, AI, and cross-platform development teams.";
+      meta.content = content;
       document.head.appendChild(meta);
     }
   }, []);
@@ -39,7 +41,7 @@ export default function ITStaffAugmentationServices() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [totalSlides]); // ✅ FIXED
+  }, [totalSlides]);
 
   /* ================= TIMELINE PROGRESS ================= */
   useEffect(() => {
@@ -54,7 +56,10 @@ export default function ITStaffAugmentationServices() {
       const windowHeight = window.innerHeight;
 
       const progress = Math.min(
-        Math.max((windowHeight - rect.top) / (rect.height + windowHeight), 0),
+        Math.max(
+          (windowHeight - rect.top) / (rect.height + windowHeight),
+          0
+        ),
         1
       );
 
@@ -73,21 +78,25 @@ export default function ITStaffAugmentationServices() {
 
     window.addEventListener("scroll", onScroll);
     onScroll();
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   /* ================= FADE-UP ================= */
   useEffect(() => {
     const elements = document.querySelectorAll(".animate");
+
     const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach(
-          (entry) =>
-            entry.isIntersecting &&
-            entry.target.classList.add("visible")
-        ),
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
       { threshold: 0.2 }
     );
+
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
@@ -101,7 +110,9 @@ export default function ITStaffAugmentationServices() {
           {heroImages.map((img, index) => (
             <div
               key={index}
-              className={`hero-slide ${index === currentSlide ? "active" : ""}`}
+              className={`hero-slide ${
+                index === currentSlide ? "active" : ""
+              }`}
               style={{ backgroundImage: `url(${img})` }}
             />
           ))}
@@ -110,15 +121,16 @@ export default function ITStaffAugmentationServices() {
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
-          <h1>IT Staff Augmentation Services</h1>
+          <h1>Vulnerability Assessment Services</h1>
           <p>
-            Flexible IT staff augmentation services to help businesses quickly
-            hire skilled software developers, mobile app developers, full stack
-            engineers, and DevOps professionals.
+            Manovate Technologies helps organizations identify security
+            weaknesses before attackers do. Our vulnerability assessment
+            services protect applications, networks, and infrastructure from
+            potential threats.
           </p>
 
           <a href="#services" className="btn-primary">
-            Get Started
+            Explore Security Services
           </a>
         </div>
       </section>
@@ -127,105 +139,112 @@ export default function ITStaffAugmentationServices() {
       <section className="section-white">
         <div className="service-container">
           <h2>Overview</h2>
-
           <p className="section-intro">
-            Our IT staff augmentation model enables companies to scale
-            development teams with vetted engineers across web, mobile,
-            cloud, and enterprise software projects.
+            Our vulnerability assessment services provide a structured approach
+            to identifying, analyzing, and prioritizing security risks across
+            applications, networks, and systems.
           </p>
 
           <div className="grid">
             <div className="card animate">
-              <h3>Software & Application Developers</h3>
+              <h3>Application Security Assessment</h3>
               <p>
-                Experienced frontend, backend, and full stack developers
-                for enterprise-grade software solutions.
+                Identify vulnerabilities in web and mobile applications through
+                automated and manual security testing.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Mobile App Development Teams</h3>
+              <h3>Network & Infrastructure Assessment</h3>
               <p>
-                Android, iOS, React Native, and cross-platform mobile
-                app development experts.
+                Detect misconfigurations and weaknesses in servers, networks,
+                cloud, and infrastructure environments.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Specialized Engineering Talent</h3>
+              <h3>Risk Analysis & Prioritization</h3>
               <p>
-                DevOps, cloud engineers, AI specialists, QA automation,
-                and database experts.
+                Classify vulnerabilities by severity and business impact to
+                guide remediation efforts.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ================= PROCESS ================= */}
+      {/* ================= TIMELINE ================= */}
       <section className="section-light">
         <div className="service-container">
-          <h2>How Our IT Staff Augmentation Works</h2>
+          <h2>Vulnerability Assessment Process</h2>
+          <p className="section-intro">
+            A repeatable and proven process to uncover and mitigate security
+            risks.
+          </p>
 
           <div className="timeline" id="brand-timeline">
+            <div className="timeline-start"></div>
             <div className="timeline-line"></div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Planning</span>
-              <h3>Skill & Team Assessment</h3>
+              <span className="timeline-label">Discover</span>
+              <h3>Asset Identification</h3>
               <p>
-                We analyze project scope, tech stack, and skill requirements.
+                Identify systems, applications, and infrastructure within the
+                assessment scope.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Onboarding</span>
-              <h3>Hire Dedicated Developers</h3>
+              <span className="timeline-label">Assess</span>
+              <h3>Vulnerability Scanning</h3>
               <p>
-                Rapid onboarding of vetted developers who integrate with
-                your in-house teams.
+                Perform automated and manual testing to detect security
+                weaknesses.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Delivery</span>
-              <h3>Ongoing Collaboration & Scale</h3>
+              <span className="timeline-label">Mitigate</span>
+              <h3>Reporting & Remediation</h3>
               <p>
-                Agile delivery, scalable teams, and long-term project
-                success.
+                Deliver actionable reports with remediation guidance and risk
+                prioritization.
               </p>
             </div>
+
+            <div className="timeline-end"></div>
           </div>
         </div>
       </section>
 
-      {/* ================= WHY US ================= */}
+      {/* ================= WHY CHOOSE US ================= */}
       <section className="section-white" id="services">
         <div className="service-container">
-          <h2>Why Choose Us</h2>
+          <h2>Why Choose Our Vulnerability Assessment Services</h2>
 
           <div className="why-grid">
             <div className="why-box animate">
-              <h3>Top Engineering Talent</h3>
+              <h3>Security Expertise</h3>
               <p>
-                Access experienced developers and IT specialists from
-                India’s leading talent pool.
+                Experienced security professionals using industry best
+                practices and tools.
               </p>
             </div>
 
             <div className="why-box animate">
-              <h3>Flexible Engagement Models</h3>
+              <h3>Comprehensive Coverage</h3>
               <p>
-                Scale teams up or down with cost-effective staff
-                augmentation.
+                Application, network, cloud, and infrastructure assessments
+                under one service.
               </p>
             </div>
 
             <div className="why-box animate">
-              <h3>Faster Delivery</h3>
+              <h3>Actionable Insights</h3>
               <p>
-                Accelerate development while maintaining quality and
-                budget efficiency.
+                Clear, prioritized reports focused on real-world risk
+                reduction.
               </p>
             </div>
           </div>
@@ -236,29 +255,31 @@ export default function ITStaffAugmentationServices() {
       <section className="contact-section" id="contact">
         <div className="service-container contact-grid">
           <div className="contact-left">
-            <h2>Contact Manovate Technologies</h2>
+            <h2>Secure Your Systems Today</h2>
             <p>
-              Hire dedicated developers and scale your development
-              teams quickly with our IT staff augmentation services.
+              Identify vulnerabilities before they become threats. Partner with
+              our security experts for proactive protection.
             </p>
 
             <form
               className="service-contact-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Our team will contact you shortly.");
+                alert(
+                  "Thank you! Our security team will contact you shortly."
+                );
               }}
             >
               <input type="text" placeholder="Your name*" required />
               <input type="email" placeholder="Your email*" required />
               <textarea
                 rows="4"
-                placeholder="Tell us about your staffing needs..."
+                placeholder="Tell us about your security requirements..."
                 required
               ></textarea>
 
               <button type="submit" className="submit-btn">
-                Submit Project
+                Request Security Assessment
               </button>
             </form>
           </div>
@@ -266,7 +287,7 @@ export default function ITStaffAugmentationServices() {
           <div className="contact-right gif-container">
             <img
               src={inventoryGif}
-              alt="IT Staff Augmentation"
+              alt="Vulnerability Assessment Services"
               className="contact-gif"
             />
           </div>

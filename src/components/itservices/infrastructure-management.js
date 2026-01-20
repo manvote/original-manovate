@@ -3,6 +3,8 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import hero1 from "../../assets/hero1.jpg";
 import hero2 from "../../assets/hero2.jpg";
 import hero3 from "../../assets/hero3.jpg";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 import "./android-app.css";
 
 export default function ITInfrastructureManagement() {
@@ -72,6 +74,7 @@ export default function ITInfrastructureManagement() {
 
   return (
     <>
+    <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
         <div className="hero-slideshow">
@@ -250,6 +253,7 @@ export default function ITInfrastructureManagement() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

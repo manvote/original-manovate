@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
+import inventoryGif from "../../assets/inventory-management.gif";
 import shero1 from "../../assets/hero1.jpg";
 import shero2 from "../../assets/hero2.jpg";
 import shero3 from "../../assets/hero3.jpg";
-import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import "./android-app.css";
+import "./App.css";
 
-export default function ERPServices() {
+export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,10 +15,10 @@ export default function ERPServices() {
   /* ================= SEO META ================= */
   useEffect(() => {
     document.title =
-      "ERP Software Services | Enterprise Resource Planning Solutions";
+      "Website Content Services | SEO Content, Copywriting & Digital Content Strategy";
 
     const content =
-      "ERP software services to integrate finance, HR, inventory, sales, and operations into a unified enterprise resource planning system. We deliver scalable ERP solutions for growing businesses.";
+      "Professional website content services including SEO content writing, website copywriting, landing page content, product descriptions, blog writing, and content strategy to improve visibility, engagement, and conversions.";
 
     const metaDescription = document.querySelector(
       "meta[name='description']"
@@ -34,7 +34,7 @@ export default function ERPServices() {
     }
   }, []);
 
-  /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
+  /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -78,7 +78,6 @@ export default function ERPServices() {
 
     window.addEventListener("scroll", onScroll);
     onScroll();
-
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -121,14 +120,16 @@ export default function ERPServices() {
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
-          <h1>ERP Solutions for Integrated Business Operations</h1>
+          <h1>Website Content Services</h1>
           <p>
-            Manovate Technologies delivers ERP solutions that integrate finance,
-            HR, inventory, sales, procurement, and operations into a unified
-            enterprise platform for better visibility and decision-making.
+            Manovate Technologies delivers professional website content services
+            that help businesses communicate clearly, rank higher on search
+            engines, and convert visitors into customers with SEO-optimized,
+            brand-aligned content.
           </p>
+
           <a href="#services" className="btn-primary">
-            Get Started
+            Get Content Started
           </a>
         </div>
       </section>
@@ -137,34 +138,35 @@ export default function ERPServices() {
       <section className="section-white">
         <div className="service-container">
           <h2>Overview</h2>
+
           <p className="section-intro">
-            Our ERP software centralizes core business functions including
-            finance, supply chain, HR, and operations into a single scalable
-            system that streamlines workflows and improves control.
+            Our website content services focus on clarity, relevance, and search
+            visibility. From homepage copy and service pages to blogs and landing
+            pages, we create content that drives engagement and conversions.
           </p>
 
           <div className="grid">
             <div className="card animate">
-              <h3>Financial & Accounting ERP</h3>
+              <h3>Website Copywriting</h3>
               <p>
-                Manage general ledger, accounts payable, receivable, budgeting,
-                and financial reporting within a unified ERP system.
+                Clear, compelling website copy that reflects your brand voice,
+                communicates value, and guides users through the journey.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>Inventory & Supply Chain ERP</h3>
+              <h3>SEO Content Writing</h3>
               <p>
-                Track inventory, procurement, vendors, warehouses, and order
-                fulfillment in real time.
+                Keyword-driven SEO content that improves rankings, organic
+                traffic, and long-term visibility.
               </p>
             </div>
 
             <div className="card animate">
-              <h3>HR & Operations ERP</h3>
+              <h3>Blogs & Landing Pages</h3>
               <p>
-                Streamline HR, payroll, employee management, and operational
-                workflows through integrated ERP modules.
+                Informative blogs and high-converting landing pages designed to
+                support marketing and lead generation.
               </p>
             </div>
           </div>
@@ -174,10 +176,11 @@ export default function ERPServices() {
       {/* ================= TIMELINE ================= */}
       <section className="section-light">
         <div className="service-container">
-          <h2>How Our ERP Implementation Works</h2>
+          <h2>Our Website Content Process</h2>
+
           <p className="section-intro">
-            A structured ERP implementation approach ensuring smooth adoption
-            and long-term scalability.
+            A structured content development workflow designed for quality,
+            consistency, and measurable results.
           </p>
 
           <div className="timeline" id="brand-timeline">
@@ -185,29 +188,29 @@ export default function ERPServices() {
             <div className="timeline-line"></div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Assessment</span>
-              <h3>Business Process Analysis</h3>
+              <span className="timeline-label">Discovery</span>
+              <h3>Research & Planning</h3>
               <p>
-                Analyze existing systems, workflows, and pain points to design
-                an ERP solution aligned with business goals.
+                Understand business goals, audience needs, competitors, and SEO
+                opportunities.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Configuration</span>
-              <h3>ERP Customization & Integration</h3>
+              <span className="timeline-label">Creation</span>
+              <h3>Content Writing & Optimization</h3>
               <p>
-                Configure ERP modules, integrate third-party systems, and tailor
-                workflows to business requirements.
+                Craft SEO-friendly, engaging, and brand-consistent website
+                content.
               </p>
             </div>
 
             <div className="timeline-item">
-              <span className="timeline-label">Deployment</span>
-              <h3>Go-Live & Optimization</h3>
+              <span className="timeline-label">Refinement</span>
+              <h3>Review & Improvement</h3>
               <p>
-                Deploy ERP, train users, and continuously optimize performance
-                for operational efficiency.
+                Refine content for clarity, performance, and alignment with
+                business objectives.
               </p>
             </div>
 
@@ -216,33 +219,49 @@ export default function ERPServices() {
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US ================= */}
-      <section className="section-white" id="services">
+      {/* ================= FLOW ================= */}
+      <section className="dt-flow-section">
         <div className="service-container">
-          <h2>Why Choose Our ERP Services</h2>
+          <h2 className="dt-title">Content That Converts</h2>
+          <p className="dt-subtitle">
+            Turning unclear messaging into structured, engaging, and
+            conversion-focused content.
+          </p>
 
-          <div className="why-grid">
-            <div className="why-box animate">
-              <h3>End-to-End ERP Expertise</h3>
-              <p>
-                ERP solutions covering finance, operations, HR, and supply chain
-                in one integrated platform.
-              </p>
+          <div className="dt-flow">
+            <div className="dt-stage before">
+              <h3>Before Content Optimization</h3>
+              <ul>
+                <li>Unclear messaging</li>
+                <li>Low engagement</li>
+                <li>Poor search visibility</li>
+                <li>Inconsistent brand voice</li>
+              </ul>
             </div>
 
-            <div className="why-box animate">
-              <h3>Scalable & Secure ERP</h3>
-              <p>
-                Enterprise-grade ERP designed to scale securely with business
-                growth.
-              </p>
+            <div className="dt-core">
+              <div className="dt-core-item">
+                <span>Strategy</span>
+                <p>Content planning and keyword research</p>
+              </div>
+              <div className="dt-core-item">
+                <span>Writing</span>
+                <p>SEO-friendly and user-focused content</p>
+              </div>
+              <div className="dt-core-item">
+                <span>Optimization</span>
+                <p>Structure, clarity, and conversion focus</p>
+              </div>
             </div>
 
-            <div className="why-box animate">
-              <h3>Business-Centric Approach</h3>
-              <p>
-                ERP implementations aligned with business goals to maximize ROI.
-              </p>
+            <div className="dt-stage after">
+              <h3>After Content Optimization</h3>
+              <ul>
+                <li>Clear messaging</li>
+                <li>Improved rankings</li>
+                <li>Higher engagement</li>
+                <li>Better conversions</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -252,28 +271,29 @@ export default function ERPServices() {
       <section className="contact-section" id="contact">
         <div className="service-container contact-grid">
           <div className="contact-left">
-            <h2>Talk to Our ERP Experts</h2>
+            <h2>Talk to Our Content Experts</h2>
             <p>
-              Planning to implement or upgrade your ERP system? Our specialists
-              are ready to help.
+              Looking to improve your website content? Our specialists are ready
+              to help.
             </p>
 
             <form
               className="service-contact-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Our ERP team will contact you shortly.");
+                alert("Thank you! Our content team will contact you shortly.");
               }}
             >
               <input type="text" placeholder="Your name*" required />
               <input type="email" placeholder="Your email*" required />
               <textarea
                 rows="4"
-                placeholder="Tell us about your ERP requirements..."
+                placeholder="Tell us about your content requirements..."
                 required
               ></textarea>
+
               <button type="submit" className="submit-btn">
-                Request ERP Consultation
+                Request Content Consultation
               </button>
             </form>
           </div>
@@ -281,7 +301,7 @@ export default function ERPServices() {
           <div className="contact-right gif-container">
             <img
               src={inventoryGif}
-              alt="ERP Software Services Illustration"
+              alt="Website Content Writing and SEO Content Services"
               className="contact-gif"
             />
           </div>

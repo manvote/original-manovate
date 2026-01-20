@@ -3,13 +3,14 @@ import { nonItServicesData } from "../data/Non-ITservicesData";
 import "../styles/services.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import nonithero from "../assets/nonitservices.jpg";
 
 export default function NonITServices() {
   return (
     <>
       <Navbar />
 
-      <section className="services-hero" style={{ backgroundImage: `url(/images/nonit-hero.jpg)` }}>
+      <section className="services-hero" style={{ backgroundImage: nonithero }}>
         <div className="services-hero-overlay">
           <h1>Non-IT Services</h1>
           <p>Business services that complement technology and operations.</p>

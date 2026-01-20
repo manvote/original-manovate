@@ -78,15 +78,15 @@ export default function ServiceCategory() {
 
                 {/* ✅ SMART ROUTING */}
                 <Link
-                  to={
-                    activeService.pagePath
-                      ? activeService.pagePath
-                      : `/nonitservices/${categoryId}/${activeService.id}`
-                  }
-                  className="sch-btn"
-                >
-                  View Service
-                </Link>
+  to={
+    activeService.pagePath
+      ? activeService.pagePath
+      : `/nonitservices/${categoryId}/${activeService.id}`
+  }
+  className="sch-btn"
+>
+  View Service
+</Link>
               </div>
             </div>
           </div>
