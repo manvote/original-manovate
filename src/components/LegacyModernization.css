@@ -30,6 +30,7 @@
   font-size: 19px;
   max-width: 720px;
   opacity: 0.9;
+  color: #fff;
 }
 
 .legacy-hero-cta {
@@ -120,6 +121,13 @@
 
 .legacy-final h2 {
   font-size: 42px;
+  color: #ffffff;
+}
+.legacy-final p {
+  font-size: 19px;
+  max-width: 720px;
+  margin: 20px auto 0;
+  color: #ffffff !important;
 }
 
 .legacy-final-btn {

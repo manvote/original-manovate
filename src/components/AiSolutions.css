@@ -30,6 +30,7 @@
   font-size: 19px;
   max-width: 720px;
   opacity: 0.9;
+  color: #f7f1f1 !important;
 }
 
 .ai-ent-cta {
@@ -120,8 +121,14 @@
 
 .ai-ent-final h2 {
   font-size: 42px;
+  color: #ffffff;
 }
-
+.ai-ent-final p {
+  font-size: 19px;
+  max-width: 720px;
+  margin: 20px auto 0;
+  color: #f7f1f1 !important;
+}
 .ai-ent-final-btn {
   display: inline-block;
   margin-top: 30px;
