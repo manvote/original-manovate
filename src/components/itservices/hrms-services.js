@@ -6,33 +6,12 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function HRMSServices() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "HRMS Software Solutions | Employee Management, Payroll & HR Automation";
-
-    const content =
-      "HRMS software solutions to manage employees, payroll, attendance, performance, and HR operations efficiently. We provide scalable human resource management systems for modern organizations.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +82,22 @@ export default function HRMSServices() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    HRMS Software Solutions | Employee Management & Payroll Systems | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides HRMS software solutions for employee management, payroll, attendance, leave management, performance tracking, and HR automation to streamline modern workforce operations."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/hrms-software-solutions"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -287,6 +282,12 @@ export default function HRMSServices() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

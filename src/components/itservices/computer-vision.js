@@ -6,33 +6,13 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function ComputerVisionServices() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Computer Vision Development | AI-Based Visual Intelligence Solutions";
-
-    const content =
-      "We provide end-to-end computer vision solutions leveraging image processing, deep learning, and AI-powered visual recognition. Our systems support object tracking, image classification, video analytics, and automated visual inspection to help businesses extract actionable insights from visual data at scale.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +83,22 @@ export default function ComputerVisionServices() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Computer Vision Services | AI-Powered Image & Video Analytics | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides computer vision services using AI and deep learning to enable image recognition, video analytics, object detection, facial recognition, and automated visual inspection for enterprises."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/computer-vision-services"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -294,6 +290,12 @@ export default function ComputerVisionServices() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

@@ -4,6 +4,8 @@ import { ITservicesData } from "../data/ITservicesData";
 import "../styles/service-category-advanced.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { Helmet } from "react-helmet-async";
+
 
 export default function ServiceCategory() {
   const { categoryId } = useParams();
@@ -22,6 +24,22 @@ export default function ServiceCategory() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    {category.categoryTitle} – IT Services | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content={category.categoryDescription}
+  />
+
+  <link
+    rel="canonical"
+    href={`https://www.manovate.co.in/itservices/${categoryId}`}
+  />
+</Helmet>
+
       <Navbar />
 
       <section className="sc-hybrid">

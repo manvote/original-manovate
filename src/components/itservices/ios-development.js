@@ -6,33 +6,12 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function IOSAppDevelopment() {
   const heroImages = [hero1, hero2, hero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "iOS App Development Services | Custom iPhone & iPad Applications";
-
-    const content =
-      "Professional iOS app development services for iPhone and iPad. We build secure, scalable, and high-performance iOS applications using Swift and modern Apple frameworks.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -103,6 +82,22 @@ export default function IOSAppDevelopment() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    iOS App Development Services – Custom iPhone & iPad Apps | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies offers professional iOS app development services to build secure, scalable, and high-performance iPhone and iPad applications using Swift and Apple-native frameworks."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/ios-app-development"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -285,6 +280,12 @@ export default function IOSAppDevelopment() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

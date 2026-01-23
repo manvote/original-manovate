@@ -6,31 +6,13 @@ import hero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function UnifiedCommunicationsSolutions() {
   const heroImages = [hero1, hero2, hero3];
   const totalSlides = heroImages.length; // ✅ FIX
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Unified Communications Solutions | VoIP, IP PBX & Business Communication Systems";
-
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Enterprise unified communications solutions including VoIP phones, IP PBX systems, Grandstream IP phones, call management, unified collaboration platforms, and business telephony solutions."
-      );
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content =
-        "Enterprise unified communications solutions including VoIP phones, IP PBX systems, Grandstream IP phones, call management, unified collaboration platforms, and business telephony solutions.";
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -94,6 +76,22 @@ export default function UnifiedCommunicationsSolutions() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Unified Communications Solutions – VoIP, IP PBX & Business Telephony | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies delivers unified communications solutions including VoIP systems, IP PBX, Grandstream IP phones, call management, and enterprise business communication platforms."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/unified-communications-solutions"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -273,6 +271,12 @@ export default function UnifiedCommunicationsSolutions() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

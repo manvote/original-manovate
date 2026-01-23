@@ -6,33 +6,13 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function AndroidAppDevelopment() {
   const heroImages = [hero1, hero2, hero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Android App Development Services | Custom Android Applications";
-
-    const content =
-      "Professional Android app development services to build secure, scalable, and high-performance Android applications. We develop custom Android apps using Kotlin, Java, and modern Android frameworks.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +83,21 @@ export default function AndroidAppDevelopment() {
 
   return (
     <>
+     <Helmet>
+  <title>
+    Android App Development Services – Custom Android Apps | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies offers professional Android app development services to build secure, scalable, and high-performance Android applications using Kotlin, Java, and modern Android frameworks."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/android-app-development"
+  />
+</Helmet>
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -289,7 +284,13 @@ export default function AndroidAppDevelopment() {
             />
           </div>
         </div>
-      </section>
+      </section><p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
+
       <Footer />
     </>
   );

@@ -6,33 +6,14 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function VulnerabilityAssessment() {
   const heroImages = [hero1, hero2, hero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Vulnerability Assessment Services | Application & Network Security";
 
-    const content =
-      "Professional vulnerability assessment services to identify, analyze, and mitigate security risks across applications, networks, and systems.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -103,6 +84,22 @@ export default function VulnerabilityAssessment() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Vulnerability Assessment Services – Application & Network Security | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides vulnerability assessment services to identify, analyze, and prioritize security risks across applications, networks, cloud, and infrastructure environments."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/vulnerability-assessment"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -293,6 +290,12 @@ export default function VulnerabilityAssessment() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

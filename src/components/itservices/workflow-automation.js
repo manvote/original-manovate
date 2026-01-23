@@ -6,33 +6,12 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function WorkflowAutomation() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Workflow Automation Solutions | Intelligent Business Process Automation";
-
-    const content =
-      "We design and implement intelligent workflow automation solutions that streamline business processes, eliminate manual work, and improve operational efficiency. Our automation systems integrate seamlessly with existing tools, data sources, and enterprise platforms.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +82,22 @@ export default function WorkflowAutomation() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Workflow Automation Solutions – Business Process Automation | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides workflow automation solutions that streamline business processes, integrate systems, reduce manual effort, and improve operational efficiency through intelligent automation."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/workflow-automation"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -288,6 +283,12 @@ export default function WorkflowAutomation() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

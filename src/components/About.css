@@ -102,9 +102,16 @@
   }
 }
 
+.about-hero-inner h1 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+  max-width: 800px;
+  color: #001f3f;
+}
 
 .about-hero-inner h2 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 800;
   max-width: 900px;
 }
@@ -115,6 +122,85 @@
   max-width: 720px;
   color: #425466;
 }
+
+/* ================= ABOUT – SERVICES LINKS ================= */
+
+.about-services-links {
+  margin-top: 40px;
+  max-width: 900px;
+}
+
+.about-services-intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.about-services-label {
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+/* LIST */
+.about-services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.about-services-list li a {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.about-services-list li a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border-color: #006cff;
+}
+
+/* ICON */
+.service-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+/* TEXT */
+.about-services-list strong {
+  display: block;
+  font-size: 1rem;
+  color: #0a0a0a;
+  margin-bottom: 4px;
+}
+
+.about-services-list span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .about-services-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* SECTIONS */
 .about-section {

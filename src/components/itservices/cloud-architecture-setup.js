@@ -6,33 +6,13 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function CloudArchitectureSetup() {
   const heroImages = [hero1, hero2, hero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Cloud Architecture Setup Services | Secure & Scalable Cloud Infrastructure";
-
-    const content =
-      "Professional cloud architecture setup services for AWS, Azure, and Google Cloud. We design secure, scalable, and high-availability cloud infrastructures optimized for performance, reliability, and cost efficiency.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +83,22 @@ export default function CloudArchitectureSetup() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Cloud Architecture Setup Services | AWS, Azure & GCP Architecture Design | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides cloud architecture setup services to design secure, scalable, and high-availability cloud infrastructure on AWS, Microsoft Azure, and Google Cloud. We build optimized cloud foundations for performance, security, and growth."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/cloud-architecture-setup"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -290,6 +286,12 @@ export default function CloudArchitectureSetup() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

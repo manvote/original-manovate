@@ -18,7 +18,7 @@ const About = () => {
     <Navbar />
 
 <Helmet>
-  <title>About Manovate Technologies | AI & Digital Engineering Company</title>
+  <title>About Us – Manovate Technologies | AI & Digital Engineering</title>
 
   <meta
     name="description"
@@ -38,7 +38,8 @@ const About = () => {
 
     {/* LEFT CONTENT */}
     <div className="about-hero-inner">
-      <h2>Engineering Digital Excellence at Manovate Technologies</h2>
+      <h1><li>About Manovate Technologies</li></h1>
+<h2>Engineering Digital Excellence</h2>
 
       <p>
         Manovate Technologies is a technology consulting and engineering
@@ -91,11 +92,42 @@ const About = () => {
       {/* WHAT WE DO */}
       <section className="about-section">
         <h2>What We Do</h2>
-        <p>
-          We deliver enterprise-grade technology solutions across web
-          platforms, mobile systems, cloud infrastructure, data engineering,
-          artificial intelligence, and cybersecurity-ready architectures.
-        </p>
+        <div className="about-services-links">
+
+  <p className="about-services-intro">
+    We deliver enterprise-grade technology solutions across web platforms,
+    mobile systems, cloud infrastructure, data engineering, artificial
+    intelligence, and cybersecurity-ready architectures.
+  </p>
+
+  <p className="about-services-label">
+    Explore our core capabilities:
+  </p>
+
+  <ul className="about-services-list">
+    <li>
+      <a href="/itservices">
+        <span className="service-icon">⚙️</span>
+        <div>
+          <strong>IT Services & Software Engineering</strong>
+          <span>AI, Cloud, Web, Mobile & Enterprise Platforms</span>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="/nonitservices">
+        <span className="service-icon">📊</span>
+        <div>
+          <strong>Non-IT & Business Consulting Services</strong>
+          <span>Strategy, Operations, Branding & Digital Growth</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+</div>
+<br />
         <p>
           From modernizing legacy environments to building cloud-native
           platforms, Manovate ensures every solution is engineered with

@@ -5,6 +5,8 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
+
 
 export default function App() {
     const heroImages = [shero1, shero2, shero3];
@@ -79,6 +81,22 @@ const totalSlides = heroImages.length;
 
   return (
     <>
+    <Helmet>
+  <title>
+    AI & Machine Learning Solutions – Enterprise AI Services | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides AI and machine learning solutions including automation, predictive analytics, personalization, and enterprise-grade artificial intelligence systems."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/ai-ml-solutions"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -95,6 +113,7 @@ const totalSlides = heroImages.length;
         <div className="hero-overlay"></div>
 
         <div className="service-hero-content animate">
+          
           <h1>AI & Machine Learning Solutions</h1>
           <p>
            Manovate Technologies delivers advanced AI and machine learning solutions that help businesses automate processes, analyze data intelligently, and create personalized digital experiences. Our artificial intelligence development services combine machine learning, deep learning, and predictive analytics to build scalable, future-ready AI systems.
@@ -111,8 +130,7 @@ const totalSlides = heroImages.length;
       {/* ================= WEBSITE DESIGN & DEVELOPMENT ================= */}
       <section className="section-white">
         <div className="service-container">
-          <h2>AI & Machine Learning Solutions (Automation, Predictive Analytics, Personalization)
-</h2>
+          <h2>AI & Machine Learning Solutions for Automation, Predictive Analytics & Personalization</h2>
 
           <p className="section-intro">
             Our AI and machine learning services help organizations turn data into intelligent decision-making systems. From AI automation and predictive analytics to personalized user experiences, we design and deploy artificial intelligence solutions that drive efficiency, accuracy, and business growth.
@@ -294,6 +312,12 @@ Our AI engineers build and train machine learning and deep learning models using
 
   </div>
 </section>
+<p className="service-backlink">
+  Explore our full range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
 <Footer />
     </>
   );

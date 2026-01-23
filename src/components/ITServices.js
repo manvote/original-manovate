@@ -4,10 +4,26 @@ import "../styles/services.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import servicesHero from "../assets/itservices.jpg"; // ✅ add image
+import { Helmet } from "react-helmet-async";
 
 export default function Services() {
   return (
     <>
+
+    <Helmet>
+  <title>IT Services – AI & Software Engineering | Manovate Technologies</title>
+
+  <meta
+    name="description"
+    content="Explore Manovate Technologies IT services including AI development, cloud solutions, web and mobile applications, enterprise software, and cybersecurity."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices"
+  />
+</Helmet>
+
       <Navbar />
 
       {/* ===== HERO SECTION ===== */}

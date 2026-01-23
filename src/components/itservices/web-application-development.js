@@ -5,6 +5,7 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function WebApplicationServices() {
     const heroImages = [shero1, shero2, shero3];
@@ -73,6 +74,22 @@ const totalSlides = heroImages.length;
 
   return (
     <>
+    <Helmet>
+  <title>
+    Web Application Services – Scalable Web Apps & Websites | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies offers web application services including high-performance websites, scalable web applications, UI/UX design, and SEO-optimized digital platforms built for business growth."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/web-application-services"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -265,6 +282,12 @@ const totalSlides = heroImages.length;
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

@@ -4,13 +4,35 @@ import "../styles/services.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import nonithero from "../assets/nonitservices.jpg";
+import { Helmet } from "react-helmet-async";
+
 
 export default function NonITServices() {
   return (
     <>
+    <Helmet>
+  <title>
+    Non-IT Services – Business & Consulting Solutions | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Explore Manovate Technologies non-IT services including business consulting, strategy, branding, operations, and digital growth solutions."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/nonitservices"
+  />
+</Helmet>
+
       <Navbar />
 
-      <section className="services-hero" style={{ backgroundImage: nonithero }}>
+      <section
+  className="services-hero"
+  style={{ backgroundImage: `url(${nonithero})` }}
+>
+
         <div className="services-hero-overlay">
           <h1>Non-IT Services</h1>
           <p>Business services that complement technology and operations.</p>

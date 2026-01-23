@@ -6,29 +6,12 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title = "AI Chatbot Services & Conversational AI Solutions";
-
-    const metaDescription = document.querySelector("meta[name='description']");
-    const content =
-      "AI chatbot services and conversational AI solutions to automate customer support, sales, and business interactions. We build intelligent chatbots for websites, mobile apps, CRM systems, and enterprise platforms.";
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (FIXED) ================= */
   useEffect(() => {
@@ -99,6 +82,22 @@ export default function App() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    AI Chatbot Services | Conversational AI & Chatbot Development | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides AI chatbot services to automate customer support, sales, and enterprise workflows. We build intelligent conversational AI chatbots using NLP and machine learning for websites, mobile apps, and business systems."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/ai-chatbot-services"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -251,6 +250,12 @@ export default function App() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );
