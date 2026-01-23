@@ -1,8 +1,23 @@
 import React from "react";
 import "./EnterpriseService.css";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { Helmet } from "react-helmet-async";
 export default function ProductEngineering() {
   return (
+    <>
+    <Navbar/>
+    <Helmet>  
+        <title>Enterprise Product Engineering Services | Build Scalable Products</title>
+        <meta
+          name="description"
+          content="Transform your digital product vision into reality with our enterprise product engineering services. From design to deployment, we build scalable and secure products."
+        />
+        <meta
+          name="keywords"
+          content="Product Engineering, Digital Products, Scalable Architecture, DevOps, CI/CD, Product Lifecycle"
+        />
+      </Helmet>
     <div className="ent-page">
 
       <section className="ent-hero">
@@ -80,7 +95,9 @@ export default function ProductEngineering() {
         <h2>Build Products That Scale</h2>
         <a href="/request-demo" className="ent-final-btn">Connect with Engineers →</a>
       </section>
-<Footer/>
+
     </div>
+    <Footer/>
+    </>
   );
 }

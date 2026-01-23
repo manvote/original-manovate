@@ -1,8 +1,23 @@
 import React from "react";
 import "./EnterpriseService.css";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { Helmet } from "react-helmet-async";
 export default function DataAnalytics() {
   return (
+    <>
+    <Navbar/>
+    <Helmet>
+        <title>Enterprise Data & Analytics Services | Drive Smarter Decisions</title>
+        <meta
+          name="description"
+          content="Transform your enterprise data into actionable insights with our comprehensive data and analytics services. Empower your business decisions today."
+        />
+        <meta
+          name="keywords"
+          content="Enterprise Data, Data Analytics, Business Intelligence, Data Governance, Predictive Analytics"
+        />
+      </Helmet>
     <div className="ent-page">
 
       <section className="ent-hero">
@@ -82,7 +97,9 @@ export default function DataAnalytics() {
         <h2>Unlock Value from Your Data</h2>
         <a href="/free-consultation" className="ent-final-btn">Talk to Data Experts →</a>
       </section>
-<Footer/>
+
     </div>
+    <Footer/>
+    </>
   );
 }

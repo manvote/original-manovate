@@ -1,8 +1,28 @@
 import React from "react";
 import "./AiSolutions.css";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { Helmet } from "react-helmet-async";
 export default function AiSolutions() {
   return (
+    <>
+    <Navbar/>
+  <Helmet>
+    <title>
+      Enterprise AI Solutions | Scalable & Secure AI for Business
+    </title>
+
+    <meta
+      name="description"
+      content="Enterprise AI solutions designed for scale, security, and impact. We help organizations deploy production-ready AI systems with governance and measurable business outcomes."
+    />
+
+    <link
+      rel="canonical"
+      href="https://www.optimusoverseasedu.com/ai-solutions"
+    />
+  </Helmet>
+
     <div className="ai-enterprise">
 
       {/* ================= HERO ================= */}
@@ -190,10 +210,11 @@ export default function AiSolutions() {
           Talk to an AI Expert →
         </a>
       </section>
-<Footer />
+
 
     
     </div>
-    
+    <Footer />
+    </>
   );
 }

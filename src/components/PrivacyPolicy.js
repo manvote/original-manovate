@@ -9,10 +9,25 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function PrivacyPolicy() {
   return (
     <>
+    <Navbar/>
+    <Helmet>
+        <title>Privacy Policy | Manovate Technologies</title>
+        <meta
+          name="description"
+          content="Read Manovate Technologies' Privacy Policy to understand how we collect, use, and protect your personal and business information."
+        />
+        <meta
+          name="keywords"
+          content="Privacy Policy, Data Protection, Information Security, Manovate Technologies"
+        />
+      </Helmet>
       {/* ================= HERO ================= */}
       <section className="legal-hero">
         <Link to="/" className="legal-back-home">
@@ -233,6 +248,7 @@ export default function PrivacyPolicy() {
 
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

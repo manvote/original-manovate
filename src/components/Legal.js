@@ -2,10 +2,25 @@ import React from "react";
 import "./Legal.css";
 import { FaEnvelope, FaArrowLeft, FaFileAlt, FaCalendarAlt, FaBuilding, FaGlobe } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function TermsAndConditions() {
   return (
     <>
+    <Navbar/>
+    <Helmet>
+        <title>Terms & Conditions | Manovate Technologies</title>
+        <meta
+          name="description"
+          content="Read the Terms & Conditions of Manovate Technologies. Understand the rules and guidelines for using our website and services."
+        />  
+        <meta
+          name="keywords"
+          content="Terms and Conditions, Manovate Technologies, Legal, Website Terms, Service Agreement"
+        />
+      </Helmet>
       {/* ================= HERO ================= */}
       <section className="legal-hero">
         <Link to="/" className="legal-back-home">
@@ -241,6 +256,7 @@ Chennai, Tamil Nadu, shall have exclusive jurisdiction over any disputes.
 
         </div>
       </section>
+      <Footer/>
     </>
   );
 }
