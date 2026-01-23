@@ -13,27 +13,6 @@ export default function CRMServices() {
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "CRM Services & Solutions | Customer Relationship Management Systems";
-
-    const content =
-      "CRM services and customer relationship management solutions to streamline sales, marketing, and customer support. We build scalable CRM systems that improve customer engagement, retention, and business growth.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -104,6 +83,22 @@ export default function CRMServices() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    CRM Services & Custom CRM Solutions | Sales, Marketing & Support CRM | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides CRM services and custom CRM solutions to manage sales pipelines, automate marketing, and improve customer support. Our scalable CRM systems centralize customer data, streamline workflows, and drive customer engagement."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/crm-services"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">

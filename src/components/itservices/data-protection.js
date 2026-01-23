@@ -75,6 +75,22 @@ const totalSlides = heroImages.length;
 
   return (
     <>
+    <Helmet>
+  <title>
+    Data Protection & Compliance Services | GDPR, ISO 27001, PCI DSS | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides data protection and compliance services including GDPR compliance, ISO 27001, PCI DSS, HIPAA, SOC 2 audits, data privacy controls, risk assessments, and cyber security governance solutions."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/data-protection-compliance"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">

@@ -74,6 +74,22 @@ const totalSlides = heroImages.length;
 
   return (
     <>
+    <Helmet>
+  <title>
+    Custom Enterprise Software Development | CRM, ERP & HRMS Solutions | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides custom enterprise software development services including CRM, ERP, HRMS, and internal business systems. We build secure, scalable, and high-performance enterprise applications for digital transformation."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/custom-enterprise-software"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
