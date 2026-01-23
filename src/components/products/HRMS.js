@@ -3,10 +3,22 @@ import React from "react";
 import "./ProductPage.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import { Helmet } from "react-helmet-async";
 export default function HRMS() {
   return (
     <>
     <Navbar />
+    <Helmet>
+        <title>Manovate HRMS | Human Resource Management System</title>
+        <meta
+          name="description"
+          content="Manovate HRMS is a unified, enterprise-grade platform for managing human resources, payroll, compliance, and performance — intelligently, securely, and at scale."
+        />
+        <meta
+          name="keywords"
+          content="HRMS, Human Resource Management System, Payroll Automation, Employee Management, HR Analytics"
+        />
+      </Helmet>
     <div className="product-page pastel-bg">
 
       {/* HERO */}

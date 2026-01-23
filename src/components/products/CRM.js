@@ -3,10 +3,22 @@ import React from "react";
 import "./ProductPage.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import { Helmet } from "react-helmet-async";
 export default function CRM() {
   return (
     <>
     <Navbar />
+    <Helmet>
+        <title>Manovate CRM | Customer Relationship Management Platform</title>
+        <meta
+          name="description"
+          content="Manovate CRM is a unified, enterprise-grade platform for managing customer relationships, sales pipelines, and service operations — intelligently, securely, and at scale."
+        />
+        <meta
+          name="keywords"
+          content="CRM, Customer Relationship Management, Enterprise CRM, Sales Automation, Lead Management"
+        />
+      </Helmet>
     <div className="product-page pastel-bg">
 
       {/* HERO */}
