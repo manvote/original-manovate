@@ -6,33 +6,13 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./App.css";
+import { Helmet } from "react-helmet-async";
 
 export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Non-IT Staff Augmentation & Workforce Solutions | Talent Acquisition & Staffing Services";
-
-    const content =
-      "Non-IT staff augmentation services offering talent acquisition, workforce augmentation, manpower services, administrative staffing, customer support staffing, operational staff hiring, and end-to-end staffing solutions for businesses.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -102,6 +82,22 @@ export default function App() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Non-IT Staff Augmentation & Workforce Solutions | Manpower & Staffing Services | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies offers non-IT staff augmentation and workforce solutions including talent acquisition, manpower services, operational staffing, administrative staffing, and customer support hiring. We help businesses scale teams quickly with qualified professionals."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/nonitservices/non-it-staff-augmentation"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -309,6 +305,12 @@ export default function App() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/nonitservices">Non-IT Services & Business Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

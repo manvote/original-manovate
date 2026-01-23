@@ -6,33 +6,13 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./App.css";
+import { Helmet } from "react-helmet-async";
 
 export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Digital Transformation Consulting Services | Strategy, Technology & Business Solutions";
-
-    const content =
-      "Digital transformation consulting services guiding businesses to modernize processes, tools, operations, and technology strategies. We deliver management consulting, IT consulting, digital solutions, and enterprise transformation services.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -102,6 +82,22 @@ export default function App() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Digital Transformation Consulting Services | Strategy, Technology & Process Modernisation | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides digital transformation consulting services to help organizations modernize business processes, technology ecosystems, and operating models through strategy, cloud, automation, data, and enterprise transformation initiatives."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/nonitservices/digital-transformation-consulting"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -306,6 +302,12 @@ export default function App() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/nonitservices">Non-IT Services & Business Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

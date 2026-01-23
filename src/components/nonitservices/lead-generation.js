@@ -6,33 +6,13 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./App.css";
+import { Helmet } from "react-helmet-async";
 
 export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Lead Design & Product Design Strategy | Manovate Technologies";
-
-    const content =
-      "We provide lead design and product design strategy services that align business goals, user needs, and scalable design systems. From UX research and design leadership to enterprise-grade design systems, we help organizations build impactful digital products.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -102,6 +82,22 @@ export default function App() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Lead Design & Product Experience Strategy | UX Leadership & Design Systems | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides lead design and product experience strategy services including UX research, product design, interaction design, and scalable design systems. We align business goals, user needs, and design leadership to build high-performing digital products."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/nonitservices/lead-design-product-experience-strategy"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -302,6 +298,12 @@ export default function App() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/nonitservices">Non-IT Services & Business Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

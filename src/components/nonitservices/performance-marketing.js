@@ -6,33 +6,13 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./App.css";
+import { Helmet } from "react-helmet-async";
 
 export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Performance Marketing Agency | Google Ads & Meta Ads for Fast Lead Generation";
-
-    const content =
-      "Performance marketing services focused on Google Ads and Meta Ads to drive fast lead generation, measurable ROI, higher conversion rates, and scalable paid advertising campaigns.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -102,6 +82,22 @@ export default function App() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Performance Marketing Services | Google Ads & Meta Ads Agency | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies is a performance marketing agency offering Google Ads, Meta Ads, and paid advertising services to generate qualified leads, improve conversions, lower CPA, and maximize ROI through data-driven campaign optimization."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/nonitservices/performance-marketing-services"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -305,6 +301,12 @@ export default function App() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/nonitservices">Non-IT Services & Business Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );
