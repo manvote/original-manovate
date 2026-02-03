@@ -7,8 +7,8 @@ import robotImg from "../assets/ai-waving-robot.webp"
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import ClientGrowthWithFilter from "./charts/ClientGrowthWithFilter";
-import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
-import { FaGlobe } from "react-icons/fa";
+// import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
+// import { FaGlobe } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 
 
