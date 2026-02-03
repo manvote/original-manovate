@@ -6,33 +6,12 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function SaaSDevelopment() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "SaaS Development Services | Scalable Cloud-Based Software Solutions";
-
-    const content =
-      "We design and develop scalable SaaS platforms using modern cloud architectures. From MVPs to enterprise-grade products, our SaaS solutions deliver security, performance, and seamless user experiences.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +82,22 @@ export default function SaaSDevelopment() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    SaaS Product Development Services – Scalable Cloud Software | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies offers SaaS product development services to build secure, scalable, and high-performance cloud-based software platforms with multi-tenant architecture, subscription billing, and DevOps enablement."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/saas-product-development"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -288,6 +283,12 @@ export default function SaaSDevelopment() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

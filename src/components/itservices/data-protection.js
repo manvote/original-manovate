@@ -6,6 +6,7 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
  
 export default function DataProtectionCompliance() {
   const heroImages = [shero1, shero2, shero3];
@@ -74,6 +75,22 @@ const totalSlides = heroImages.length;
 
   return (
     <>
+    <Helmet>
+  <title>
+    Data Protection & Compliance Services | GDPR, ISO 27001, PCI DSS | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides data protection and compliance services including GDPR compliance, ISO 27001, PCI DSS, HIPAA, SOC 2 audits, data privacy controls, risk assessments, and cyber security governance solutions."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/data-protection-compliance"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -258,6 +275,12 @@ const totalSlides = heroImages.length;
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

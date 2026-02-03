@@ -2,11 +2,23 @@ import React from "react";
 import "./ProductPage.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import { Helmet } from "react-helmet-async";
 
 export default function FoodDelivery() {
   return (
     <>
     <Navbar />
+    <Helmet>
+        <title>Manovate Food Delivery Platform | Online Order & Delivery Management</title>
+        <meta
+          name="description"
+          content="Manovate Food Delivery Platform is a comprehensive solution for restaurants and food brands to manage online orders, delivery operations, and customer engagement at scale."
+        />
+        <meta
+          name="keywords"
+          content="Food Delivery, Online Ordering, Delivery Management, Restaurant Technology, Food Tech Platform"
+        />
+      </Helmet>
     <div className="product-page pastel-bg">
 
       {/* HERO */}

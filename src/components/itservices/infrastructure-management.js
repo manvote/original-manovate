@@ -6,6 +6,7 @@ import hero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function ITInfrastructureManagement() {
   const heroImages = [hero1, hero2, hero3];
@@ -74,6 +75,22 @@ export default function ITInfrastructureManagement() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    IT Infrastructure Management Services | Managed IT & Cloud Solutions | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides end-to-end IT infrastructure management services including help desk support, device and endpoint management, Microsoft 365, cloud services, network monitoring, and secure managed IT solutions."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/it-infrastructure-management"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -253,6 +270,12 @@ export default function ITInfrastructureManagement() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

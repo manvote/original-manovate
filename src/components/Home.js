@@ -183,7 +183,7 @@ const [open, setOpen] = useState(false);
     
       <Navbar />
 <Helmet>
-        <title>AI Software Development Company | Manovate Technologies</title>
+        <title>Manovate Technologies – AI Software Development Company</title>
 
         <meta
           name="description"

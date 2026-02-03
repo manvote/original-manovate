@@ -6,33 +6,13 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./App.css";
+import { Helmet } from "react-helmet-async";
 
 export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Accounting Management Services | Bookkeeping, Financial Reporting & Compliance";
-
-    const content =
-      "Professional accounting management services including bookkeeping, financial reporting, accounts payable and receivable, payroll accounting, general ledger management, and statutory compliance for businesses of all sizes.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -102,6 +82,22 @@ export default function App() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Accounting Management Services | Bookkeeping, Financial Reporting & Compliance | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides accounting management services including bookkeeping, general ledger management, accounts payable and receivable, payroll accounting, financial reporting, and statutory compliance for businesses of all sizes."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/accounting-management-services"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -310,6 +306,12 @@ export default function App() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/nonitservices">Non-IT Services & Business Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

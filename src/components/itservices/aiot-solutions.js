@@ -7,34 +7,13 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
- 
+import { Helmet } from "react-helmet-async";
+
 
 export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "AIoT Development | Intelligent AI & IoT Solutions for Smart Systems";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    const content =
-      "We design and develop AIoT (Artificial Intelligence of Things) solutions that combine IoT devices, edge computing, and AI analytics. Our AIoT systems enable real-time monitoring, predictive intelligence, automation, and data-driven decision-making across smart industries.";
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
    useEffect(() => {
@@ -105,6 +84,22 @@ export default function App() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    AIoT Development Solutions – AI & IoT Services | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies delivers AIoT development solutions by integrating artificial intelligence with IoT systems, edge computing, and real-time analytics to build intelligent, connected platforms."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/aiot-development-solutions"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -134,7 +129,9 @@ export default function App() {
             Get Started
           </a>
         </div>
+        
       </section>
+
 
       {/* ================= OVERVIEW ================= */}
       <section className="section-white">
@@ -293,6 +290,12 @@ export default function App() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
 
     </>

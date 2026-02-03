@@ -1,8 +1,29 @@
 import React from "react";
 import "./LegacyModernization.css";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet-async";
+import Navbar from "./Navbar";
+
 export default function LegacyModernization() {
   return (
+    <>
+    <Navbar/>
+    <Helmet>
+  <title>
+    Legacy Modernization Services | Modernize Enterprise Systems
+  </title>
+
+  <meta
+    name="description"
+    content="Enterprise legacy modernization services to transform core systems into scalable, secure, cloud-ready platforms without business disruption."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.optimusoverseasedu.com/legacy-modernization"
+  />
+</Helmet>
+
     <div className="legacy-enterprise">
 
       {/* ================= HERO ================= */}
@@ -192,5 +213,6 @@ export default function LegacyModernization() {
       </section>
  <Footer/>
     </div>
+    </>
   );
 }

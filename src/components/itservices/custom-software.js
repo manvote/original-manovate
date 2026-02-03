@@ -5,6 +5,7 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function CustomEnterpriseSoftware() {
     const heroImages = [shero1, shero2, shero3];
@@ -73,6 +74,22 @@ const totalSlides = heroImages.length;
 
   return (
     <>
+    <Helmet>
+  <title>
+    Custom Enterprise Software Development | CRM, ERP & HRMS Solutions | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides custom enterprise software development services including CRM, ERP, HRMS, and internal business systems. We build secure, scalable, and high-performance enterprise applications for digital transformation."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/custom-enterprise-software"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -271,6 +288,12 @@ const totalSlides = heroImages.length;
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

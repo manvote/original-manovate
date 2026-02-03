@@ -6,33 +6,12 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function CrossPlatformAppDevelopment() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Cross-Platform App Development Services | iOS & Android Apps";
-
-    const content =
-      "Cross-platform app development services to build high-performance mobile applications for iOS and Android using a single codebase. We deliver scalable, secure, and cost-effective cross-platform mobile solutions.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +82,22 @@ export default function CrossPlatformAppDevelopment() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Cross-Platform App Development Services | iOS & Android Apps | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies offers cross-platform app development services to build high-performance mobile applications for iOS and Android using a single codebase. Our solutions ensure faster time-to-market, cost efficiency, scalability, and native-like user experience."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/cross-platform-app-development"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -287,6 +282,12 @@ export default function CrossPlatformAppDevelopment() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

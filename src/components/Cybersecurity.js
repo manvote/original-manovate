@@ -1,8 +1,23 @@
 import React from "react";
 import "./EnterpriseService.css";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { Helmet } from "react-helmet-async";
 export default function Cybersecurity() {
   return (
+    <>
+    <Navbar/>
+    <Helmet>
+        <title>Enterprise Cybersecurity Services | Secure Your Business</title> 
+        <meta
+          name="description"
+          content="Protect your enterprise with our comprehensive cybersecurity services. From threat detection to compliance, we ensure your business stays secure."
+        />
+        <meta
+          name="keywords"
+          content="Enterprise Cybersecurity, Threat Detection, Data Protection, Compliance, Risk Management"
+        />
+      </Helmet>
     <div className="ent-page">
 
       <section className="ent-hero">
@@ -87,7 +102,9 @@ export default function Cybersecurity() {
         <h2>Secure Your Enterprise Today</h2>
         <a href="/free-consultation" className="ent-final-btn">Schedule Security Assessment →</a>
       </section>
-<Footer/>
+
     </div>
+    <Footer/>
+    </>
   );
 }

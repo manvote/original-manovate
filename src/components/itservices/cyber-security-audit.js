@@ -6,31 +6,12 @@ import hero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function CyberSecurityAudit() {
   const heroImages = [hero1, hero2, hero3];
   const totalSlides = heroImages.length; // ✅ FIX
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Cyber Security Audit Services | Information Security & Network Security Audits";
-
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Comprehensive cyber security audit services including information security audits, network security assessments, penetration testing, vulnerability assessment, compliance audits, and security risk management."
-      );
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content =
-        "Comprehensive cyber security audit services including information security audits, network security assessments, penetration testing, vulnerability assessment, compliance audits, and security risk management.";
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -94,6 +75,22 @@ export default function CyberSecurityAudit() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Cyber Security Audit Services | Vulnerability Assessment & Compliance | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides cyber security audit services including vulnerability assessment, penetration testing, network security audits, and compliance audits aligned with ISO 27001, PCI DSS, HIPAA, and SOC 2 standards."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/cyber-security-audit"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -270,6 +267,12 @@ export default function CyberSecurityAudit() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

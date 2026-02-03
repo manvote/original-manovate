@@ -6,33 +6,12 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function WebDevelopment() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Web Development Services | Scalable & Modern Digital Solutions";
-
-    const content =
-      "We deliver modern, scalable, and high-performance web development solutions. From responsive websites and custom web applications to full-stack development and cloud-ready platforms, we help businesses build fast, secure, and user-centric digital experiences.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +82,22 @@ export default function WebDevelopment() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Web Development Services – Modern Websites & Web Applications | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides web development services including modern websites, custom web applications, frontend and backend development, and scalable full-stack solutions built for performance and security."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/web-development"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -288,6 +283,12 @@ export default function WebDevelopment() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

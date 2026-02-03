@@ -6,33 +6,12 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function AIRecommendationSystems() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "AI Recommendation Systems | Personalized Recommendation Solutions";
-
-    const content =
-      "We build AI-powered recommendation systems that deliver personalized product, content, and service recommendations. Our solutions leverage machine learning, collaborative filtering, and behavioral analytics to increase engagement, conversions, and customer satisfaction.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +82,22 @@ export default function AIRecommendationSystems() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    AI Recommendation Systems – Personalized AI Solutions | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies builds AI-powered recommendation systems that deliver personalized product, content, and service recommendations using machine learning, behavioral analytics, and real-time data insights."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/ai-recommendation-systems"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -289,6 +284,12 @@ export default function AIRecommendationSystems() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

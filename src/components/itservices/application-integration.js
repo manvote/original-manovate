@@ -5,6 +5,7 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function App() {
     const heroImages = [shero1, shero2, shero3];
@@ -73,6 +74,22 @@ const totalSlides = heroImages.length;
 
   return (
     <>
+    <Helmet>
+  <title>
+    Application Integration Services – API & System Integrations | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides application integration services including API integrations, enterprise system integration, and process automation to enable seamless data flow and unified business operations."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/application-integrations"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">

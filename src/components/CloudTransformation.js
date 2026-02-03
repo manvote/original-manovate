@@ -1,8 +1,25 @@
 import React from "react";
 import "./EnterpriseService.css";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { Helmet } from "react-helmet-async";
 export default function CloudTransformation() {
   return (
+    <>
+    <Navbar/>
+  <Helmet>
+    <title>
+      Cloud Transformation Services | Enterprise Cloud Solutions
+    </title>
+    <meta
+      name="description"
+      content="Cloud transformation services for enterprises. We help organizations migrate, modernize, and optimize workloads across secure and scalable cloud platforms."
+    />
+    <link
+      rel="canonical"
+      href="https://www.optimusoverseasedu.com/cloud-transformation"
+    />
+  </Helmet>
     <div className="ent-page">
 
       <section className="ent-hero">
@@ -79,7 +96,9 @@ export default function CloudTransformation() {
         <h2>Accelerate Cloud Adoption</h2>
         <a href="/free-consultation" className="ent-final-btn">Talk to Cloud Experts →</a>
       </section>
-<Footer/>
+
     </div>
+    <Footer/>
+    </>
   );
 }

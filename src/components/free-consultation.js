@@ -8,6 +8,9 @@ import {
   FaArrowLeft,
   FaCheckCircle,
 } from "react-icons/fa";
+import Navbar from "./Navbar";
+import { Helmet } from "react-helmet-async";
+import Footer from "./Footer";
 
 export default function FreeConsultation() {
   const [submitted, setSubmitted] = useState(false);
@@ -59,6 +62,19 @@ export default function FreeConsultation() {
   };
 
   return (
+    <>
+    <Navbar/>
+    <Helmet>
+        <title>Free Consultation | Manovate</title> 
+        <meta
+          name="description"
+          content="Request a free consultation with Manovate's digital engineering experts. Discuss your project requirements and get tailored solutions to drive your business forward."
+        />
+        <meta 
+          name="keywords"
+          content="Free Consultation, Digital Engineering, Software Development, AI Solutions, Cloud Services, Manovate"
+        />
+      </Helmet>
     <div className="consult-page split-layout">
 
       {/* LEFT CONTENT */}
@@ -214,5 +230,7 @@ export default function FreeConsultation() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

@@ -2,11 +2,23 @@ import React from "react";
 import "./ProductPage.css";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
+import { Helmet } from "react-helmet-async";
 
 export default function Messaging() {
   return (
     <>
     <Navbar />
+    <Helmet>
+        <title>Manovate Messaging Platform | Secure Enterprise Communication</title>
+        <meta
+          name="description"
+          content="Manovate Messaging Platform is a secure, real-time communication solution designed for modern enterprises to collaborate faster, safer, and smarter."
+        />
+        <meta
+          name="keywords"
+          content="Messaging Platform, Enterprise Communication, Secure Messaging, Team Collaboration, Real-time Chat"
+        />
+      </Helmet>
     <div className="product-page pastel-bg">
 
       {/* HERO */}

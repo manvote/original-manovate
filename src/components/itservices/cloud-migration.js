@@ -6,33 +6,13 @@ import inventoryGif from "../../assets/inventory-management.gif";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function CloudMigrationServices() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Cloud Migration Services | Secure & Scalable Cloud Transformation";
-
-    const content =
-      "We provide end-to-end cloud migration services to help businesses move applications, data, and infrastructure to the cloud securely and efficiently. Our cloud experts ensure minimal downtime, optimized performance, and cost-effective scalability across AWS, Azure, and Google Cloud.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW (HOOK FIXED) ================= */
   useEffect(() => {
@@ -103,6 +83,22 @@ export default function CloudMigrationServices() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Cloud Migration Services | Secure AWS, Azure & GCP Migration | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides cloud migration services to securely migrate applications, data, and infrastructure to AWS, Microsoft Azure, and Google Cloud with minimal downtime, optimized performance, and cost efficiency."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/cloud-migration-services"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -290,6 +286,12 @@ export default function CloudMigrationServices() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

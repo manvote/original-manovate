@@ -6,31 +6,12 @@ import hero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function ThreatMonitoringServices() {
   const heroImages = [hero1, hero2, hero3];
   const totalSlides = heroImages.length; // ✅ FIX
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Threat Monitoring Services | Network & Endpoint Security | MDR Solutions";
-
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Threat monitoring services with continuous network security and endpoint security monitoring, threat intelligence, MDR services, real-time threat detection and response, and enterprise cybersecurity solutions."
-      );
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content =
-        "Threat monitoring services with continuous network security and endpoint security monitoring, threat intelligence, MDR services, real-time threat detection and response, and enterprise cybersecurity solutions.";
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -94,6 +75,22 @@ export default function ThreatMonitoringServices() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Threat Monitoring Services – MDR, EDR & Cyber Threat Detection | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides 24/7 threat monitoring services using MDR, EDR, and advanced threat intelligence to detect, analyze, and respond to cyber threats across networks, endpoints, and cloud environments."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/threat-monitoring-services"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -273,6 +270,12 @@ export default function ThreatMonitoringServices() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

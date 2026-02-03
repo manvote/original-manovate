@@ -6,6 +6,7 @@ import hero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./android-app.css";
+import { Helmet } from "react-helmet-async";
 
 export default function InventoryAssetManagement() {
   const heroImages = [hero1, hero2, hero3];
@@ -74,6 +75,22 @@ export default function InventoryAssetManagement() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Inventory & Asset Management Systems | Real-Time Tracking Solutions | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides intelligent inventory and asset management systems with real-time tracking, lifecycle management, analytics, and centralized control across warehouses and distributed locations."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/itservices/inventory-asset-management"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -251,6 +268,12 @@ export default function InventoryAssetManagement() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/itservices">IT Services & Software Engineering Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );

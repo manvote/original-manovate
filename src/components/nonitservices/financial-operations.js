@@ -6,33 +6,13 @@ import shero3 from "../../assets/hero3.jpg";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import "./App.css";
+import { Helmet } from "react-helmet-async";
 
 export default function App() {
   const heroImages = [shero1, shero2, shero3];
   const totalSlides = heroImages.length;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* ================= SEO META ================= */
-  useEffect(() => {
-    document.title =
-      "Financial Operations Support | Billing, Invoicing, Accounts Payable & Receivable";
-
-    const content =
-      "Financial operations support services covering e invoicing, billing and payments, accounts payable and accounts receivable processes, invoice processing, payment approvals, automated invoicing, invoice to pay workflows, and billing management.";
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
 
   /* ================= HERO SLIDESHOW ================= */
   useEffect(() => {
@@ -102,6 +82,22 @@ export default function App() {
 
   return (
     <>
+    <Helmet>
+  <title>
+    Financial Operations Support Services | Billing, Invoicing, AP & AR Management | Manovate Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Manovate Technologies provides financial operations support services including billing and invoicing, e-invoicing, invoice processing, accounts payable, accounts receivable, and payment reconciliation to streamline invoice-to-pay and order-to-cash workflows."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.manovate.co.in/nonitservices/financial-operations-support"
+  />
+</Helmet>
+
     <Navbar />
       {/* ================= HERO ================= */}
       <section className="hero-modern">
@@ -305,6 +301,12 @@ export default function App() {
           </div>
         </div>
       </section>
+      <p className="service-backlink">
+  Explore our complete range of{" "}
+  <a href="/nonitservices">Non-IT Services & Business Solutions</a>.
+</p>
+<br />
+<br />
       <Footer />
     </>
   );
