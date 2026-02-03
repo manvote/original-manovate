@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
-import ceo from "../assets/team/ceo.webp";
-import manager1 from "../assets/team/manager.webp";
+// import ceo from "../assets/team/ceo.webp";
+// import manager1 from "../assets/team/manager.webp";
 // import manager2 from "../assets/team/manager1.webp";
 import robotImg from "../assets/ai-waving-robot.webp"
 import Footer from "./Footer";
@@ -121,13 +121,13 @@ const About = () => {
       {/* LEADERSHIP */}
   
 {/* LEADERSHIP */}
-<section className="about-team">
+{/* <section className="about-team">
   <h2>Leadership Team</h2>
 
-  <div className="team-grid">
+  <div className="team-grid"> */}
 
     {/* FOUNDER */}
-    <div className="team-card">
+    {/* <div className="team-card">
       <div className="team-photo">
         <img src={ceo} alt="Syed Kareem Mynudeen, Founder and Director of Manovate Technologies"
  />
@@ -173,10 +173,10 @@ const About = () => {
     <FaGlobe />
   </a>
       </div>
-    </div>
+    </div> */}
 
     {/* MANAGER */}
-    <div className="team-card">
+    {/* <div className="team-card">
       <div className="team-photo">
         <img src={manager1} alt="Harish N - Business Operations & Client Strategy" />
       </div>
@@ -191,10 +191,10 @@ const About = () => {
   quality standards. Through strong coordination with cross-functional teams,
   this position ensures disciplined execution, transparent delivery processes,
   and consistent outcomes that support long-term partnerships and client success.
-</p>
+</p> */}
 
 
-      <div className="team-socials">
+      {/* <div className="team-socials">
         <a
           href="https://www.linkedin.com/in/harishnandhakumar"
           target="_blank"
@@ -219,7 +219,7 @@ const About = () => {
     <FaGlobe />
   </a>
       </div>
-    </div>
+    </div> */}
 
     {/* MANAGER */}
     {/* <div className="team-card">
@@ -267,9 +267,9 @@ const About = () => {
   </a>
       </div>
     </div> */}
-
+{/* 
   </div>
-</section>
+</section> */}
 
 
     </div>
